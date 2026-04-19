@@ -1,0 +1,15 @@
+baseURL = "https://username.github.io/"
+languageCode = "zh-CN"
+title = "我的 Hugo 博客"
+paginate = 10
+
+[menu]
+[[menu.main]]
+name = "首页"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "文章"
+url = "/posts/"
+weight = 2

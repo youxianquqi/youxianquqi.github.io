@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="posts-container">
+  <h2>{{ .Title }}</h2>
+  
+  {{ if .Content }}
+  <div class="post-intro">{{ .Content }}</div>
+  {{ end }}
+
+  <ul class="posts-list">
+    {{ range .Pages.ByPublishDate.Reverse }}
+    {{ if not .Draft }}
+    <li class="post-item">
+      <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
+      <span class="post-date">{{ .PublishDate.Format "2006-01-02" }}</span>
+      {{ if .Description }}
+      <p class="post-desc">{{ .Description }}</p>
+      {{ else }}
+      <p class="post-desc">{{ .Summary }}</p>
+      {{ end }}
+    </li>
+    {{ end }}
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

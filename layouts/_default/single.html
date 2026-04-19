@@ -1,0 +1,43 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ .PublishDate.Format "2006-01-02" }}</time>
+      {{ if .Params.author }}
+      <span class="post-author">作者: {{ .Params.author }}</span>
+      {{ end }}
+    </p>
+    {{ if .Params.tags }}
+    <div class="post-tags">
+      {{ range .Params.tags }}
+      <a href="{{ "/" | relURL }}tags/{{ . | lower }}/" class="tag">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  <footer class="post-footer">
+    <p><em>发布于 {{ .PublishDate.Format "2006-01-02" }}</em></p>
+  </footer>
+</article>
+
+{{ if or .PrevInSection .NextInSection }}
+<nav class="posts-nav">
+  {{ if .PrevInSection }}
+  <div class="prev-post">
+    <a href="{{ .PrevInSection.RelPermalink }}">← {{ .PrevInSection.Title }}</a>
+  </div>
+  {{ end }}
+  {{ if .NextInSection }}
+  <div class="next-post">
+    <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }} →</a>
+  </div>
+  {{ end }}
+</nav>
+{{ end }}
+{{ end }}
