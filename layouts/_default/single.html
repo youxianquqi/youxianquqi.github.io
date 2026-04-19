@@ -1,43 +1,30 @@
 {{ define "main" }}
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ .Title }}</h1>
-    <p class="post-meta">
+<article class="book-article">
+  <header class="book-article-header">
+    <p class="book-kicker">{{ .Section | default "article" }}</p>
+    <h1>{{ .Title }}</h1>
+    <div class="book-article-meta">
       <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ .PublishDate.Format "2006-01-02" }}</time>
-      {{ if .Params.author }}
-      <span class="post-author">作者: {{ .Params.author }}</span>
-      {{ end }}
-    </p>
-    {{ if .Params.tags }}
-    <div class="post-tags">
-      {{ range .Params.tags }}
-      <a href="{{ "/" | relURL }}tags/{{ . | lower }}/" class="tag">{{ . }}</a>
+      {{ with .Params.tags }}
+      <span class="book-dot">•</span>
+      <span>
+        {{ range $index, $tag := . }}
+        {{ if $index }}, {{ end }}{{ $tag }}
+        {{ end }}
+      </span>
       {{ end }}
     </div>
-    {{ end }}
   </header>
 
-  <div class="post-content">
+  {{ if .TableOfContents }}
+  <aside class="book-toc">
+    <h2>目录</h2>
+    {{ .TableOfContents }}
+  </aside>
+  {{ end }}
+
+  <div class="book-article-body">
     {{ .Content }}
   </div>
-
-  <footer class="post-footer">
-    <p><em>发布于 {{ .PublishDate.Format "2006-01-02" }}</em></p>
-  </footer>
 </article>
-
-{{ if or .PrevInSection .NextInSection }}
-<nav class="posts-nav">
-  {{ if .PrevInSection }}
-  <div class="prev-post">
-    <a href="{{ .PrevInSection.RelPermalink }}">← {{ .PrevInSection.Title }}</a>
-  </div>
-  {{ end }}
-  {{ if .NextInSection }}
-  <div class="next-post">
-    <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }} →</a>
-  </div>
-  {{ end }}
-</nav>
-{{ end }}
 {{ end }}

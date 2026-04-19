@@ -4,30 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
-      <nav class="site-nav">
-        <ul>
-          {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}" {{ if eq .URL $.RelPermalink }} class="active"{{ end }}>{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
+  <div class="book-shell">
+    <aside class="book-sidebar">
+      <div class="book-brand">
+        <a href="{{ "/" | relURL }}" class="book-title">{{ .Site.Title }}</a>
+        <p class="book-subtitle">Hugo 技术笔记</p>
+      </div>
+
+      <nav class="book-nav">
+        <div class="book-nav-group">
+          <h2>导航</h2>
+          <ul>
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}" {{ if eq .URL $.RelPermalink }}class="active"{{ end }}>{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="book-nav-group">
+          <h2>文章</h2>
+          <ul>
+            {{ range (where .Site.RegularPages "Section" "posts").ByPublishDate.Reverse }}
+            <li><a href="{{ .RelPermalink }}" {{ if eq .RelPermalink $.RelPermalink }}class="active"{{ end }}>{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
       </nav>
-    </div>
-  </header>
+    </aside>
 
-  <main class="container">
-    {{ block "main" . }}{{ end }}
-  </main>
+    <div class="book-main">
+      <header class="book-topbar">
+        <button class="book-toggle" type="button" aria-label="Toggle navigation" onclick="document.body.classList.toggle('sidebar-open')">菜单</button>
+        <div class="book-topbar-title">{{ .Site.Title }}</div>
+      </header>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Built with <a href="https://gohugo.io">Hugo</a>.</p>
+      <main class="book-content">
+        {{ block "main" . }}{{ end }}
+      </main>
     </div>
-  </footer>
+  </div>
+
+  <script>
+    document.addEventListener("click", function (event) {
+      if (!document.body.classList.contains("sidebar-open")) return;
+      const sidebar = document.querySelector(".book-sidebar");
+      const toggle = document.querySelector(".book-toggle");
+      if (sidebar && !sidebar.contains(event.target) && !toggle.contains(event.target)) {
+        document.body.classList.remove("sidebar-open");
+      }
+    });
+  </script>
 </body>
 </html>
