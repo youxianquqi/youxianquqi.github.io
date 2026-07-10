@@ -1,0 +1,37 @@
+{{ define "main" }}
+<section class="book-page">
+  <header class="book-page-header">
+    <p class="book-kicker">视频</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+    <div class="book-page-intro">{{ . }}</div>
+    {{ end }}
+  </header>
+
+  <div class="video-grid">
+    {{ range (where .Pages "Draft" false).ByPublishDate.Reverse }}
+    {{ $page := . }}
+    <a class="video-card" href="{{ $page.RelPermalink }}">
+      <div class="video-cover">
+        {{ with $page.Params.cover }}
+        <img src="{{ . | relURL }}" alt="{{ $page.Title }}" loading="lazy">
+        {{ else }}
+        <div class="video-cover-fallback" aria-hidden="true"></div>
+        {{ end }}
+      </div>
+      <h2 class="video-title">{{ $page.Title }}</h2>
+      <time class="video-date" datetime="{{ $page.PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ $page.PublishDate.Format "2006-01-02" }}</time>
+      {{ with $page.Params.tags }}
+      <div class="video-tags">
+        {{ range . }}
+        <span class="video-tag">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </a>
+    {{ else }}
+    <p class="video-empty">还没有视频。</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="book-page">
+  <header class="book-page-header">
+    <p class="book-kicker">首页</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+    <div class="book-page-intro">{{ . }}</div>
+    {{ end }}
+  </header>
+</section>
+{{ end }}

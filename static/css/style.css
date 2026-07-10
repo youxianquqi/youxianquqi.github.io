@@ -81,8 +81,7 @@ a {
 
 .book-nav-group h2,
 .book-page-header h1,
-.book-article-header h1,
-.book-toc h2 {
+.book-article-header h1 {
   margin: 0;
   line-height: 1.2;
 }
@@ -95,8 +94,7 @@ a {
   color: var(--muted);
 }
 
-.book-nav-group ul,
-.book-toc ul {
+.book-nav-group ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -289,32 +287,87 @@ a {
   border-radius: 16px;
 }
 
-.book-toc {
-  padding: 1rem 1.1rem;
-  border: 1px solid var(--border);
+.book-dot {
+  margin: 0 0.5rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 1.25rem;
+}
+
+.video-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-3px);
+}
+
+.video-cover {
+  overflow: hidden;
   border-radius: var(--radius);
+  border: 1px solid var(--border);
   background: var(--panel);
+  aspect-ratio: 16 / 10;
   box-shadow: var(--shadow);
 }
 
-.book-toc h2 {
-  margin-bottom: 0.8rem;
-  font-size: 1rem;
-}
-
-.book-toc a {
+.video-cover img,
+.video-cover-fallback {
   display: block;
-  padding: 0.35rem 0;
-  color: var(--muted);
-  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.book-toc a:hover {
+.video-cover-fallback {
+  background: linear-gradient(135deg, #e7f1ea, #d7e8dc 55%, #c5dccb);
+}
+
+.video-title {
+  margin: 0.75rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.video-date {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.video-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.45rem;
+}
+
+.video-tag {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.18rem 0.45rem;
+  border-radius: 8px;
+  background: var(--accent-soft);
   color: var(--accent);
 }
 
-.book-dot {
-  margin: 0 0.5rem;
+.video-card:hover .video-title {
+  color: var(--accent);
+}
+
+.video-empty {
+  grid-column: 1 / -1;
+  color: var(--muted);
 }
 
 @media (max-width: 960px) {
@@ -343,4 +396,9 @@ a {
   .book-content {
     padding: 1.5rem 1.1rem 3rem;
   }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
 }
+

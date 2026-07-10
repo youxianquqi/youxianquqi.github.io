@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="book-page">
   <header class="book-page-header">
-    <p class="book-kicker">{{ .Section | default "home" }}</p>
+    <p class="book-kicker">{{ if eq .Section "posts" }}文章{{ else if eq .Section "videos" }}视频{{ else }}{{ .Section | default "列表" }}{{ end }}</p>
     <h1>{{ .Title }}</h1>
     {{ with .Content }}
     <div class="book-page-intro">{{ . }}</div>
@@ -9,14 +9,12 @@
   </header>
 
   <div class="book-list">
-    {{ range .Pages.ByPublishDate.Reverse }}
-    {{ if not .Draft }}
+    {{ range (where .Pages "Draft" false).ByPublishDate.Reverse }}
     <article class="book-card">
       <div class="book-card-meta">{{ .PublishDate.Format "2006-01-02" }}</div>
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
     </article>
-    {{ end }}
     {{ end }}
   </div>
 </section>

@@ -12,7 +12,7 @@
     <aside class="book-sidebar">
       <div class="book-brand">
         <a href="{{ "/" | relURL }}" class="book-title">{{ .Site.Title }}</a>
-        <p class="book-subtitle">Hugo 技术笔记</p>
+        <p class="book-subtitle">技术笔记 · 作品与视频</p>
       </div>
 
       <nav class="book-nav">
@@ -29,6 +29,15 @@
           <h2>文章</h2>
           <ul>
             {{ range (where .Site.RegularPages "Section" "posts").ByPublishDate.Reverse }}
+            <li><a href="{{ .RelPermalink }}" {{ if eq .RelPermalink $.RelPermalink }}class="active"{{ end }}>{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="book-nav-group">
+          <h2>视频</h2>
+          <ul>
+            {{ range (where .Site.RegularPages "Section" "videos").ByPublishDate.Reverse }}
             <li><a href="{{ .RelPermalink }}" {{ if eq .RelPermalink $.RelPermalink }}class="active"{{ end }}>{{ .Title }}</a></li>
             {{ end }}
           </ul>

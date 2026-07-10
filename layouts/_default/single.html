@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="book-article">
   <header class="book-article-header">
-    <p class="book-kicker">{{ .Section | default "article" }}</p>
+    <p class="book-kicker">{{ if eq .Section "posts" }}文章{{ else if eq .Section "videos" }}视频{{ else }}{{ .Section | default "详情" }}{{ end }}</p>
     <h1>{{ .Title }}</h1>
     <div class="book-article-meta">
       <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ .PublishDate.Format "2006-01-02" }}</time>
@@ -15,13 +15,6 @@
       {{ end }}
     </div>
   </header>
-
-  {{ if .TableOfContents }}
-  <aside class="book-toc">
-    <h2>目录</h2>
-    {{ .TableOfContents }}
-  </aside>
-  {{ end }}
 
   <div class="book-article-body">
     {{ .Content }}
