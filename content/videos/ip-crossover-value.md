@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "跨越载体：人物、故事和观众，如何炼成IP的价值？"
 date = 2026-06-08T12:30:00+08:00
 draft = false
@@ -16,6 +16,3 @@ cover = "/images/ip-crossover-value.jpg"
 
 **B 站：** [https://www.bilibili.com/video/BV1WTEK6qEvm/](https://www.bilibili.com/video/BV1WTEK6qEvm/)
 
-<div style="position:relative;padding-top:56.25%;margin:1rem 0;">
-  <iframe src="//player.bilibili.com/player.html?bvid=BV1WTEK6qEvm&page=1&high_quality=1" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
-</div>

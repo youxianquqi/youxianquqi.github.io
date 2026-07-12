@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "pvz设计篇：为什么蘑菇需要睡觉"
 date = 2026-06-18T11:00:44+08:00
 draft = false
@@ -16,6 +16,3 @@ cover = "/images/pvz-mushroom-sleep.jpg"
 
 **B 站：** [https://www.bilibili.com/video/BV1WnjF62EAm/](https://www.bilibili.com/video/BV1WnjF62EAm/)
 
-<div style="position:relative;padding-top:56.25%;margin:1rem 0;">
-  <iframe src="//player.bilibili.com/player.html?bvid=BV1WnjF62EAm&page=1&high_quality=1" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
-</div>

@@ -105,7 +105,11 @@ cd hugo-site
 ```
 对应 Markdown 可写成：标题用 `title`，正文用「技术栈 / 项目描述 / 仓库」三块；`description` 用项目描述首句或压缩版。
 ## 视频条目规范
+
 视频写在 `hugo-site/content/videos/`，列表页用双列封面网格（`layouts/videos/list.html`）：展示封面 + 标题链接 + **上传日期** + tags 小标签。封面图放 `hugo-site/static/images/`。
+
+**不接入视频源：** 详情页只保留可点击的 B 站（或其它平台）链接，**禁止**嵌入 `iframe` / 播放器 / 直链视频文件。访客点链接去原站观看。
+
 ### 上传时间（必填并展示）
 
 - `date` **必须**写成 B 站页面上的实际上传时间（含时区，如 `2026-06-18T11:00:44+08:00`），不要用「写入博客当天」冒充
@@ -132,10 +136,6 @@ cover = "/images/封面文件名.jpg"
 一句话简介。
 
 **B 站：** [https://www.bilibili.com/video/BVxxxxxx/](https://www.bilibili.com/video/BVxxxxxx/)
-
-<div style="position:relative;padding-top:56.25%;margin:1rem 0;">
-  <iframe src="//player.bilibili.com/player.html?bvid=BVxxxxxx&page=1&high_quality=1" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
-</div>
 ```
 
 字段约定：
@@ -146,9 +146,10 @@ cover = "/images/封面文件名.jpg"
 | `date` | B 站上传时间，必填；列表与详情都要能看到 |
 | `description` | 一句话简介，必填（详情 meta / 摘要用） |
 | `tags` | 2～3 个即可，列表页标题下展示 |
-| `bilibili` | 干净链接（去掉 spm / vd_source 等参数） |
+| `bilibili` | 干净链接（去掉 `spm` / `vd_source` 等参数）；正文用同一 URL 写成 Markdown 链接 |
 | `cover` | `/images/xxx.jpg`，统一用 `.jpg`；与正文封面图同一文件 |
-| iframe `bvid` | 从链接里的 `BVxxxx` 填入 |
+
+禁止：正文或模板里出现 B 站/`player.bilibili.com` 等 `iframe`、自托管 mp4/webm、第三方嵌入播放器。
 
 示例（蘑菇睡觉）：
 
@@ -159,9 +160,10 @@ description = 从蘑菇睡觉机制切入，讨论设计师为何这样安排。
 tags = 植物大战僵尸, 游戏杂谈, 游戏设计
 bilibili = https://www.bilibili.com/video/BV1WnjF62EAm/
 cover = /images/pvz-mushroom-sleep.jpg
+正文仅保留：**B 站：** [链接](同一 URL)
 ```
 
-验收：http://localhost:1313/videos/ 能看到封面、上传日期与标签；点进详情能播或跳转 B 站，且日期与 `date` 一致。
+验收：http://localhost:1313/videos/ 能看到封面、上传日期与标签；点进详情只有链接可跳转 B 站、**无内嵌播放器**，且日期与 `date` 一致。
 
 ## 边界
 
@@ -171,7 +173,7 @@ cover = /images/pvz-mushroom-sleep.jpg
 - 用户用中文时，页面与文章文案用中文
 - 改完说明：改了哪些文件、浏览器应看到什么、如何自己验证（如 `./bin/hugo.exe server -D -p 1313` → http://localhost:1313）
 - 命名与风格遵循上文「编码规范」
-- 新增视频时填写 B 站实际上传时间到 `date`，并确保列表/详情能看到该日期
+- 新增视频时填写 B 站实际上传时间到 `date`，并确保列表/详情能看到该日期；正文只写外链，不嵌 iframe / 播放器
 - 新增文章/视频时填写规范 `tags`（首页关键词云依赖它）；整站保持 Book 侧栏，勿擅自换布局风格
 - 改首页时保持关键词云规范（统一字号、×N、随机排布、多色），不要改回欢迎文案首页
 
@@ -191,3 +193,4 @@ cover = /images/pvz-mushroom-sleep.jpg
 - 不要提交密钥、`.env`、无意义大文件
 - 不要改用户未点名的配置（如乱改 git / Cursor 全局设置）
 - 不要把可手改源文件的改动只写进 `public/`（下次 build 会丢）
+- 不要在视频条目中嵌入 iframe / 播放器 / 自托管视频文件（只保留外链）

@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "为什么启动游戏要用启动器？"
 date = 2026-05-12T19:02:21+08:00
 draft = false
@@ -16,6 +16,3 @@ cover = "/images/why-game-launcher.jpg"
 
 **B 站：** [https://www.bilibili.com/video/BV1F85g6eEvu/](https://www.bilibili.com/video/BV1F85g6eEvu/)
 
-<div style="position:relative;padding-top:56.25%;margin:1rem 0;">
-  <iframe src="//player.bilibili.com/player.html?bvid=BV1F85g6eEvu&page=1&high_quality=1" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
-</div>

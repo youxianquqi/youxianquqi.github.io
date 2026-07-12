@@ -1,4 +1,4 @@
-+++
+﻿+++
 title = "PVZ传送带：设计师是如何优化伪随机的？"
 date = 2026-05-21T17:16:15+08:00
 draft = false
@@ -16,6 +16,3 @@ cover = "/images/pvz-conveyor-rng.jpg"
 
 **B 站：** [https://www.bilibili.com/video/BV1bLL86BELi/](https://www.bilibili.com/video/BV1bLL86BELi/)
 
-<div style="position:relative;padding-top:56.25%;margin:1rem 0;">
-  <iframe src="//player.bilibili.com/player.html?bvid=BV1bLL86BELi&page=1&high_quality=1" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
-</div>
