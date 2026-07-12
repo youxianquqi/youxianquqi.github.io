@@ -175,6 +175,66 @@ a {
   line-height: 1.7;
 }
 
+.keyword-cloud {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.05rem 1.2rem;
+  min-height: 18rem;
+  padding: 2rem 1.6rem 2.2rem;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 4px);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(47, 111, 78, 0.08), transparent 42%),
+    radial-gradient(circle at 82% 18%, rgba(29, 79, 122, 0.07), transparent 40%),
+    radial-gradient(circle at 70% 88%, rgba(143, 74, 56, 0.06), transparent 38%),
+    linear-gradient(165deg, #fffcf7 0%, #f7f4ee 100%);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.keyword-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--chip-border, var(--border));
+  background: var(--chip-bg, var(--accent-soft));
+  color: var(--chip-fg, var(--accent));
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 16px rgba(31, 41, 55, 0.05);
+  transform: translate(var(--dx, 0), var(--dy, 0)) rotate(var(--rot, 0deg));
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.keyword-chip:hover {
+  transform: translate(var(--dx, 0), calc(var(--dy, 0) - 3px)) rotate(var(--rot, 0deg)) scale(1.04);
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.1);
+  filter: saturate(1.08);
+  z-index: 1;
+}
+
+.keyword-count {
+  font-size: 0.78em;
+  font-weight: 800;
+  opacity: 0.72;
+}
+
+.keyword-empty {
+  color: var(--muted);
+}
+
+.keyword-empty code {
+  font-size: 0.92em;
+}
+
 .book-list {
   display: grid;
   gap: 1rem;

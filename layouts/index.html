@@ -1,11 +1,78 @@
 {{ define "main" }}
+{{ $tags := .Site.Taxonomies.tags.ByCount }}
 <section class="book-page">
   <header class="book-page-header">
     <p class="book-kicker">首页</p>
-    <h1>{{ .Title }}</h1>
-    {{ with .Content }}
-    <div class="book-page-intro">{{ . }}</div>
-    {{ end }}
+    <h1>关键词云</h1>
+    <p class="book-page-intro">汇总文章与视频的技术关键词；重复出现用 ×次数 标出，点击可打开该标签下的内容。</p>
   </header>
+
+  {{ if $tags }}
+  <div class="keyword-cloud" id="keyword-cloud" aria-label="技术关键词云">
+    {{ range $tags }}
+    {{ $count := .Count }}
+    <a
+      class="keyword-chip"
+      href="{{ .Page.RelPermalink }}"
+      title="{{ .Page.Title }} · {{ $count }} 次"
+      data-label="{{ .Page.Title }}"
+    >
+      <span class="keyword-name">{{ .Page.Title }}</span>{{ if gt $count 1 }}<span class="keyword-count">×{{ $count }}</span>{{ end }}
+    </a>
+    {{ end }}
+  </div>
+  <script>
+    (function () {
+      var cloud = document.getElementById("keyword-cloud");
+      if (!cloud) return;
+
+      var palettes = [
+        { bg: "#e7f1ea", fg: "#245a3e", border: "#b7d2c2" },
+        { bg: "#e4f3f1", fg: "#0f6b63", border: "#a8d4ce" },
+        { bg: "#e8f0f8", fg: "#1d4f7a", border: "#b0c9e0" },
+        { bg: "#f6efe3", fg: "#8a5a12", border: "#e0cba0" },
+        { bg: "#f6e9e5", fg: "#8f4a38", border: "#e0bdb2" },
+        { bg: "#eceff4", fg: "#3a4d63", border: "#c3ccd8" },
+        { bg: "#e9f2e4", fg: "#3f6234", border: "#bfd4b3" },
+        { bg: "#e6f4f7", fg: "#176574", border: "#a9d3dc" }
+      ];
+
+      function hashLabel(text) {
+        var h = 0;
+        for (var i = 0; i < text.length; i++) {
+          h = ((h << 5) - h) + text.charCodeAt(i);
+          h |= 0;
+        }
+        return Math.abs(h);
+      }
+
+      var chips = Array.prototype.slice.call(cloud.querySelectorAll(".keyword-chip"));
+      for (var i = chips.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = chips[i];
+        chips[i] = chips[j];
+        chips[j] = tmp;
+      }
+
+      chips.forEach(function (chip) {
+        var label = chip.getAttribute("data-label") || chip.textContent || "";
+        var tone = palettes[hashLabel(label) % palettes.length];
+        var dx = (Math.random() - 0.5) * 32;
+        var dy = (Math.random() - 0.5) * 40;
+        var rot = (Math.random() - 0.5) * 8;
+
+        chip.style.setProperty("--chip-bg", tone.bg);
+        chip.style.setProperty("--chip-fg", tone.fg);
+        chip.style.setProperty("--chip-border", tone.border);
+        chip.style.setProperty("--dx", dx.toFixed(1) + "px");
+        chip.style.setProperty("--dy", dy.toFixed(1) + "px");
+        chip.style.setProperty("--rot", rot.toFixed(2) + "deg");
+        cloud.appendChild(chip);
+      });
+    })();
+  </script>
+  {{ else }}
+  <p class="keyword-empty">还没有关键词。给文章或视频加上 <code>tags</code> 后会出现在这里。</p>
+  {{ end }}
 </section>
 {{ end }}

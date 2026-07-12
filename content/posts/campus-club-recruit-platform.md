@@ -4,6 +4,7 @@ date = 2026-07-10T14:00:00+08:00
 draft = false
 tags = ["Web", "推荐系统", "高校", "社团", "毕业设计"]
 description = "面向高校社团招新的全栈管理平台，覆盖学生端、社团端、管理端三端协同。"
+repo = "https://gitee.com/keaitui/end"
 +++
 
 **技术栈：** Spring Boot 3.2, Vue.js 3, MySQL 8.0, Redis, JWT, MyBatis-Plus, AI大模型API
