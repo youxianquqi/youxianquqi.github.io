@@ -11,7 +11,9 @@
   <div class="video-grid">
     {{ range (where .Pages "Draft" false).ByPublishDate.Reverse }}
     {{ $page := . }}
-    <a class="video-card" href="{{ $page.RelPermalink }}">
+    {{ $href := $page.Params.bilibili | default "" }}
+    {{ if $href }}
+    <a class="video-card" href="{{ $href }}" target="_blank" rel="noopener noreferrer">
       <div class="video-cover">
         {{ with $page.Params.cover }}
         <img src="{{ . | relURL }}" alt="{{ $page.Title }}" loading="lazy">
@@ -29,6 +31,7 @@
       </div>
       {{ end }}
     </a>
+    {{ end }}
     {{ else }}
     <p class="video-empty">还没有视频。</p>
     {{ end }}

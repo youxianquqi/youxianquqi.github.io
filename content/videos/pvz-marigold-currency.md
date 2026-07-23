@@ -6,13 +6,7 @@ tags = ["植物大战僵尸", "游戏杂谈", "游戏设计"]
 description = "从货币与数值博弈角度看金盏花：为什么说它是危险的设计。"
 bilibili = "https://www.bilibili.com/video/BV1WT7C6uE8v/"
 cover = "/images/pvz-marigold-currency.jpg"
+[build]
+  render = "link"
+  list = "always"
 +++
-
-![封面](/images/pvz-marigold-currency.jpg)
-
-**PVZ货币系统：为什么说金盏花是危险的设计?** | 游戏杂谈视频
-
-从《植物大战僵尸》的货币与数值博弈切入，讨论金盏花为何是「危险」的设计。
-
-**B 站：** [https://www.bilibili.com/video/BV1WT7C6uE8v/](https://www.bilibili.com/video/BV1WT7C6uE8v/)
-

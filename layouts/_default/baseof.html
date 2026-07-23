@@ -33,15 +33,6 @@
             {{ end }}
           </ul>
         </div>
-
-        <div class="book-nav-group">
-          <h2>视频</h2>
-          <ul>
-            {{ range (where .Site.RegularPages "Section" "videos").ByPublishDate.Reverse }}
-            <li><a href="{{ .RelPermalink }}" {{ if eq .RelPermalink $.RelPermalink }}class="active"{{ end }}>{{ .Title }}</a></li>
-            {{ end }}
-          </ul>
-        </div>
       </nav>
     </aside>
 
