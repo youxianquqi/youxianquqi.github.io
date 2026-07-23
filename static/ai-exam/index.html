@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>AI 编程合格考试</title>
+    <link rel="stylesheet" href="shared/exam.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1><span>AI</span> 编程合格考试</h1>
+      <p class="lead">
+        独立科目：只考 AI 协作编程正确使用方式。题库覆盖泄密、幻觉、假验证、乱改仓库、依赖陷阱等常见坑；
+        每次随机抽 20 题，限时 20 分钟。<strong>错满 5 题不合格</strong>（对 ≥16 题合格）。
+      </p>
+
+      <section class="card">
+        <h2>规则</h2>
+        <ul>
+          <li>题量：<strong>20</strong> 题/卷（8 判断 + 8 单选 + 4 多选）；题库约 <strong>100+</strong> 道随机抽</li>
+          <li>合格线：错题数 &lt; 5（即做错 5 题及以上不合格）</li>
+          <li>多选须全对才算该题正确；少选/多选/错选均算错</li>
+          <li>限时 20 分钟，到点自动交卷；考中不显示对错</li>
+        </ul>
+        <p class="note">考点：密钥与隐私、Prompt、审查与验证、XSS/幻觉 API、AI 不能替代基础学习等。</p>
+      </section>
+
+      <section class="card">
+        <h2>开始</h2>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="exam.html" id="btn-start">正式考试</a>
+          <a class="btn" href="practice.html">练习模式</a>
+          <a class="btn btn--ghost" href="practice.html?mode=wrong">错题本</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>最近成绩</h2>
+        <ul class="history-list" id="history-list">
+          <li class="meta">暂无记录</li>
+        </ul>
+      </section>
+
+      <p class="meta">与「前端综合合格考」相互独立，互不影响成绩。</p>
+    </div>
+
+    <script src="engine/storage.js"></script>
+    <script>
+      (function () {
+        const list = document.getElementById("history-list");
+        const history = AiExamStorage.loadHistory();
+        if (!history.length) return;
+        list.innerHTML = history
+          .slice(0, 8)
+          .map(function (h) {
+            const tag = h.passed
+              ? '<span class="pass-tag">合格</span>'
+              : '<span class="fail-tag">不合格</span>';
+            return (
+              "<li><span>" +
+              new Date(h.at).toLocaleString() +
+              "</span><span>对 " +
+              h.correctCount +
+              " / 错 " +
+              h.wrongCount +
+              " " +
+              tag +
+              "</span></li>"
+            );
+          })
+          .join("");
+
+        document.getElementById("btn-start").addEventListener("click", function (e) {
+          const p = AiExamStorage.loadPaper();
+          if (p && p.answers) {
+            if (!confirm("检测到未交卷记录，确定放弃并开始新考试？")) {
+              e.preventDefault();
+              return;
+            }
+            AiExamStorage.clearPaper();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>AI 编程考 · 作答中</title>
+    <link rel="stylesheet" href="shared/exam.css" />
+  </head>
+  <body>
+    <div class="exam-shell">
+      <div class="exam-topbar">
+        <div>
+          <strong>AI 编程考试</strong>
+          <span class="meta" id="progress-label">第 1 / 20 题</span>
+        </div>
+        <div class="timer" id="timer">20:00</div>
+        <div class="btn-row">
+          <button type="button" class="btn btn--ghost" id="btn-flag">标记</button>
+          <button type="button" class="btn btn--danger" id="btn-submit">交卷</button>
+        </div>
+      </div>
+
+      <main>
+        <article class="question-card" id="question-card">
+          <p class="meta">组卷中…</p>
+        </article>
+        <div class="q-nav">
+          <button type="button" class="btn" id="btn-prev">上一题</button>
+          <button type="button" class="btn btn--primary" id="btn-next">下一题</button>
+        </div>
+      </main>
+
+      <aside class="answer-sheet" id="answer-sheet" aria-label="答题卡">
+        <h3>答题卡</h3>
+        <div class="sheet-grid" id="sheet-grid"></div>
+        <p class="sheet-legend"><span>■ 已答</span> <span>黄框=标记</span></p>
+      </aside>
+    </div>
+
+    <div class="sheet-backdrop" id="sheet-backdrop"></div>
+    <button type="button" class="sheet-fab" id="sheet-fab" aria-controls="answer-sheet" aria-expanded="false">
+      答题卡
+    </button>
+
+    <script src="bank/loader.js"></script>
+    <script src="bank/ai-usage.js"></script>
+    <script src="engine/storage.js"></script>
+    <script src="engine/scoring.js"></script>
+    <script src="engine/timer.js"></script>
+    <script src="engine/draw.js"></script>
+    <script src="engine/exam-app.js"></script>
+  </body>
+</html>

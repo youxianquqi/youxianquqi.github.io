@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>AI 编程考 · 结果</title>
+    <link rel="stylesheet" href="shared/exam.css" />
+  </head>
+  <body>
+    <div class="wrap wrap--wide">
+      <div id="result-root"><p class="meta">加载中…</p></div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="index.html">返回首页</a>
+        <a class="btn" href="exam.html" id="btn-retry">再考一次</a>
+        <a class="btn btn--ghost" href="practice.html?mode=wrong">去错题本</a>
+      </div>
+    </div>
+
+    <script src="engine/storage.js"></script>
+    <script>
+      (function () {
+        const result = AiExamStorage.loadResult();
+        const root = document.getElementById("result-root");
+        if (!result) {
+          root.innerHTML = '<p class="lead">暂无成绩。请先<a href="exam.html">参加考试</a>。</p>';
+          return;
+        }
+        document.getElementById("btn-retry").addEventListener("click", function () {
+          AiExamStorage.clearPaper();
+        });
+
+        const TYPE_LABEL = { judge: "判断", single: "单选", multi: "多选" };
+        const LETTERS = "ABCDEFGH";
+        function escapeHtml(s) {
+          return String(s)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+        }
+        function fmt(arr) {
+          if (!arr || !arr.length) return "未作答";
+          return arr.map(function (i) {
+            return LETTERS[i];
+          }).join("、");
+        }
+
+        const heroClass = result.passed ? "is-pass" : "is-fail";
+        const verdict = result.passed ? "合格" : "不合格";
+        const reason = result.passed
+          ? "错题 " + result.wrongCount + " &lt; 5"
+          : "错题 " + result.wrongCount + " ≥ 5";
+
+        let html =
+          '<div class="score-hero ' +
+          heroClass +
+          '"><div class="score-num">' +
+          result.correctCount +
+          " / 20</div>" +
+          '<div class="meta">对 ' +
+          result.correctCount +
+          " · 错 " +
+          result.wrongCount +
+          " · 合格条件：错 &lt; 5</div>" +
+          '<div class="verdict">' +
+          verdict +
+          "（" +
+          reason +
+          "）" +
+          (result.autoSubmit ? " · 超时交卷" : "") +
+          "</div></div>";
+
+        result.details.forEach(function (d, idx) {
+          html +=
+            '<article class="review-item ' +
+            (d.correct ? "is-right" : "is-wrong") +
+            '"><div class="q-meta"><strong>第 ' +
+            (idx + 1) +
+            " 题</strong><span>" +
+            TYPE_LABEL[d.type] +
+            "</span><span>" +
+            (d.correct ? "✓" : "✗") +
+            '</span></div><p class="q-stem">' +
+            escapeHtml(d.stem) +
+            '</p><ul class="options">' +
+            d.options
+              .map(function (opt, oi) {
+                let cls = "option";
+                if (d.answer.indexOf(oi) !== -1) cls += " is-correct";
+                if (d.userAnswer.indexOf(oi) !== -1 && d.answer.indexOf(oi) === -1) cls += " is-wrong";
+                return (
+                  '<li class="' +
+                  cls +
+                  '"><span class="option-label">' +
+                  LETTERS[oi] +
+                  '.</span><span class="option-text">' +
+                  escapeHtml(opt) +
+                  "</span></li>"
+                );
+              })
+              .join("") +
+            '</ul><p class="meta">你的答案：' +
+            fmt(d.userAnswer) +
+            " · 正确答案：" +
+            fmt(d.answer) +
+            '</p><div class="explain">' +
+            escapeHtml(d.explain) +
+            "</div></article>";
+        });
+
+        root.innerHTML = html;
+      })();
+    </script>
+  </body>
+</html>

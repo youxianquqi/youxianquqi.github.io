@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>AI 编程考 · 练习</title>
+    <link rel="stylesheet" href="shared/exam.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="meta"><a href="index.html">← 首页</a></p>
+      <h1>练习模式</h1>
+      <p class="lead">即时反馈。可练全题库或错题本。</p>
+
+      <section class="card" id="setup-card">
+        <p>
+          <label>
+            来源
+            <select id="source">
+              <option value="all">全题库</option>
+              <option value="wrong">错题本</option>
+            </select>
+          </label>
+          &nbsp;
+          <label>
+            题量
+            <select id="count">
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+            </select>
+          </label>
+        </p>
+        <div class="btn-row">
+          <button type="button" class="btn btn--primary" id="btn-start">开始练习</button>
+          <button type="button" class="btn btn--ghost" id="btn-clear">清空错题本</button>
+        </div>
+        <p class="meta" id="wrong-count"></p>
+      </section>
+
+      <section id="practice-area" hidden>
+        <article class="question-card" id="question-card"></article>
+        <div id="feedback" hidden></div>
+        <div class="btn-row">
+          <button type="button" class="btn btn--primary" id="btn-check">检查</button>
+          <button type="button" class="btn" id="btn-next" hidden>下一题</button>
+          <button type="button" class="btn btn--ghost" id="btn-remove" hidden>移出错题本</button>
+        </div>
+        <p class="meta" id="practice-progress"></p>
+      </section>
+    </div>
+
+    <script src="bank/loader.js"></script>
+    <script src="bank/ai-usage.js"></script>
+    <script src="engine/storage.js"></script>
+    <script src="engine/scoring.js"></script>
+    <script src="engine/draw.js"></script>
+    <script>
+      (function () {
+        const TYPE_LABEL = { judge: "判断", single: "单选", multi: "多选" };
+        const TYPE_CLASS = { judge: "badge--judge", single: "badge--single", multi: "badge--multi" };
+        const LETTERS = "ABCDEFGH";
+        if (new URLSearchParams(location.search).get("mode") === "wrong") {
+          document.getElementById("source").value = "wrong";
+        }
+
+        let queue = [];
+        let index = 0;
+        let checked = false;
+
+        function escapeHtml(s) {
+          return String(s)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+        }
+
+        function updateWrong() {
+          document.getElementById("wrong-count").textContent =
+            "错题本 " + AiExamStorage.loadWrong().length + " 题";
+        }
+
+        function pool() {
+          return document.getElementById("source").value === "wrong"
+            ? AiExamStorage.loadWrong()
+            : AiExamDraw.collectBank();
+        }
+
+        function start() {
+          const p = pool();
+          if (!p.length) {
+            alert("题库/错题本为空");
+            return;
+          }
+          queue = AiExamDraw.drawPractice(p, Number(document.getElementById("count").value));
+          index = 0;
+          document.getElementById("setup-card").hidden = true;
+          document.getElementById("practice-area").hidden = false;
+          render();
+        }
+
+        function render() {
+          const q = queue[index];
+          checked = false;
+          document.getElementById("practice-progress").textContent =
+            index + 1 + " / " + queue.length;
+          document.getElementById("feedback").hidden = true;
+          document.getElementById("btn-check").hidden = false;
+          document.getElementById("btn-next").hidden = true;
+          document.getElementById("btn-remove").hidden = true;
+          const isMulti = q.type === "multi";
+          document.getElementById("question-card").innerHTML =
+            '<div class="q-meta"><span class="badge ' +
+            TYPE_CLASS[q.type] +
+            '">' +
+            TYPE_LABEL[q.type] +
+            '</span></div><p class="q-stem">' +
+            escapeHtml(q.stem) +
+            '</p><ul class="options" id="options">' +
+            q.options
+              .map(function (opt, oi) {
+                return (
+                  '<li class="option" data-oi="' +
+                  oi +
+                  '"><input type="' +
+                  (isMulti ? "checkbox" : "radio") +
+                  '" name="pq" value="' +
+                  oi +
+                  '" /><span class="option-label">' +
+                  LETTERS[oi] +
+                  '.</span><span class="option-text">' +
+                  escapeHtml(opt) +
+                  "</span></li>"
+                );
+              })
+              .join("") +
+            "</ul>";
+          document.querySelectorAll("#options .option").forEach(function (el) {
+            el.addEventListener("click", function (e) {
+              if (checked || e.target.tagName === "INPUT") return;
+              const input = el.querySelector("input");
+              if (isMulti) input.checked = !input.checked;
+              else input.checked = true;
+            });
+          });
+        }
+
+        function getUser() {
+          const selected = [];
+          document.querySelectorAll("#options input").forEach(function (inp) {
+            if (inp.checked) selected.push(Number(inp.value));
+          });
+          return selected;
+        }
+
+        document.getElementById("btn-start").addEventListener("click", start);
+        document.getElementById("btn-check").addEventListener("click", function () {
+          const q = queue[index];
+          const user = getUser();
+          const ok = AiExamScoring.equal(q.answer, user);
+          checked = true;
+          const fb = document.getElementById("feedback");
+          fb.hidden = false;
+          fb.className = "feedback " + (ok ? "feedback--ok" : "feedback--bad");
+          fb.innerHTML =
+            (ok ? "正确。" : "错误。") +
+            " 答案：" +
+            q.answer
+              .map(function (i) {
+                return LETTERS[i];
+              })
+              .join("、") +
+            '<div class="explain">' +
+            escapeHtml(q.explain) +
+            "</div>";
+          document.querySelectorAll("#options .option").forEach(function (el) {
+            const oi = Number(el.getAttribute("data-oi"));
+            if (q.answer.indexOf(oi) !== -1) el.classList.add("is-correct");
+            if (user.indexOf(oi) !== -1 && q.answer.indexOf(oi) === -1) el.classList.add("is-wrong");
+          });
+          document.getElementById("btn-check").hidden = true;
+          document.getElementById("btn-next").hidden = false;
+          if (!ok) {
+            AiExamStorage.addWrong([q]);
+            updateWrong();
+          } else if (document.getElementById("source").value === "wrong") {
+            document.getElementById("btn-remove").hidden = false;
+          }
+        });
+        document.getElementById("btn-next").addEventListener("click", function () {
+          if (index >= queue.length - 1) {
+            alert("练习结束");
+            location.href = "practice.html";
+            return;
+          }
+          index++;
+          render();
+        });
+        document.getElementById("btn-remove").addEventListener("click", function () {
+          AiExamStorage.removeWrong(queue[index].id);
+          updateWrong();
+          document.getElementById("btn-remove").hidden = true;
+        });
+        document.getElementById("btn-clear").addEventListener("click", function () {
+          if (confirm("清空错题本？")) {
+            AiExamStorage.clearWrong();
+            updateWrong();
+          }
+        });
+        updateWrong();
+      })();
+    </script>
+  </body>
+</html>

@@ -45,3 +45,5 @@ hugo-site/          ← git 根目录
 ```
 
 写文章/视频请带 `tags`（首页云图依赖）与 `description`。完整约定见 `AGENTS.md`。
+
+独立静态应用（不影响博客壳）：[AI 编程合格考试](https://youxianquqi.github.io/ai-exam/)（源文件在 `static/ai-exam/`）。
