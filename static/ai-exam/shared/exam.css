@@ -455,6 +455,27 @@ code {
   outline-offset: -2px;
 }
 
+.sheet-btn.is-right {
+  background: var(--accent-dim);
+  border-color: var(--pass);
+  color: #e8fff6;
+}
+
+.sheet-btn.is-wrong {
+  background: #5a2e2e;
+  border-color: var(--fail);
+  color: #ffc9c9;
+}
+
+.option.is-locked {
+  cursor: default;
+  opacity: 0.95;
+}
+
+#exam-feedback {
+  margin-top: 1rem;
+}
+
 .sheet-legend {
   margin-top: 0.75rem;
   font-size: 0.8rem;

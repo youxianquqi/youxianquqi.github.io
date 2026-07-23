@@ -1,5 +1,6 @@
 /**
  * AI 编程合格考 · 作答页
+ * 答完即显示对错与解析（单选/判断点选即出；多选需点「确认本题」）
  */
 (function () {
   const TYPE_LABEL = { judge: "判断", single: "单选", multi: "多选" };
@@ -18,6 +19,18 @@
       .replace(/"/g, "&quot;");
   }
 
+  function ensureRevealed() {
+    if (!paper.revealed || paper.revealed.length !== paper.questions.length) {
+      paper.revealed = paper.questions.map(function (_, i) {
+        const q = paper.questions[i];
+        const ans = paper.answers[i] || [];
+        // 续考：已作答的判断/单选视为已揭晓；多选仅在曾揭晓时保留
+        if (q.type === "multi") return false;
+        return ans.length > 0;
+      });
+    }
+  }
+
   function ensurePaper() {
     const existing = AiExamStorage.loadPaper();
     if (
@@ -32,7 +45,6 @@
       return existing;
     }
     if (existing) {
-      // 残缺续考数据（无答案键等）直接作废重抽
       AiExamStorage.clearPaper();
     }
     const report = AiExamDraw.validateBank();
@@ -42,6 +54,9 @@
       return null;
     }
     paper = AiExamDraw.drawExam();
+    paper.revealed = paper.questions.map(function () {
+      return false;
+    });
     AiExamStorage.savePaper(paper);
     return paper;
   }
@@ -54,19 +69,34 @@
     return paper.answers[i] || [];
   }
 
+  function isRevealed(i) {
+    return !!(paper.revealed && paper.revealed[i]);
+  }
+
   function setAnswer(i, arr) {
     paper.answers[i] = AiExamScoring.normalize(arr);
     save();
     renderSheet();
   }
 
+  function reveal(i) {
+    ensureRevealed();
+    paper.revealed[i] = true;
+    save();
+  }
+
   function renderSheet() {
+    ensureRevealed();
     document.getElementById("sheet-grid").innerHTML = paper.questions
       .map(function (q, i) {
         const answered = (paper.answers[i] || []).length > 0;
+        const shown = isRevealed(i);
+        const ok = shown && AiExamScoring.equal(q.answer, paper.answers[i] || []);
         const cls = [
           "sheet-btn",
           answered ? "is-answered" : "",
+          shown && ok ? "is-right" : "",
+          shown && !ok ? "is-wrong" : "",
           paper.flags[i] ? "is-flagged" : "",
           i === paper.currentIndex ? "is-current" : "",
         ]
@@ -77,8 +107,49 @@
       .join("");
   }
 
+  function applyFeedbackUI(i) {
+    const q = paper.questions[i];
+    const user = getAnswer(i);
+    const ok = AiExamScoring.equal(q.answer, user);
+    const card = document.getElementById("question-card");
+
+    document.querySelectorAll("#options .option").forEach(function (el) {
+      const oi = Number(el.getAttribute("data-oi"));
+      el.classList.remove("is-selected", "is-correct", "is-wrong");
+      if (q.answer.indexOf(oi) !== -1) el.classList.add("is-correct");
+      if (user.indexOf(oi) !== -1 && q.answer.indexOf(oi) === -1) el.classList.add("is-wrong");
+      const input = el.querySelector("input");
+      if (input) input.disabled = true;
+      el.classList.add("is-locked");
+    });
+
+    let fb = document.getElementById("exam-feedback");
+    if (!fb) {
+      fb = document.createElement("div");
+      fb.id = "exam-feedback";
+      card.appendChild(fb);
+    }
+    fb.hidden = false;
+    fb.className = "feedback " + (ok ? "feedback--ok" : "feedback--bad");
+    fb.innerHTML =
+      (ok ? "回答正确。" : "回答错误。") +
+      " 正确答案：" +
+      q.answer
+        .map(function (ai) {
+          return LETTERS[ai];
+        })
+        .join("、") +
+      '<div class="explain">' +
+      escapeHtml(q.explain || "") +
+      "</div>";
+
+    const confirmBtn = document.getElementById("btn-confirm-answer");
+    if (confirmBtn) confirmBtn.hidden = true;
+  }
+
   function syncFromInputs() {
     const i = paper.currentIndex;
+    if (isRevealed(i)) return;
     const q = paper.questions[i];
     const selected = [];
     document.querySelectorAll("#options input").forEach(function (inp) {
@@ -92,23 +163,33 @@
       const oi = Number(el.getAttribute("data-oi"));
       el.classList.toggle("is-selected", selected.indexOf(oi) !== -1);
     });
+
+    if (q.type !== "multi" && selected.length > 0) {
+      reveal(i);
+      applyFeedbackUI(i);
+      renderSheet();
+    } else if (q.type === "multi") {
+      const confirmBtn = document.getElementById("btn-confirm-answer");
+      if (confirmBtn) confirmBtn.hidden = selected.length === 0;
+    }
   }
 
   function renderQuestion() {
+    ensureRevealed();
     const i = paper.currentIndex;
     const q = paper.questions[i];
     const user = getAnswer(i);
     const isMulti = q.type === "multi";
+    const locked = isRevealed(i);
 
     document.getElementById("progress-label").textContent =
       "第 " + (i + 1) + " / 20 题 · 错满 5 题不合格";
 
-    const tip =
-      q.type === "multi"
-        ? '<p class="meta">多选题：选出所有正确项（须全对）</p>'
-        : q.type === "judge"
-          ? '<p class="meta">判断题</p>'
-          : '<p class="meta">单选题</p>';
+    const tip = isMulti
+      ? '<p class="meta">多选题：选出所有正确项后点「确认本题」（须全对）</p>'
+      : q.type === "judge"
+        ? '<p class="meta">判断题：点选后立即显示对错与解析</p>'
+        : '<p class="meta">单选题：点选后立即显示对错与解析</p>';
 
     document.getElementById("question-card").innerHTML =
       '<div class="q-meta"><span class="badge ' +
@@ -136,6 +217,7 @@
             oi +
             '"' +
             (checked ? " checked" : "") +
+            (locked ? " disabled" : "") +
             ' /><span class="option-label">' +
             LETTERS[oi] +
             '.</span><span class="option-text">' +
@@ -144,22 +226,47 @@
           );
         })
         .join("") +
-      "</ul>";
+      "</ul>" +
+      (isMulti && !locked
+        ? '<div class="btn-row" style="margin-top:1rem"><button type="button" class="btn btn--primary" id="btn-confirm-answer"' +
+          (user.length ? "" : " hidden") +
+          ">确认本题</button></div>"
+        : "") +
+      '<div id="exam-feedback" hidden></div>';
 
     document.getElementById("btn-prev").disabled = i === 0;
     document.getElementById("btn-next").textContent = i === 19 ? "最后一题" : "下一题";
     document.getElementById("btn-flag").textContent = paper.flags[i] ? "取消标记" : "标记";
 
-    document.querySelectorAll("#options .option").forEach(function (el) {
-      el.addEventListener("click", function (e) {
-        if (e.target.tagName === "INPUT") return;
-        const input = el.querySelector("input");
-        if (isMulti) input.checked = !input.checked;
-        else input.checked = true;
-        syncFromInputs();
+    if (!locked) {
+      document.querySelectorAll("#options .option").forEach(function (el) {
+        el.addEventListener("click", function (e) {
+          if (isRevealed(paper.currentIndex)) return;
+          if (e.target.tagName === "INPUT") return;
+          const input = el.querySelector("input");
+          if (isMulti) input.checked = !input.checked;
+          else input.checked = true;
+          syncFromInputs();
+        });
+        el.querySelector("input").addEventListener("change", syncFromInputs);
       });
-      el.querySelector("input").addEventListener("change", syncFromInputs);
-    });
+      const confirmBtn = document.getElementById("btn-confirm-answer");
+      if (confirmBtn) {
+        confirmBtn.addEventListener("click", function () {
+          if (isRevealed(i)) return;
+          const selected = getAnswer(i);
+          if (!selected.length) {
+            alert("请至少选择一项");
+            return;
+          }
+          reveal(i);
+          applyFeedbackUI(i);
+          renderSheet();
+        });
+      }
+    } else {
+      applyFeedbackUI(i);
+    }
 
     renderSheet();
   }
@@ -173,8 +280,8 @@
   function doSubmit(auto) {
     if (submitting) return;
     if (!auto) {
-      const unanswered = paper.questions.filter(function (_, i) {
-        return !(paper.answers[i] && paper.answers[i].length);
+      const unanswered = paper.questions.filter(function (_, idx) {
+        return !(paper.answers[idx] && paper.answers[idx].length);
       }).length;
       if (!confirm((unanswered ? "还有 " + unanswered + " 题未作答。\n" : "") + "确定交卷？")) return;
     }
@@ -279,6 +386,7 @@
 
   paper = ensurePaper();
   if (!paper) return;
+  ensureRevealed();
   bind();
   renderQuestion();
   startTimer();

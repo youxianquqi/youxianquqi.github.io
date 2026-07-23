@@ -10,7 +10,7 @@
     <div class="wrap">
       <p class="meta"><a href="index.html">← 首页</a></p>
       <h1>练习模式</h1>
-      <p class="lead">即时反馈。可练全题库或错题本。</p>
+      <p class="lead">答完即出对错与解析。单选/判断点选即判；多选勾选后点「确认本题」。可练全题库或错题本。</p>
 
       <section class="card" id="setup-card">
         <p>
@@ -42,7 +42,7 @@
         <article class="question-card" id="question-card"></article>
         <div id="feedback" hidden></div>
         <div class="btn-row">
-          <button type="button" class="btn btn--primary" id="btn-check">检查</button>
+          <button type="button" class="btn btn--primary" id="btn-check" hidden>确认本题</button>
           <button type="button" class="btn" id="btn-next" hidden>下一题</button>
           <button type="button" class="btn btn--ghost" id="btn-remove" hidden>移出错题本</button>
         </div>
@@ -106,7 +106,8 @@
           document.getElementById("practice-progress").textContent =
             index + 1 + " / " + queue.length;
           document.getElementById("feedback").hidden = true;
-          document.getElementById("btn-check").hidden = false;
+          document.getElementById("btn-check").hidden = q.type !== "multi";
+          document.getElementById("btn-check").disabled = true;
           document.getElementById("btn-next").hidden = true;
           document.getElementById("btn-remove").hidden = true;
           const isMulti = q.type === "multi";
@@ -115,7 +116,9 @@
             TYPE_CLASS[q.type] +
             '">' +
             TYPE_LABEL[q.type] +
-            '</span></div><p class="q-stem">' +
+            '</span></div><p class="meta">' +
+            (isMulti ? "多选：选完后点「确认本题」" : "点选后立即出结果") +
+            '</p><p class="q-stem">' +
             escapeHtml(q.stem) +
             '</p><ul class="options" id="options">' +
             q.options
@@ -142,7 +145,9 @@
               const input = el.querySelector("input");
               if (isMulti) input.checked = !input.checked;
               else input.checked = true;
+              onPick();
             });
+            el.querySelector("input").addEventListener("change", onPick);
           });
         }
 
@@ -154,10 +159,31 @@
           return selected;
         }
 
-        document.getElementById("btn-start").addEventListener("click", start);
-        document.getElementById("btn-check").addEventListener("click", function () {
+        function onPick() {
+          if (checked) return;
           const q = queue[index];
           const user = getUser();
+          document.querySelectorAll("#options .option").forEach(function (el) {
+            el.classList.toggle(
+              "is-selected",
+              user.indexOf(Number(el.getAttribute("data-oi"))) !== -1
+            );
+          });
+          if (q.type === "multi") {
+            document.getElementById("btn-check").disabled = user.length === 0;
+            return;
+          }
+          if (user.length) check();
+        }
+
+        function check() {
+          if (checked) return;
+          const q = queue[index];
+          const user = getUser();
+          if (!user.length) {
+            alert("请先选择答案");
+            return;
+          }
           const ok = AiExamScoring.equal(q.answer, user);
           checked = true;
           const fb = document.getElementById("feedback");
@@ -178,6 +204,8 @@
             const oi = Number(el.getAttribute("data-oi"));
             if (q.answer.indexOf(oi) !== -1) el.classList.add("is-correct");
             if (user.indexOf(oi) !== -1 && q.answer.indexOf(oi) === -1) el.classList.add("is-wrong");
+            const input = el.querySelector("input");
+            if (input) input.disabled = true;
           });
           document.getElementById("btn-check").hidden = true;
           document.getElementById("btn-next").hidden = false;
@@ -187,7 +215,10 @@
           } else if (document.getElementById("source").value === "wrong") {
             document.getElementById("btn-remove").hidden = false;
           }
-        });
+        }
+
+        document.getElementById("btn-start").addEventListener("click", start);
+        document.getElementById("btn-check").addEventListener("click", check);
         document.getElementById("btn-next").addEventListener("click", function () {
           if (index >= queue.length - 1) {
             alert("练习结束");
