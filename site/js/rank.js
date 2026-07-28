@@ -1,0 +1,253 @@
+// rank.js — 首页：综合/分源标签热榜 + 搜索过滤
+import { initThemeToggle } from "./theme.js";
+import { loadMeta, loadLatest, loadSeries, loadAcgDict, buildKindMap, escapeHTML } from "./data.js";
+import { byKeyword } from "./filters.js";
+
+const state = { board: "merged", kind: "all", kw: "" };
+let meta = null;
+let latest = null;
+let series = null;
+let kindMap = new Map();
+let sourceKeys = [];
+let hasSpark = false;
+
+const $ = (sel) => document.querySelector(sel);
+
+const ICON = {
+  up: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>',
+  down: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10"/><path d="M17 8v9H8"/></svg>',
+  flat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M5 12h14"/></svg>',
+  arrow: '<svg class="rank-tag__arrow icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>',
+  db: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>',
+  tag: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2H2v10l9.3 9.3a1 1 0 0 0 1.4 0l8.6-8.6a1 1 0 0 0 0-1.4z"/><circle cx="7" cy="7" r="1.2"/></svg>',
+  clock: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+  searchX: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="m8.5 8.5 5 5m0-5-5 5"/></svg>',
+};
+
+function deltaHTML(dr) {
+  if (dr === null || dr === undefined) return '<span class="delta delta--new">NEW</span>';
+  if (dr > 0) return `<span class="delta delta--up">${ICON.up}${dr}</span>`;
+  if (dr < 0) return `<span class="delta delta--down">${ICON.down}${Math.abs(dr)}</span>`;
+  return `<span class="delta delta--flat">${ICON.flat}</span>`;
+}
+
+function rankNoHTML(rank) {
+  if (rank <= 3) return `<span class="rank-no rank-no--medal rank-no--${rank}">${rank}</span>`;
+  return `<span class="rank-no">${rank}</span>`;
+}
+
+// 行内 7 日迷你趋势（纯 SVG，仅综合榜桌面显示）
+function sparkSVG(tag) {
+  const entry = series && series[tag];
+  const daily = entry && entry.daily && entry.daily.merged;
+  if (!daily || daily.length < 1) return '<span class="rank-spark col-spark"></span>';
+  const pts = daily.slice(-7).map((p) => p[1]);
+  if (pts.length === 0) return '<span class="rank-spark col-spark"></span>';
+  const w = 96;
+  const h = 30;
+  const pad = 3;
+  const min = Math.min(...pts);
+  const max = Math.max(...pts);
+  const span = max - min || 1;
+  const stepX = pts.length > 1 ? (w - pad * 2) / (pts.length - 1) : 0;
+  const xy = pts.map((v, i) => [pts.length > 1 ? pad + i * stepX : w / 2, h - pad - ((v - min) / span) * (h - pad * 2)]);
+  const line = xy.map((p, i) => `${i ? "L" : "M"}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(" ");
+  const area = `${line} L${xy[xy.length - 1][0].toFixed(1)},${h - pad} L${xy[0][0].toFixed(1)},${h - pad} Z`;
+  const last = xy[xy.length - 1];
+  return `<span class="rank-spark col-spark"><svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true"><path class="spark-area" fill="currentColor" d="${area}"/><path class="spark-line" d="${line}"/><circle class="spark-dot" cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2.2"/></svg></span>`;
+}
+
+// 覆盖源点阵：实心=该平台在榜。归一化分数在头部高度聚集，
+// 「几个平台同时在榜」比分数本身更能说明信号强弱
+function dotsHTML(item) {
+  const hit = new Set(item.sources_hit || []);
+  const names = sourceKeys.map((s) => `${meta.source_names[s] || s}${hit.has(s) ? "" : "（未上榜）"}`);
+  const dots = sourceKeys.map((s) => `<i class="${hit.has(s) ? "on" : ""}"></i>`).join("");
+  return `<span class="rank-dots col-dots" title="${escapeHTML(names.join(" · "))}">${dots}</span>`;
+}
+
+function rowHTML(item, i, isMerged, scale) {
+  const tag = escapeHTML(item.tag);
+  const pct = scale(item.score);
+  const dots = isMerged ? dotsHTML(item) : '<span class="rank-dots col-dots"></span>';
+  const spark = isMerged ? sparkSVG(item.tag) : '<span class="rank-spark col-spark"></span>';
+  const top1 = isMerged && item.rank === 1 ? " rank-row--top1" : "";
+  return `<li class="rank-row${top1}" style="--row-delay:${Math.min(i, 20) * 22}ms" data-tag="${tag}" role="link" tabindex="0" aria-label="查看 ${tag} 趋势">
+    ${rankNoHTML(item.rank)}
+    <span class="rank-tag"><span class="rank-tag__name">${tag}</span>${ICON.arrow}</span>
+    <span class="rank-score"><span class="rank-score__num">${item.score.toFixed(1)}</span><span class="rank-score__bar"><i style="width:0%" data-w="${pct}"></i></span></span>
+    <span class="rank-delta col-delta">${deltaHTML(item.delta_rank)}</span>
+    ${dots}
+    ${spark}
+  </li>`;
+}
+
+// 分数条按当前可见榜单的区间相对缩放：绝对 0–100 刻度下
+// 头部（如 100 / 95.7 / 93.5）几乎等长，看不出差距
+function makeScale(list) {
+  const scores = list.map((x) => x.score);
+  const max = Math.max(...scores);
+  const min = Math.min(...scores);
+  const span = max - min;
+  if (span < 0.05) return () => 100;
+  return (score) => 8 + 92 * ((score - min) / span);
+}
+
+function byKind(list, kind) {
+  if (!kind || kind === "all") return list;
+  return list.filter((item) => kindMap.get(item.tag) === kind);
+}
+
+function renderKindTabs() {
+  const tabs = $("#kind-tabs");
+  if (!tabs) return;
+  tabs.querySelectorAll("button").forEach((btn) => {
+    const active = btn.dataset.kind === state.kind;
+    btn.classList.toggle("is-active", active);
+    btn.setAttribute("aria-selected", active ? "true" : "false");
+    btn.onclick = () => {
+      state.kind = btn.dataset.kind;
+      renderKindTabs();
+      renderBoard();
+    };
+  });
+}
+
+function renderTabs() {
+  const tabs = $("#board-tabs");
+  tabs.innerHTML = meta.sources
+    .map(
+      (s) =>
+        `<button type="button" role="tab" data-src="${s}" class="${s === state.board ? "is-active" : ""}" aria-selected="${s === state.board}">${escapeHTML(meta.source_names[s] || s)}</button>`
+    )
+    .join("");
+  tabs.querySelectorAll("button").forEach((btn) =>
+    btn.addEventListener("click", () => {
+      state.board = btn.dataset.src;
+      tabs.querySelectorAll("button").forEach((b) => {
+        b.classList.toggle("is-active", b === btn);
+        b.setAttribute("aria-selected", b === btn ? "true" : "false");
+      });
+      renderBoard();
+    })
+  );
+}
+
+function renderBoard() {
+  const isMerged = state.board === "merged";
+  const board = $("#board");
+  board.classList.toggle("board--src", !isMerged);
+  $("#board-date").textContent = `${latest.date} 快照`;
+
+  let list = byKeyword(latest.boards[state.board] || [], state.kw);
+  list = byKind(list, state.kind);
+  // 类型筛选后重排名次展示（不改动原始数据）
+  list = list.map((item, i) => Object.assign({}, item, { rank: i + 1 }));
+
+  const ol = $("#rank-list");
+  const status = $("#board-status");
+
+  if (!list.length) {
+    ol.innerHTML = "";
+    const hint =
+      state.kind !== "all"
+        ? "当前类型下暂无上榜标签（词典有词但源站未出现则不上热度榜）"
+        : `没有匹配「${escapeHTML(state.kw)}」的标签`;
+    status.innerHTML = `<div class="empty">
+      ${ICON.searchX}
+      <p>${hint}</p>
+      <span class="meta">试试切换「全部 / 套路 / 萌属性 / IP」，或换数据源</span>
+    </div>`;
+    return;
+  }
+
+  const hasDelta = list.some((x) => x.delta_rank !== null && x.delta_rank !== undefined);
+  board.classList.toggle("board--nodelta", !hasDelta);
+  board.classList.toggle("board--nospark", !hasSpark);
+  renderLegend(hasDelta, isMerged);
+
+  status.innerHTML = "";
+  const scale = makeScale(list);
+  ol.innerHTML = list.map((item, i) => rowHTML(item, i, isMerged, scale)).join("");
+
+  requestAnimationFrame(() => {
+    ol.querySelectorAll(".rank-score__bar > i").forEach((el) => {
+      el.style.width = el.dataset.w + "%";
+    });
+  });
+
+  ol.querySelectorAll(".rank-row").forEach((row) => {
+    const go = () => {
+      location.href = `tag.html#name=${encodeURIComponent(row.dataset.tag)}`;
+    };
+    row.addEventListener("click", go);
+    row.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        go();
+      }
+    });
+  });
+}
+
+// 榜头图例：只说明当前真正显示出来的编码方式
+function renderLegend(hasDelta, isMerged) {
+  const parts = ['<span>分数条 = 当前榜单区间相对刻度</span>'];
+  if (isMerged) parts.push("<span>圆点 = 覆盖平台，实心为在榜</span>");
+  if (!hasDelta) parts.push('<span class="board__flag">首日快照 · 暂无升降</span>');
+  $("#board-legend").innerHTML = parts.join("");
+}
+
+// 今日风向：由 Top1-3 拼一句静态文案
+function renderHero() {
+  const top = latest.boards.merged.slice(0, 3);
+  if (!top.length) return;
+  const names = top.map((t) => `<strong>${escapeHTML(t.tag)}</strong>`).join("、");
+  const rising = top.filter((t) => (t.delta_rank || 0) > 0).length;
+  const tail = rising >= 2 ? "，整体走强" : top.some((t) => (t.delta_rank || 0) < 0) ? "，格局微调" : "";
+  $("#wind-text").innerHTML = `${names} 领跑题材风向${tail}。`;
+  $("#wind-date").textContent = `${latest.date} 快照`;
+  $("#wind-line").hidden = false;
+}
+
+function showSkeleton() {
+  $("#board-status").innerHTML = Array.from({ length: 8 })
+    .map(() => '<div class="skeleton-row"><i></i><i></i><i></i><i></i><i></i></div>')
+    .join("");
+}
+
+function showError(err) {
+  console.error(err);
+  $("#board-status").innerHTML = `<div class="load-error">
+    <strong>数据加载失败</strong>
+    请通过本地服务器访问本站：<code>npx serve 次元热度</code><br />
+    直接双击打开 html 文件时浏览器会拦截 JSON 请求
+  </div>`;
+}
+
+async function init() {
+  initThemeToggle();
+  showSkeleton();
+  $("#search-input").addEventListener("input", (e) => {
+    state.kw = e.target.value;
+    renderBoard();
+  });
+  try {
+    [meta, latest] = await Promise.all([loadMeta(), loadLatest()]);
+    series = await loadSeries().catch(() => null);
+    const dict = await loadAcgDict().catch(() => null);
+    kindMap = buildKindMap(dict);
+    sourceKeys = meta.sources.filter((s) => s !== "merged");
+    hasSpark =
+      !!series &&
+      Object.values(series).some((e) => ((e.daily && e.daily.merged) || []).length >= 2);
+    renderHero();
+    renderTabs();
+    renderKindTabs();
+    renderBoard();
+  } catch (err) {
+    showError(err);
+  }
+}
+
+init();

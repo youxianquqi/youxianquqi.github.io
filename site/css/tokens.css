@@ -1,0 +1,168 @@
+/* ============================================================
+   次元热度 · Design Tokens v2.0
+   「墨蓝风向台」—— 深色主打 / 浅色「日间文库」变体
+   借鉴 AI 跑分榜的排行榜语法，气质是题材风向仪而非科技 SaaS
+   纯 UI 无插画，装饰仅用极弱网格 + 两处低对比径向光
+   ============================================================ */
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* ---------- 品牌 · 冰蓝（非紫） ---------- */
+  --brand: #5eb6ff;
+  --brand-2: #3b8eff;
+  --brand-ink: #9fd2ff;
+  --brand-bg: rgba(94, 182, 255, 0.1);
+  --brand-line: rgba(94, 182, 255, 0.32);
+  --grad-brand: linear-gradient(135deg, #5eb6ff 0%, #3b8eff 100%);
+  --grad-text: linear-gradient(100deg, #cfe8ff 0%, #5eb6ff 55%, #3b8eff 100%);
+
+  /* ---------- 升降 · 青 / 玫 ---------- */
+  --up: #2dd4bf;
+  --up-ink: #6fe8d6;
+  --up-bg: rgba(45, 212, 191, 0.1);
+  --up-line: rgba(45, 212, 191, 0.28);
+  --down: #fb7185;
+  --down-ink: #fda4b3;
+  --down-bg: rgba(251, 113, 133, 0.1);
+  --down-line: rgba(251, 113, 133, 0.28);
+  --flat: #7f92ad;
+
+  /* ---------- Top3 序号 · 低饱和 ---------- */
+  --no1: #d9b26a;
+  --no2: #a8bdd4;
+  --no3: #c18a63;
+
+  /* ---------- 中性 · 墨蓝 ---------- */
+  --bg: #0b1220;
+  --bg-2: #080e19;
+  --surface: #121a2b;
+  --surface-2: #182238;
+  --surface-3: #1f2c47;
+  --glass: rgba(11, 18, 32, 0.78);
+  --border: rgba(140, 180, 235, 0.12);
+  --border-strong: rgba(140, 180, 235, 0.26);
+  --ink: #eaf2fc;
+  --ink-2: #b8c8de;
+  --muted: #8296b3;
+  --faint: #5a6f8c;
+
+  /* ---------- 阴影与光（克制） ---------- */
+  --shadow-sm: 0 1px 2px rgba(3, 8, 18, 0.5), 0 2px 8px rgba(3, 8, 18, 0.32);
+  --shadow-md: 0 4px 14px rgba(3, 8, 18, 0.45), 0 12px 32px rgba(3, 8, 18, 0.35);
+  --shadow-lg: 0 12px 40px rgba(3, 8, 18, 0.55);
+  --line-glow: 0 0 0 1px rgba(94, 182, 255, 0.16);
+  --ring-focus: 0 0 0 3px rgba(94, 182, 255, 0.32);
+
+  /* ---------- 分数条 / spark ---------- */
+  --score-track: rgba(140, 180, 235, 0.14);
+  --score-fill: linear-gradient(90deg, #3b8eff, #5eb6ff);
+  --spark-line: #5eb6ff;
+
+  /* ---------- 背景装饰（极弱） ---------- */
+  --decor-blob-1: radial-gradient(50rem 24rem at 86% -12%, rgba(94, 182, 255, 0.09), transparent 62%);
+  --decor-blob-2: radial-gradient(40rem 22rem at -10% 22%, rgba(45, 212, 191, 0.05), transparent 62%);
+  --decor-blob-3: radial-gradient(42rem 26rem at 50% 118%, rgba(59, 142, 255, 0.05), transparent 62%);
+  --decor-grid-line: rgba(140, 180, 235, 0.045);
+  --site-art-image: url("../tagheat-anime-bg.png");
+  --site-art-veil: linear-gradient(180deg, rgba(11, 18, 32, 0.18) 0%, rgba(11, 18, 32, 0.55) 48%, #0b1220 94%);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --brand: #2f7fe0;
+  --brand-2: #1f6fd0;
+  --brand-ink: #1f6fd0;
+  --brand-bg: rgba(47, 127, 224, 0.08);
+  --brand-line: rgba(47, 127, 224, 0.3);
+  --grad-brand: linear-gradient(135deg, #4d95ec 0%, #1f6fd0 100%);
+  --grad-text: linear-gradient(100deg, #1f6fd0 0%, #2f7fe0 60%, #4d95ec 100%);
+
+  --up: #0f9d8a;
+  --up-ink: #0b8a79;
+  --up-bg: rgba(15, 157, 138, 0.08);
+  --up-line: rgba(15, 157, 138, 0.26);
+  --down: #d8556a;
+  --down-ink: #c24357;
+  --down-bg: rgba(216, 85, 106, 0.08);
+  --down-line: rgba(216, 85, 106, 0.26);
+  --flat: #8a97ab;
+
+  --no1: #c69a4a;
+  --no2: #8ba0ba;
+  --no3: #b0764e;
+
+  --bg: #eef3fa;
+  --bg-2: #e6edf7;
+  --surface: #ffffff;
+  --surface-2: #f1f6fc;
+  --surface-3: #e4edf9;
+  --glass: rgba(255, 255, 255, 0.8);
+  --border: rgba(28, 76, 140, 0.12);
+  --border-strong: rgba(28, 76, 140, 0.24);
+  --ink: #16273f;
+  --ink-2: #3c4f6d;
+  --muted: #6a7d9c;
+  --faint: #9aa9c2;
+
+  --shadow-sm: 0 1px 2px rgba(23, 60, 120, 0.06), 0 2px 8px rgba(23, 60, 120, 0.05);
+  --shadow-md: 0 4px 14px rgba(23, 60, 120, 0.07), 0 12px 32px rgba(23, 60, 120, 0.07);
+  --shadow-lg: 0 12px 40px rgba(23, 60, 120, 0.12);
+  --line-glow: 0 0 0 1px rgba(47, 127, 224, 0.14);
+  --ring-focus: 0 0 0 3px rgba(47, 127, 224, 0.28);
+
+  --score-track: rgba(28, 76, 140, 0.12);
+  --score-fill: linear-gradient(90deg, #1f6fd0, #4d95ec);
+  --spark-line: #2f7fe0;
+
+  --decor-blob-1: radial-gradient(50rem 24rem at 86% -12%, rgba(47, 127, 224, 0.07), transparent 62%);
+  --decor-blob-2: radial-gradient(40rem 22rem at -10% 22%, rgba(77, 149, 236, 0.09), transparent 62%);
+  --decor-blob-3: radial-gradient(42rem 26rem at 50% 118%, rgba(47, 127, 224, 0.05), transparent 62%);
+  --decor-grid-line: rgba(28, 76, 140, 0.05);
+  --site-art-image: url("../tagheat-anime-bg-light.png");
+  --site-art-veil: linear-gradient(180deg, rgba(238, 243, 250, 0.22) 0%, rgba(238, 243, 250, 0.52) 56%, #eef3fa 94%);
+}
+
+:root {
+  /* ---------- 字体 ---------- */
+  --font-brand: "Outfit", "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-sans: "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", "Source Han Sans SC", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-num: "JetBrains Mono", "Cascadia Code", "SF Mono", Consolas, monospace;
+  --fs-xs: 0.95rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: clamp(1.5rem, 4vw, 2rem);
+  --fs-display: clamp(2.4rem, 6vw, 3.4rem);
+
+  /* ---------- 圆角 ---------- */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 20px;
+  --r-full: 999px;
+
+  /* ---------- 间距 ---------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+
+  /* ---------- 动效 ---------- */
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 360ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ---------- 布局 ---------- */
+  --maxw: 66rem;
+  --topbar-h: 60px;
+  --z-topbar: 40;
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">TagHeat color quill</title>
+  <defs>
+    <linearGradient id="shaft" x1="11" y1="54" x2="49" y2="8" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#236FA8"/>
+      <stop offset=".55" stop-color="#2BA9C2"/>
+      <stop offset="1" stop-color="#5EB6FF"/>
+    </linearGradient>
+    <linearGradient id="trend" x1="23" y1="53" x2="59" y2="39" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF"/>
+      <stop offset=".55" stop-color="#E5B85C"/>
+      <stop offset="1" stop-color="#FB7185"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Color feather pieces -->
+  <path fill="#5EB6FF" d="M28.5 36.2 36 13.5 51.8 4.8 44 20.2z"/>
+  <path fill="#80CBF2" d="m37.1 22.3 14.7-17.5-2.2 15.1-11.8 7.4z"/>
+  <path fill="#FB7185" d="m31.9 30.8 17.7-10.9-6.2 11.2-13.1 5.2z"/>
+  <path fill="#43C3C3" d="M23.9 42.5 28 24.2 37 36.4 28.2 47z"/>
+  <path fill="#25A8B8" d="m27.8 46.8 15.6-15.7-4.6 13.1-13.2 8z"/>
+  <path fill="#E5B85C" d="m19.2 48.9 1.1-13.7 5.3 10.2-3.7 8.3z"/>
+
+  <!-- Shaft and nib -->
+  <path fill="url(#shaft)" d="M14.2 57.9c6.2-14.6 15.6-30.8 28.5-46.4C31.9 29 23.1 45.2 17.4 59.1z"/>
+  <path fill="#23628F" d="m14.2 57.9 3.2 1.2-5.6 3.4z"/>
+  <circle cx="16.1" cy="57.1" r="1.35" fill="#EAF7FF"/>
+
+  <!-- Heat trend line -->
+  <path d="m18.2 58.5 10.2-5.2 7.3 3.2 8.2-9.2 6 2.4 8.5-10.4" fill="none" stroke="url(#trend)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="28.4" cy="53.3" r="2" fill="#2DD4BF"/>
+  <circle cx="35.7" cy="56.5" r="2" fill="#50C9B8"/>
+  <circle cx="43.9" cy="47.3" r="2" fill="#E5B85C"/>
+  <circle cx="49.9" cy="49.7" r="2" fill="#E5A85C"/>
+  <path fill="#FB7185" d="m56.2 37.1 4.7-.9-.9 4.7-1.2-1.2-3.2 3.2-1.4-1.4 3.2-3.2z"/>
+</svg>

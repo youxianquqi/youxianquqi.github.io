@@ -1,4 +1,4 @@
-name: Deploy Hugo Site
+name: Deploy Site
 
 on:
   push:
@@ -21,28 +21,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Configure Pages
-        id: pages
         uses: actions/configure-pages@v5
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: "0.160.1"
-          extended: true
-
-      - name: Build site
-        env:
-          HUGO_ENVIRONMENT: production
-        run: hugo --gc --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./site
 
   deploy:
     environment:
