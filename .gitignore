@@ -1,4 +1,4 @@
-public/
+/public/
 resources/
 .hugo_cache/
 .hugo_build.lock

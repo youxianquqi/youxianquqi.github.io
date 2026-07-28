@@ -1,0 +1,1546 @@
+{
+  "date": "2026-07-28",
+  "boards": {
+    "bilibili_manga": [
+      {
+        "rank": 1,
+        "tag": "战斗",
+        "score": 100,
+        "raw_heat": 4390,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 2,
+        "tag": "奇幻",
+        "score": 97.9,
+        "raw_heat": 3855,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 3,
+        "tag": "恋爱",
+        "score": 95.7,
+        "raw_heat": 3834,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 4,
+        "tag": "热血",
+        "score": 93.6,
+        "raw_heat": 3022,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 5,
+        "tag": "古风",
+        "score": 91.5,
+        "raw_heat": 2140,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 6,
+        "tag": "修罗场",
+        "score": 89.4,
+        "raw_heat": 1665,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 7,
+        "tag": "穿越",
+        "score": 87.2,
+        "raw_heat": 1600,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 8,
+        "tag": "冒险",
+        "score": 85.1,
+        "raw_heat": 1568,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 9,
+        "tag": "中二",
+        "score": 83,
+        "raw_heat": 1372,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 10,
+        "tag": "悬疑",
+        "score": 80.9,
+        "raw_heat": 1097,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 11,
+        "tag": "搞笑",
+        "score": 78.7,
+        "raw_heat": 972,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 12,
+        "tag": "游戏",
+        "score": 76.6,
+        "raw_heat": 900,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 13,
+        "tag": "竞技",
+        "score": 74.5,
+        "raw_heat": 900,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 14,
+        "tag": "日常",
+        "score": 72.3,
+        "raw_heat": 841,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 15,
+        "tag": "玄幻",
+        "score": 70.2,
+        "raw_heat": 833,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 16,
+        "tag": "迪化",
+        "score": 68.1,
+        "raw_heat": 817,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 17,
+        "tag": "异能",
+        "score": 66,
+        "raw_heat": 805,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 18,
+        "tag": "灵异",
+        "score": 63.8,
+        "raw_heat": 792,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 19,
+        "tag": "腹黑",
+        "score": 61.7,
+        "raw_heat": 758,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 20,
+        "tag": "病娇",
+        "score": 59.6,
+        "raw_heat": 651,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 21,
+        "tag": "无限",
+        "score": 57.4,
+        "raw_heat": 645,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 22,
+        "tag": "美食",
+        "score": 55.3,
+        "raw_heat": 530,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 23,
+        "tag": "西幻",
+        "score": 53.2,
+        "raw_heat": 523,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 24,
+        "tag": "间谍过家家",
+        "score": 51.1,
+        "raw_heat": 480,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 25,
+        "tag": "柯南",
+        "score": 48.9,
+        "raw_heat": 473,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 26,
+        "tag": "青春",
+        "score": 46.8,
+        "raw_heat": 471,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 27,
+        "tag": "航海王",
+        "score": 44.7,
+        "raw_heat": 458,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 28,
+        "tag": "火影",
+        "score": 42.6,
+        "raw_heat": 372,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 29,
+        "tag": "鬼灭",
+        "score": 40.4,
+        "raw_heat": 336,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 30,
+        "tag": "白毛",
+        "score": 38.3,
+        "raw_heat": 289,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 31,
+        "tag": "傲娇",
+        "score": 36.2,
+        "raw_heat": 257,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 32,
+        "tag": "推理",
+        "score": 34,
+        "raw_heat": 247,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 33,
+        "tag": "正太",
+        "score": 31.9,
+        "raw_heat": 236,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 34,
+        "tag": "升级",
+        "score": 29.8,
+        "raw_heat": 232,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 35,
+        "tag": "校园",
+        "score": 27.7,
+        "raw_heat": 222,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 36,
+        "tag": "魔法",
+        "score": 25.5,
+        "raw_heat": 214,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 37,
+        "tag": "重生",
+        "score": 23.4,
+        "raw_heat": 201,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 38,
+        "tag": "克苏鲁",
+        "score": 21.3,
+        "raw_heat": 180,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 39,
+        "tag": "系统",
+        "score": 19.1,
+        "raw_heat": 157,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 40,
+        "tag": "无口",
+        "score": 17,
+        "raw_heat": 144,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 41,
+        "tag": "治愈",
+        "score": 14.9,
+        "raw_heat": 132,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 42,
+        "tag": "刀剑神域",
+        "score": 12.8,
+        "raw_heat": 117,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 43,
+        "tag": "毒舌",
+        "score": 10.6,
+        "raw_heat": 106,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 44,
+        "tag": "科幻",
+        "score": 8.5,
+        "raw_heat": 98,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 45,
+        "tag": "日漫",
+        "score": 6.4,
+        "raw_heat": 30,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 46,
+        "tag": "国漫",
+        "score": 4.3,
+        "raw_heat": 20,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 47,
+        "tag": "漫画",
+        "score": 2.1,
+        "raw_heat": 15,
+        "delta_rank": null,
+        "delta_score": null
+      }
+    ],
+    "ciweimao": [
+      {
+        "rank": 1,
+        "tag": "动漫穿越",
+        "score": 100,
+        "raw_heat": 480,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 2,
+        "tag": "综漫",
+        "score": 98,
+        "raw_heat": 470,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 3,
+        "tag": "无限",
+        "score": 96,
+        "raw_heat": 420,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 4,
+        "tag": "修罗场",
+        "score": 94,
+        "raw_heat": 380,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 5,
+        "tag": "fate",
+        "score": 92,
+        "raw_heat": 368,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 6,
+        "tag": "型月",
+        "score": 90,
+        "raw_heat": 360,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 7,
+        "tag": "同人",
+        "score": 88,
+        "raw_heat": 360,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 8,
+        "tag": "明日方舟",
+        "score": 86,
+        "raw_heat": 352,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 9,
+        "tag": "星穹铁道",
+        "score": 84,
+        "raw_heat": 344,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 10,
+        "tag": "奥特曼",
+        "score": 82,
+        "raw_heat": 328,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 11,
+        "tag": "崩坏",
+        "score": 80,
+        "raw_heat": 320,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 12,
+        "tag": "舰娘",
+        "score": 78,
+        "raw_heat": 312,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 13,
+        "tag": "俺春物",
+        "score": 76,
+        "raw_heat": 296,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 14,
+        "tag": "火影",
+        "score": 74,
+        "raw_heat": 280,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 15,
+        "tag": "约会大作战",
+        "score": 72,
+        "raw_heat": 272,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 16,
+        "tag": "原神",
+        "score": 70,
+        "raw_heat": 264,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 17,
+        "tag": "穿越",
+        "score": 68,
+        "raw_heat": 260,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 18,
+        "tag": "宝可梦",
+        "score": 66,
+        "raw_heat": 256,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 19,
+        "tag": "战锤",
+        "score": 64,
+        "raw_heat": 248,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 20,
+        "tag": "绝区零",
+        "score": 62,
+        "raw_heat": 240,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 21,
+        "tag": "种田",
+        "score": 60,
+        "raw_heat": 240,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 22,
+        "tag": "死神",
+        "score": 58,
+        "raw_heat": 232,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 23,
+        "tag": "哈利波特",
+        "score": 56,
+        "raw_heat": 224,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 24,
+        "tag": "克苏鲁",
+        "score": 54,
+        "raw_heat": 220,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 25,
+        "tag": "鸣潮",
+        "score": 52,
+        "raw_heat": 216,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 26,
+        "tag": "轻小说",
+        "score": 50,
+        "raw_heat": 210,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 27,
+        "tag": "漫画",
+        "score": 48,
+        "raw_heat": 200,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 28,
+        "tag": "校园",
+        "score": 46,
+        "raw_heat": 200,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 29,
+        "tag": "游戏",
+        "score": 44,
+        "raw_heat": 196,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 30,
+        "tag": "魔法",
+        "score": 42,
+        "raw_heat": 190,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 31,
+        "tag": "机甲",
+        "score": 40,
+        "raw_heat": 170,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 32,
+        "tag": "升级",
+        "score": 38,
+        "raw_heat": 150,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 33,
+        "tag": "重生",
+        "score": 36,
+        "raw_heat": 130,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 34,
+        "tag": "战斗",
+        "score": 34,
+        "raw_heat": 100,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 35,
+        "tag": "末世",
+        "score": 32,
+        "raw_heat": 100,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 36,
+        "tag": "恋爱",
+        "score": 30,
+        "raw_heat": 92,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 37,
+        "tag": "科幻",
+        "score": 28,
+        "raw_heat": 72,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 38,
+        "tag": "腹黑",
+        "score": 26,
+        "raw_heat": 70,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 39,
+        "tag": "纯爱",
+        "score": 24,
+        "raw_heat": 64,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 40,
+        "tag": "丧尸",
+        "score": 22,
+        "raw_heat": 60,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 41,
+        "tag": "青春",
+        "score": 20,
+        "raw_heat": 56,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 42,
+        "tag": "治愈",
+        "score": 18,
+        "raw_heat": 48,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 43,
+        "tag": "热血",
+        "score": 16,
+        "raw_heat": 44,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 44,
+        "tag": "冒险",
+        "score": 14,
+        "raw_heat": 36,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 45,
+        "tag": "玄幻",
+        "score": 12,
+        "raw_heat": 32,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 46,
+        "tag": "推理",
+        "score": 10,
+        "raw_heat": 20,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 47,
+        "tag": "奇幻",
+        "score": 8,
+        "raw_heat": 16,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 48,
+        "tag": "海贼",
+        "score": 6,
+        "raw_heat": 16,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 49,
+        "tag": "国漫",
+        "score": 4,
+        "raw_heat": 12,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 50,
+        "tag": "咒术回战",
+        "score": 2,
+        "raw_heat": 4,
+        "delta_rank": null,
+        "delta_score": null
+      }
+    ],
+    "jjwxc": [
+      {
+        "rank": 1,
+        "tag": "衍生",
+        "score": 100,
+        "raw_heat": 122,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 2,
+        "tag": "纯爱",
+        "score": 92.3,
+        "raw_heat": 120,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 3,
+        "tag": "百合",
+        "score": 84.6,
+        "raw_heat": 118,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 4,
+        "tag": "轻小说",
+        "score": 76.9,
+        "raw_heat": 106,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 5,
+        "tag": "娱乐",
+        "score": 69.2,
+        "raw_heat": 100,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 6,
+        "tag": "无CP",
+        "score": 61.5,
+        "raw_heat": 92,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 7,
+        "tag": "奇幻",
+        "score": 53.8,
+        "raw_heat": 90,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 8,
+        "tag": "游戏",
+        "score": 46.2,
+        "raw_heat": 88,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 9,
+        "tag": "科幻",
+        "score": 38.5,
+        "raw_heat": 86,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 10,
+        "tag": "悬疑",
+        "score": 30.8,
+        "raw_heat": 84,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 11,
+        "tag": "死神日常",
+        "score": 23.1,
+        "raw_heat": 40,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 12,
+        "tag": "同人",
+        "score": 15.4,
+        "raw_heat": 24,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 13,
+        "tag": "二次元",
+        "score": 7.7,
+        "raw_heat": 24,
+        "delta_rank": null,
+        "delta_score": null
+      }
+    ],
+    "sfacg": [
+      {
+        "rank": 1,
+        "tag": "校园",
+        "score": 100,
+        "raw_heat": 415,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 2,
+        "tag": "魔幻",
+        "score": 90,
+        "raw_heat": 374,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 3,
+        "tag": "同人",
+        "score": 80,
+        "raw_heat": 245,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 4,
+        "tag": "轻小说",
+        "score": 70,
+        "raw_heat": 240,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 5,
+        "tag": "玄幻",
+        "score": 60,
+        "raw_heat": 180,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 6,
+        "tag": "古风",
+        "score": 50,
+        "raw_heat": 146,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 7,
+        "tag": "科幻",
+        "score": 40,
+        "raw_heat": 122,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 8,
+        "tag": "游戏",
+        "score": 30,
+        "raw_heat": 114,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 9,
+        "tag": "悬疑",
+        "score": 20,
+        "raw_heat": 106,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 10,
+        "tag": "漫画",
+        "score": 10,
+        "raw_heat": 75,
+        "delta_rank": null,
+        "delta_score": null
+      }
+    ],
+    "merged": [
+      {
+        "rank": 1,
+        "tag": "动漫穿越",
+        "score": 100,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 2,
+        "tag": "衍生",
+        "score": 100,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "jjwxc"
+        ]
+      },
+      {
+        "rank": 3,
+        "tag": "综漫",
+        "score": 98,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 4,
+        "tag": "fate",
+        "score": 92,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 5,
+        "tag": "修罗场",
+        "score": 91.7,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 6,
+        "tag": "魔幻",
+        "score": 90,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "sfacg"
+        ]
+      },
+      {
+        "rank": 7,
+        "tag": "型月",
+        "score": 90,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 8,
+        "tag": "明日方舟",
+        "score": 86,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 9,
+        "tag": "百合",
+        "score": 84.6,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "jjwxc"
+        ]
+      },
+      {
+        "rank": 10,
+        "tag": "星穹铁道",
+        "score": 84,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 11,
+        "tag": "中二",
+        "score": 83,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 12,
+        "tag": "奥特曼",
+        "score": 82,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 13,
+        "tag": "崩坏",
+        "score": 80,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 14,
+        "tag": "搞笑",
+        "score": 78.7,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 15,
+        "tag": "舰娘",
+        "score": 78,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 16,
+        "tag": "穿越",
+        "score": 77.6,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 17,
+        "tag": "无限",
+        "score": 76.7,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 18,
+        "tag": "俺春物",
+        "score": 76,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 19,
+        "tag": "竞技",
+        "score": 74.5,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 20,
+        "tag": "日常",
+        "score": 72.3,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 21,
+        "tag": "约会大作战",
+        "score": 72,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 22,
+        "tag": "古风",
+        "score": 70.8,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "sfacg"
+        ]
+      },
+      {
+        "rank": 23,
+        "tag": "原神",
+        "score": 70,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 24,
+        "tag": "娱乐",
+        "score": 69.2,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "jjwxc"
+        ]
+      },
+      {
+        "rank": 25,
+        "tag": "迪化",
+        "score": 68.1,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 26,
+        "tag": "战斗",
+        "score": 67,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 27,
+        "tag": "宝可梦",
+        "score": 66,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 28,
+        "tag": "异能",
+        "score": 66,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 29,
+        "tag": "轻小说",
+        "score": 65.6,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 3,
+        "sources_hit": [
+          "ciweimao",
+          "jjwxc",
+          "sfacg"
+        ]
+      },
+      {
+        "rank": 30,
+        "tag": "战锤",
+        "score": 64,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 31,
+        "tag": "灵异",
+        "score": 63.8,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 32,
+        "tag": "恋爱",
+        "score": 62.9,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 33,
+        "tag": "绝区零",
+        "score": 62,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 34,
+        "tag": "无CP",
+        "score": 61.5,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "jjwxc"
+        ]
+      },
+      {
+        "rank": 35,
+        "tag": "同人",
+        "score": 61.1,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 3,
+        "sources_hit": [
+          "ciweimao",
+          "jjwxc",
+          "sfacg"
+        ]
+      },
+      {
+        "rank": 36,
+        "tag": "种田",
+        "score": 60,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 37,
+        "tag": "病娇",
+        "score": 59.6,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 38,
+        "tag": "火影",
+        "score": 58.3,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 39,
+        "tag": "纯爱",
+        "score": 58.2,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 2,
+        "sources_hit": [
+          "ciweimao",
+          "jjwxc"
+        ]
+      },
+      {
+        "rank": 40,
+        "tag": "死神",
+        "score": 58,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 41,
+        "tag": "校园",
+        "score": 57.9,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 3,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao",
+          "sfacg"
+        ]
+      },
+      {
+        "rank": 42,
+        "tag": "哈利波特",
+        "score": 56,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 43,
+        "tag": "美食",
+        "score": 55.3,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 44,
+        "tag": "热血",
+        "score": 54.8,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 45,
+        "tag": "奇幻",
+        "score": 53.2,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 3,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao",
+          "jjwxc"
+        ]
+      },
+      {
+        "rank": 46,
+        "tag": "西幻",
+        "score": 53.2,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 47,
+        "tag": "鸣潮",
+        "score": 52,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 48,
+        "tag": "间谍过家家",
+        "score": 51.1,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ]
+      },
+      {
+        "rank": 49,
+        "tag": "冒险",
+        "score": 49.6,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ]
+      },
+      {
+        "rank": 50,
+        "tag": "游戏",
+        "score": 49.2,
+        "delta_rank": null,
+        "delta_score": null,
+        "source_count": 4,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao",
+          "jjwxc",
+          "sfacg"
+        ]
+      }
+    ]
+  }
+}
