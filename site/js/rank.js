@@ -130,6 +130,14 @@ function renderKindTabs() {
   const tabs = $("#kind-tabs");
   if (!tabs) return;
   const board = state.board;
+
+  // 分源榜不展示类型筛选；当前 kind 对不上可见按钮时回全部（禁止递归）
+  const curBtn = tabs.querySelector(`button[data-kind="${state.kind}"]`);
+  const curBoards = ((curBtn && curBtn.dataset.boards) || "merged").split(",");
+  const kindOk =
+    board === "merged" || board === "fandom" ? curBoards.includes(board) : true;
+  if (!kindOk) state.kind = "all";
+
   tabs.querySelectorAll("button").forEach((btn) => {
     const boards = (btn.dataset.boards || "merged").split(",");
     if (board === "fandom") {
@@ -149,13 +157,6 @@ function renderKindTabs() {
       renderBoard();
     };
   });
-
-  // 切换到同人榜时若当前 kind 不可见则回全部
-  const activeBtn = tabs.querySelector(`button[data-kind="${state.kind}"]`);
-  if (activeBtn && activeBtn.hidden) {
-    state.kind = "all";
-    renderKindTabs();
-  }
 }
 
 function renderTabs() {
