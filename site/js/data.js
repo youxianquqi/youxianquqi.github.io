@@ -18,13 +18,19 @@ export const loadLatest = () => fetchJSON("tags-latest.json");
 export const loadSeries = () => fetchJSON("tags-series.json");
 export const loadAcgDict = () => fetchJSON("acg-dict.json");
 
-/** 由词典构建 tag -> kind 映射；优先级 moe > trope > ip > genre */
+/**
+ * 由词典构建 tag -> kind 映射（前端筛选）
+ * 题材 genre = subgenre + relationship；频道/粗题材不进细分筛选
+ * 优先级：moe > relationship/trope > ip > subgenre
+ */
 export function buildKindMap(dict) {
   const map = new Map();
   if (!dict) return map;
+  for (const t of dict.subgenre || []) map.set(t, "genre");
   for (const t of dict.genre || []) map.set(t, "genre");
   for (const t of dict.ip || []) map.set(t, "ip");
   for (const t of dict.trope || []) map.set(t, "trope");
+  for (const t of dict.relationship || []) map.set(t, "genre");
   for (const t of dict.moe || []) map.set(t, "moe");
   return map;
 }

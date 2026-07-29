@@ -66,15 +66,28 @@ function dotsHTML(item) {
   return `<span class="rank-dots col-dots" title="${escapeHTML(names.join(" · "))}">${dots}</span>`;
 }
 
-function rowHTML(item, i, isMerged, scale) {
+function discoveryHTML(item, show) {
+  if (!show) return "";
+  if (item.discovery === "multi_source") {
+    return `<span class="disc disc--multi" title="多源共识 · ${(item.sources_hit || []).join("、")}">多源共识·${item.source_count || 0}</span>`;
+  }
+  if (item.discovery === "single_source") {
+    return `<span class="disc disc--single" title="仅单一来源命中">单源发现</span>`;
+  }
+  return "";
+}
+
+function rowHTML(item, i, isOverview, scale) {
   const tag = escapeHTML(item.tag);
   const pct = scale(item.score);
-  const dots = isMerged ? dotsHTML(item) : '<span class="rank-dots col-dots"></span>';
-  const spark = isMerged ? sparkSVG(item.tag) : '<span class="rank-spark col-spark"></span>';
-  const top1 = isMerged && item.rank === 1 ? " rank-row--top1" : "";
+  const showMeta = isOverview || state.board === "channel";
+  const dots = showMeta ? dotsHTML(item) : '<span class="rank-dots col-dots"></span>';
+  const spark = state.board === "merged" ? sparkSVG(item.tag) : '<span class="rank-spark col-spark"></span>';
+  const top1 = state.board === "merged" && item.rank === 1 ? " rank-row--top1" : "";
+  const disc = discoveryHTML(item, showMeta);
   return `<li class="rank-row${top1}" style="--row-delay:${Math.min(i, 20) * 22}ms" data-tag="${tag}" role="link" tabindex="0" aria-label="查看 ${tag} 趋势">
     ${rankNoHTML(item.rank)}
-    <span class="rank-tag"><span class="rank-tag__name">${tag}</span>${ICON.arrow}</span>
+    <span class="rank-tag"><span class="rank-tag__name">${tag}</span>${disc}${ICON.arrow}</span>
     <span class="rank-score"><span class="rank-score__num">${item.score.toFixed(1)}</span><span class="rank-score__bar"><i style="width:0%" data-w="${pct}"></i></span></span>
     <span class="rank-delta col-delta">${deltaHTML(item.delta_rank)}</span>
     ${dots}
@@ -134,41 +147,46 @@ function renderTabs() {
 }
 
 function renderBoard() {
-  const isMerged = state.board === "merged";
+  const isOverview = state.board === "merged" || state.board === "channel";
   const board = $("#board");
-  board.classList.toggle("board--src", !isMerged);
-  $("#board-date").textContent = `${latest.date} 快照`;
+  board.classList.toggle("board--src", !isOverview);
+  const titleHint = state.board === "channel" ? "频道/粗题材" : state.board === "merged" ? "细分风向" : "";
+  $("#board-date").textContent = titleHint
+    ? `${latest.date} · ${titleHint}`
+    : `${latest.date} 快照`;
 
+  // 频道榜不做细分 kind 筛选（本身就是粗词）
   let list = byKeyword(latest.boards[state.board] || [], state.kw);
-  list = byKind(list, state.kind);
-  // 类型筛选后重排名次展示（不改动原始数据）
+  if (state.board !== "channel") list = byKind(list, state.kind);
   list = list.map((item, i) => Object.assign({}, item, { rank: i + 1 }));
 
   const ol = $("#rank-list");
   const status = $("#board-status");
+  const kindTabs = $("#kind-tabs");
+  if (kindTabs) kindTabs.hidden = state.board === "channel";
 
   if (!list.length) {
     ol.innerHTML = "";
     const hint =
-      state.kind !== "all"
-        ? "当前类型下暂无上榜标签（词典有词但源站未出现则不上热度榜）"
+      state.kind !== "all" && state.board !== "channel"
+        ? "当前类型下暂无上榜细分标签"
         : `没有匹配「${escapeHTML(state.kw)}」的标签`;
     status.innerHTML = `<div class="empty">
       ${ICON.searchX}
       <p>${hint}</p>
-      <span class="meta">试试切换「全部 / 套路 / 萌属性 / IP」，或换数据源</span>
+      <span class="meta">试试「全部细分 / 套路 / 萌属性 / IP / 题材」，或切换频道榜</span>
     </div>`;
     return;
   }
 
   const hasDelta = list.some((x) => x.delta_rank !== null && x.delta_rank !== undefined);
   board.classList.toggle("board--nodelta", !hasDelta);
-  board.classList.toggle("board--nospark", !hasSpark);
-  renderLegend(hasDelta, isMerged);
+  board.classList.toggle("board--nospark", !hasSpark || state.board !== "merged");
+  renderLegend(hasDelta, isOverview);
 
   status.innerHTML = "";
   const scale = makeScale(list);
-  ol.innerHTML = list.map((item, i) => rowHTML(item, i, isMerged, scale)).join("");
+  ol.innerHTML = list.map((item, i) => rowHTML(item, i, isOverview, scale)).join("");
 
   requestAnimationFrame(() => {
     ol.querySelectorAll(".rank-score__bar > i").forEach((el) => {
@@ -191,21 +209,27 @@ function renderBoard() {
 }
 
 // 榜头图例：只说明当前真正显示出来的编码方式
-function renderLegend(hasDelta, isMerged) {
+function renderLegend(hasDelta, isOverview) {
   const parts = ['<span>分数条 = 当前榜单区间相对刻度</span>'];
-  if (isMerged) parts.push("<span>圆点 = 覆盖平台，实心为在榜</span>");
+  if (state.board === "merged") {
+    parts.push("<span>默认 = 细分风向（排除频道/粗题材）</span>");
+    parts.push("<span>单源发现 / 多源共识 = 覆盖可信度</span>");
+  }
+  if (state.board === "channel") {
+    parts.push("<span>频道榜 = 专区/粗题材结构，不等价读者热度</span>");
+  }
+  if (isOverview) parts.push("<span>圆点 = 覆盖平台，实心为在榜</span>");
   if (!hasDelta) parts.push('<span class="board__flag">首日快照 · 暂无升降</span>');
   $("#board-legend").innerHTML = parts.join("");
 }
 
-// 今日风向：由 Top1-3 拼一句静态文案
 function renderHero() {
-  const top = latest.boards.merged.slice(0, 3);
+  const top = (latest.boards.merged || []).slice(0, 3);
   if (!top.length) return;
   const names = top.map((t) => `<strong>${escapeHTML(t.tag)}</strong>`).join("、");
   const rising = top.filter((t) => (t.delta_rank || 0) > 0).length;
   const tail = rising >= 2 ? "，整体走强" : top.some((t) => (t.delta_rank || 0) < 0) ? "，格局微调" : "";
-  $("#wind-text").innerHTML = `${names} 领跑题材风向${tail}。`;
+  $("#wind-text").innerHTML = `${names} 领跑细分风向${tail}。`;
   $("#wind-date").textContent = `${latest.date} 快照`;
   $("#wind-line").hidden = false;
 }
@@ -237,7 +261,7 @@ async function init() {
     series = await loadSeries().catch(() => null);
     const dict = await loadAcgDict().catch(() => null);
     kindMap = buildKindMap(dict);
-    sourceKeys = meta.sources.filter((s) => s !== "merged");
+    sourceKeys = meta.sources.filter((s) => s !== "merged" && s !== "channel");
     hasSpark =
       !!series &&
       Object.values(series).some((e) => ((e.daily && e.daily.merged) || []).length >= 2);

@@ -1,8 +1,9 @@
 {
-  "updated_at": "2026-07-29T03:41:44.183Z",
+  "updated_at": "2026-07-29T04:29:47.397Z",
   "latest_date": "2026-07-29",
   "sources": [
     "merged",
+    "channel",
     "bilibili_manga",
     "ciweimao",
     "jjwxc",
@@ -10,12 +11,17 @@
     "sfacg"
   ],
   "source_names": {
-    "merged": "综合",
+    "merged": "细分风向",
+    "channel": "频道/粗题材",
+    "sfacg": "SF轻小说",
+    "feilu": "飞卢",
     "bilibili_manga": "B漫",
+    "lofter": "LOFTER",
     "ciweimao": "刺猬猫",
     "jjwxc": "晋江",
-    "qidian": "起点",
-    "sfacg": "SF轻小说"
+    "fanqie": "番茄",
+    "qidian": "起点"
   },
-  "limit": 50
+  "limit": 50,
+  "board_mode": "fine_default"
 }
