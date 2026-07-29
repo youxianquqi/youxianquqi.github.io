@@ -7,4 +7,4 @@ cd ../novel-heat && npm run crawl && npm run build-data
 cd ../次元热度 && node scripts/sync-from-novel-heat.js && node scripts/serve.js
 ```
 
-同步复制 `novel-heat/data/public/*`（权威综合结果），本站不再二次合成。主源：刺猬猫、SF、起点。萌娘百科只作词典。
+同步复制 `novel-heat/data/public/*`（权威综合结果），本站不再二次合成。主源：刺猬猫、SF轻小说、起点。萌娘百科只作词典。
