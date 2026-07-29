@@ -1,0 +1,355 @@
+/* ============================================================
+   次元热度 · 开屏「晨启 · 学园都市」 v1.0
+   仅 index.html 引入；纯 CSS/SVG，零图片零新增字体
+   明亮晨空 + 全息 HUD + 风流线，每天首次访问播放一次
+   层级：sky < skyline < hexgrid < winds < core < flash < skip
+   ============================================================ */
+
+.splash {
+  /* 开屏专用 token：明亮晨色，不随站点主题变化 */
+  --sp-sky-1: #f7fbff;
+  --sp-sky-2: #dcefff;
+  --sp-sky-3: #d3f4ec;
+  --sp-blue: #2f7fe0;
+  --sp-blue-2: #3b8eff;
+  --sp-ice: #5eb6ff;
+  --sp-teal: #2dd4bf;
+  --sp-teal-ink: #0f9d8a;
+  --sp-muted: #5b7ba3;
+  --sp-gold: rgba(255, 214, 150, 0.5);
+  --sp-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+  background: linear-gradient(180deg, var(--sp-sky-1) 0%, var(--sp-sky-2) 55%, var(--sp-sky-3) 100%);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  animation: sp-sky-in 0.5s var(--sp-ease) both;
+}
+
+/* ---------- 层 1 · 晨空光斑 ---------- */
+.splash__sky,
+.splash__sky::before,
+.splash__sky::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.splash__sky::before {
+  content: "";
+  background: radial-gradient(42rem 22rem at 15% 18%, rgba(94, 182, 255, 0.28), transparent 65%);
+}
+.splash__sky::after {
+  content: "";
+  background: radial-gradient(30rem 18rem at 84% 10%, var(--sp-gold), transparent 68%);
+  animation: sp-glow-in 0.9s 0.2s var(--sp-ease) both;
+}
+
+/* ---------- 层 2 · 学园都市天际线 ---------- */
+.splash__skyline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 24vh;
+  min-height: 120px;
+  color: rgba(47, 127, 224, 0.13);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 46%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 46%);
+  animation: sp-skyline-in 0.7s 0.08s var(--sp-ease) both;
+  pointer-events: none;
+}
+
+/* ---------- 层 3 · 六边形蜂窝网格 ---------- */
+.splash__hexgrid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='62.4' viewBox='0 0 54 62.4'%3E%3Cg fill='none' stroke='%233b8eff' stroke-opacity='.16'%3E%3Cpath d='M36 15.6 27 31.2 9 31.2 0 15.6 9 0 27 0z'/%3E%3Cpath d='M63 46.8 54 62.4 36 62.4 27 46.8 36 31.2 54 31.2z'/%3E%3Cpath d='M9 46.8 0 62.4-18 62.4-27 46.8-18 31.2 0 31.2z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 54px 62.4px;
+  -webkit-mask-image: radial-gradient(ellipse 85% 52% at 50% 0%, #000 12%, transparent 74%);
+  mask-image: radial-gradient(ellipse 85% 52% at 50% 0%, #000 12%, transparent 74%);
+  animation: sp-fade-in 0.8s 0.25s var(--sp-ease) both;
+}
+
+/* ---------- 层 4 · 风流线（全屏唯一恒动元素） ---------- */
+.splash__winds {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  animation: sp-fade-in 0.6s 0.8s var(--sp-ease) both;
+}
+.splash__winds i {
+  position: absolute;
+  left: -12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(94, 182, 255, 0.85) 50%, transparent);
+  animation: sp-wind-pass linear infinite;
+  will-change: transform;
+}
+.splash__winds i:nth-child(1) { top: 16%; width: 150px; animation-duration: 3.4s; animation-delay: -1.2s; }
+.splash__winds i:nth-child(2) { top: 33%; width: 230px; animation-duration: 4.6s; animation-delay: -2.6s; background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.7) 50%, transparent); }
+.splash__winds i:nth-child(3) { top: 55%; width: 180px; animation-duration: 3.9s; animation-delay: -0.4s; }
+.splash__winds i:nth-child(4) { top: 72%; width: 260px; animation-duration: 5.2s; animation-delay: -3.3s; height: 2px; opacity: 0.55; }
+
+/* ---------- 层 5 · 全息 HUD 圆环 ---------- */
+.splash__hud {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(360px, 80vw);
+  transform: translate(-50%, -58%);
+  pointer-events: none;
+  animation: sp-hud-in 0.7s 0.3s var(--sp-ease) both;
+}
+.splash__hud circle {
+  fill: none;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.hud-ticks { stroke: rgba(47, 127, 224, 0.5); stroke-width: 1.5; stroke-dasharray: 1.5 8; }
+.hud-arcs { stroke: rgba(45, 212, 191, 0.55); stroke-width: 2; stroke-dasharray: 60 30 10 30; }
+.hud-thin { stroke: rgba(47, 127, 224, 0.26); stroke-width: 1; }
+.hud-charge {
+  stroke: var(--sp-blue);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 140 614;
+  transform: rotate(-90deg);
+  animation: sp-hud-charge 0.9s 0.45s var(--sp-ease) both;
+}
+.hud-pulse { stroke: rgba(45, 212, 191, 0.7); stroke-width: 2; opacity: 0; }
+.hud-spin-cw { animation: sp-spin 44s linear infinite; transform-box: fill-box; transform-origin: center; }
+.hud-spin-ccw { animation: sp-spin 28s linear infinite reverse; transform-box: fill-box; transform-origin: center; }
+.splash.is-online .hud-pulse { animation: sp-hud-pulse 0.8s ease-out both; }
+
+/* ---------- 层 6 · 中心机组 ---------- */
+.splash__core {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 20px 5vh;
+}
+
+.splash__logo-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  animation: sp-logo-in 0.6s 0.45s var(--sp-ease) both;
+}
+.splash__logo-wrap img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  filter: drop-shadow(0 4px 10px rgba(35, 111, 168, 0.3));
+}
+.splash__logo-wrap::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(115deg, transparent 42%, rgba(255, 255, 255, 0.9) 50%, transparent 58%);
+  transform: translateX(-120%);
+  animation: sp-shine 0.75s 0.95s var(--sp-ease) both;
+}
+
+.splash__word {
+  margin: 0;
+  font-family: var(--font-brand);
+  font-size: clamp(2.4rem, 7vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+}
+.splash__word span {
+  display: inline-block;
+  background: linear-gradient(100deg, #1f6fd0 0%, #2f7fe0 55%, #2dd4bf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: sp-letter-in 0.55s calc(0.82s + var(--i) * 0.07s) var(--sp-ease) both;
+}
+
+.splash__en {
+  font-family: var(--font-num);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--sp-muted);
+  animation: sp-en-in 0.7s 0.95s var(--sp-ease) both;
+}
+
+/* 启动日志 */
+.splash__log {
+  margin-top: 20px;
+  width: 250px;
+  font-family: var(--font-num);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--sp-muted);
+  animation: sp-fade-in 0.4s 0.8s var(--sp-ease) both;
+}
+.splash__log p {
+  margin: 0;
+  min-height: 1.5em;
+  opacity: 0;
+  transition: opacity 0.12s linear;
+  white-space: nowrap;
+}
+.splash__log p.is-on { opacity: 1; }
+.splash__log p.is-typing::after {
+  content: "▍";
+  margin-left: 2px;
+  animation: sp-caret 0.7s steps(1) infinite;
+}
+.splash__log p.is-final {
+  font-weight: 700;
+  color: var(--sp-teal-ink);
+  text-shadow: 0 0 14px rgba(45, 212, 191, 0.5);
+}
+
+/* 进度条：宽度由 JS rAF 推进，与日志打字同步 */
+.splash__progress {
+  width: 172px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(47, 127, 224, 0.16);
+  overflow: hidden;
+  animation: sp-fade-in 0.4s 1.6s var(--sp-ease) both;
+}
+.splash__progress > i {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--sp-blue-2), var(--sp-teal));
+}
+
+/* ---------- 跳过 ---------- */
+.splash__skip {
+  position: absolute;
+  right: 22px;
+  bottom: 20px;
+  font-family: var(--font-num);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: #4a719f;
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(47, 127, 224, 0.35);
+  border-radius: 999px;
+  padding: 0.34rem 0.85rem;
+  cursor: pointer;
+  transition: color 0.15s var(--sp-ease), border-color 0.15s var(--sp-ease);
+  animation: sp-fade-in 0.5s 1.1s var(--sp-ease) both;
+}
+.splash__skip:hover { color: #1f6fd0; border-color: var(--sp-blue); }
+
+/* ---------- 退场 A · 光门 ---------- */
+.splash__flash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60rem 40rem at 50% 42%, #ffffff, rgba(255, 255, 255, 0.65) 60%, transparent);
+  opacity: 0;
+  pointer-events: none;
+}
+.splash.is-exiting .splash__flash { animation: sp-flash 0.5s var(--sp-ease) both; }
+.splash.is-exiting .splash__core { animation: sp-core-out 0.3s cubic-bezier(0.5, 0, 0.75, 0.4) both; }
+.splash.is-exiting .splash__skip { animation: sp-fade-out 0.2s linear both; }
+
+/* ---------- 退场 B · 揭幕 ---------- */
+.splash.is-leaving {
+  transition: clip-path 0.45s cubic-bezier(0.65, 0, 0.35, 1) 0.02s;
+  clip-path: inset(0 0 100% 0);
+}
+
+/* ---------- 快进退场（跳过 / 静态帧） ---------- */
+.splash.is-quick.is-exiting .splash__flash { animation-duration: 0.3s; }
+.splash.is-quick.is-exiting .splash__core { animation-duration: 0.16s; }
+.splash.is-quick.is-leaving { transition-duration: 0.32s; transition-delay: 0s; }
+
+/* 静态帧模式：所有入场动画关闭，直接呈现完成态 */
+.splash.is-static,
+.splash.is-static * {
+  animation: none !important;
+}
+
+/* ---------- 揭幕后主站入场（与退场 B 同一时间轴） ---------- */
+body.js-splash-reveal .hero {
+  animation: sp-rise 0.55s var(--ease, cubic-bezier(0.22, 1, 0.36, 1)) both;
+}
+body.js-splash-reveal .board {
+  animation: sp-rise 0.55s var(--ease, cubic-bezier(0.22, 1, 0.36, 1)) 0.08s both;
+}
+
+/* ============================================================
+   keyframes
+   ============================================================ */
+@keyframes sp-sky-in { from { opacity: 0; } }
+@keyframes sp-glow-in { from { opacity: 0; } }
+@keyframes sp-fade-in { from { opacity: 0; } }
+@keyframes sp-fade-out { to { opacity: 0; } }
+@keyframes sp-skyline-in {
+  from { opacity: 0; transform: translateY(14px); }
+}
+@keyframes sp-wind-pass {
+  from { transform: translateX(-30vw); }
+  to { transform: translateX(125vw); }
+}
+@keyframes sp-hud-in {
+  from { opacity: 0; transform: translate(-50%, -58%) scale(0.8); }
+}
+@keyframes sp-spin { to { transform: rotate(360deg); } }
+@keyframes sp-hud-charge {
+  from { stroke-dasharray: 0 754; }
+  to { stroke-dasharray: 140 614; }
+}
+@keyframes sp-hud-pulse {
+  from { opacity: 0.6; transform: scale(1); }
+  to { opacity: 0; transform: scale(1.5); }
+}
+@keyframes sp-logo-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.92); }
+}
+@keyframes sp-shine {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(120%); }
+}
+@keyframes sp-letter-in {
+  from { opacity: 0; transform: translateY(0.28em); filter: blur(6px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+@keyframes sp-en-in {
+  from { opacity: 0; letter-spacing: 0.6em; }
+}
+@keyframes sp-caret { 50% { opacity: 0; } }
+@keyframes sp-core-out {
+  to { opacity: 0; transform: translateY(-26px); }
+}
+@keyframes sp-flash {
+  0% { opacity: 0; }
+  35% { opacity: 0.92; }
+  100% { opacity: 0; }
+}
+@keyframes sp-rise {
+  from { opacity: 0; transform: translateY(16px); }
+}
+
+/* ---------- 降低动效：静态成品帧，由 JS 控制 500ms 后快进退场 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .splash,
+  .splash * {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
