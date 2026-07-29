@@ -1,11 +1,12 @@
 {
-  "updated_at": "2026-07-28T06:13:00.817Z",
-  "latest_date": "2026-07-28",
+  "updated_at": "2026-07-29T03:22:15.014Z",
+  "latest_date": "2026-07-29",
   "sources": [
     "merged",
     "bilibili_manga",
     "ciweimao",
     "jjwxc",
+    "qidian",
     "sfacg"
   ],
   "source_names": {
@@ -13,6 +14,7 @@
     "bilibili_manga": "B漫",
     "ciweimao": "刺猬猫",
     "jjwxc": "晋江",
+    "qidian": "起点",
     "sfacg": "SF轻小说"
   },
   "limit": 50
