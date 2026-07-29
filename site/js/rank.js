@@ -1,4 +1,4 @@
-// rank.js — 首页：综合/分源标签热榜 + 搜索过滤
+// rank.js — 首页：细分 / 同人IP / 频道 / 分源
 import { initThemeToggle } from "./theme.js";
 import { loadMeta, loadLatest, loadSeries, loadAcgDict, buildKindMap, escapeHTML } from "./data.js";
 import { byKeyword } from "./filters.js";
@@ -13,14 +13,13 @@ let hasSpark = false;
 
 const $ = (sel) => document.querySelector(sel);
 
+const OVERVIEW = new Set(["merged", "fandom", "channel"]);
+
 const ICON = {
   up: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>',
   down: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10"/><path d="M17 8v9H8"/></svg>',
   flat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M5 12h14"/></svg>',
   arrow: '<svg class="rank-tag__arrow icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>',
-  db: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>',
-  tag: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2H2v10l9.3 9.3a1 1 0 0 0 1.4 0l8.6-8.6a1 1 0 0 0 0-1.4z"/><circle cx="7" cy="7" r="1.2"/></svg>',
-  clock: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
   searchX: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="m8.5 8.5 5 5m0-5-5 5"/></svg>',
 };
 
@@ -36,10 +35,10 @@ function rankNoHTML(rank) {
   return `<span class="rank-no">${rank}</span>`;
 }
 
-// 行内 7 日迷你趋势（纯 SVG，仅综合榜桌面显示）
 function sparkSVG(tag) {
   const entry = series && series[tag];
-  const daily = entry && entry.daily && entry.daily.merged;
+  const key = state.board === "fandom" ? "fandom" : "merged";
+  const daily = entry && entry.daily && entry.daily[key];
   if (!daily || daily.length < 1) return '<span class="rank-spark col-spark"></span>';
   const pts = daily.slice(-7).map((p) => p[1]);
   if (pts.length === 0) return '<span class="rank-spark col-spark"></span>';
@@ -57,8 +56,6 @@ function sparkSVG(tag) {
   return `<span class="rank-spark col-spark"><svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true"><path class="spark-area" fill="currentColor" d="${area}"/><path class="spark-line" d="${line}"/><circle class="spark-dot" cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2.2"/></svg></span>`;
 }
 
-// 覆盖源点阵：实心=该平台在榜。归一化分数在头部高度聚集，
-// 「几个平台同时在榜」比分数本身更能说明信号强弱
 function dotsHTML(item) {
   const hit = new Set(item.sources_hit || []);
   const names = sourceKeys.map((s) => `${meta.source_names[s] || s}${hit.has(s) ? "" : "（未上榜）"}`);
@@ -68,22 +65,33 @@ function dotsHTML(item) {
 
 function discoveryHTML(item, show) {
   if (!show) return "";
+  const parts = [];
   if (item.discovery === "multi_source") {
-    return `<span class="disc disc--multi" title="多源共识 · ${(item.sources_hit || []).join("、")}">多源共识·${item.source_count || 0}</span>`;
+    parts.push(`<span class="disc disc--multi" title="多源共识 · ${(item.sources_hit || []).join("、")}">多源共识·${item.source_count || 0}</span>`);
+  } else if (item.discovery === "single_source") {
+    parts.push(`<span class="disc disc--single" title="仅单一来源命中">单源发现</span>`);
   }
-  if (item.discovery === "single_source") {
-    return `<span class="disc disc--single" title="仅单一来源命中">单源发现</span>`;
+  if (item.signal_summary_text) {
+    parts.push(
+      `<span class="disc disc--signal" title="${escapeHTML(item.signal_summary_text)}">${escapeHTML(item.signal_summary_text)}</span>`
+    );
   }
-  return "";
+  return parts.join("");
 }
 
 function rowHTML(item, i, isOverview, scale) {
   const tag = escapeHTML(item.tag);
   const pct = scale(item.score);
-  const showMeta = isOverview || state.board === "channel";
+  const showMeta = isOverview;
   const dots = showMeta ? dotsHTML(item) : '<span class="rank-dots col-dots"></span>';
-  const spark = state.board === "merged" ? sparkSVG(item.tag) : '<span class="rank-spark col-spark"></span>';
-  const top1 = state.board === "merged" && item.rank === 1 ? " rank-row--top1" : "";
+  const spark =
+    state.board === "merged" || state.board === "fandom"
+      ? sparkSVG(item.tag)
+      : '<span class="rank-spark col-spark"></span>';
+  const top1 =
+    (state.board === "merged" || state.board === "fandom") && item.rank === 1
+      ? " rank-row--top1"
+      : "";
   const disc = discoveryHTML(item, showMeta);
   return `<li class="rank-row${top1}" style="--row-delay:${Math.min(i, 20) * 22}ms" data-tag="${tag}" role="link" tabindex="0" aria-label="查看 ${tag} 趋势">
     ${rankNoHTML(item.rank)}
@@ -95,8 +103,6 @@ function rowHTML(item, i, isOverview, scale) {
   </li>`;
 }
 
-// 分数条按当前可见榜单的区间相对缩放：绝对 0–100 刻度下
-// 头部（如 100 / 95.7 / 93.5）几乎等长，看不出差距
 function makeScale(list) {
   const scores = list.map((x) => x.score);
   const max = Math.max(...scores);
@@ -108,13 +114,32 @@ function makeScale(list) {
 
 function byKind(list, kind) {
   if (!kind || kind === "all") return list;
-  return list.filter((item) => kindMap.get(item.tag) === kind);
+  return list.filter((item) => {
+    if (item.tag_role === "ip_universe" && kind === "ip") return true;
+    if (item.tag_role === "fandom_structure" && kind === "fandom_structure") return true;
+    if (
+      (item.tag_role === "relationship_type" || item.tag_role === "relationship") &&
+      kind === "relationship"
+    )
+      return true;
+    return kindMap.get(item.tag) === kind;
+  });
 }
 
 function renderKindTabs() {
   const tabs = $("#kind-tabs");
   if (!tabs) return;
+  const board = state.board;
   tabs.querySelectorAll("button").forEach((btn) => {
+    const boards = (btn.dataset.boards || "merged").split(",");
+    if (board === "fandom") {
+      btn.hidden = !boards.includes("fandom");
+    } else if (board === "merged") {
+      btn.hidden = !boards.includes("merged");
+    } else {
+      btn.hidden = true;
+    }
+
     const active = btn.dataset.kind === state.kind;
     btn.classList.toggle("is-active", active);
     btn.setAttribute("aria-selected", active ? "true" : "false");
@@ -124,6 +149,13 @@ function renderKindTabs() {
       renderBoard();
     };
   });
+
+  // 切换到同人榜时若当前 kind 不可见则回全部
+  const activeBtn = tabs.querySelector(`button[data-kind="${state.kind}"]`);
+  if (activeBtn && activeBtn.hidden) {
+    state.kind = "all";
+    renderKindTabs();
+  }
 }
 
 function renderTabs() {
@@ -137,51 +169,62 @@ function renderTabs() {
   tabs.querySelectorAll("button").forEach((btn) =>
     btn.addEventListener("click", () => {
       state.board = btn.dataset.src;
+      state.kind = "all";
       tabs.querySelectorAll("button").forEach((b) => {
         b.classList.toggle("is-active", b === btn);
         b.setAttribute("aria-selected", b === btn ? "true" : "false");
       });
+      renderKindTabs();
       renderBoard();
     })
   );
 }
 
+function boardTitleHint() {
+  if (state.board === "channel") return "频道/粗题材";
+  if (state.board === "merged") return "细分风向";
+  if (state.board === "fandom") return "同人/IP";
+  return "";
+}
+
 function renderBoard() {
-  const isOverview = state.board === "merged" || state.board === "channel";
+  const isOverview = OVERVIEW.has(state.board);
   const board = $("#board");
   board.classList.toggle("board--src", !isOverview);
-  const titleHint = state.board === "channel" ? "频道/粗题材" : state.board === "merged" ? "细分风向" : "";
+  const titleHint = boardTitleHint();
   $("#board-date").textContent = titleHint
     ? `${latest.date} · ${titleHint}`
     : `${latest.date} 快照`;
 
-  // 频道榜不做细分 kind 筛选（本身就是粗词）
   let list = byKeyword(latest.boards[state.board] || [], state.kw);
-  if (state.board !== "channel") list = byKind(list, state.kind);
+  if (state.board !== "channel" && OVERVIEW.has(state.board)) list = byKind(list, state.kind);
   list = list.map((item, i) => Object.assign({}, item, { rank: i + 1 }));
 
   const ol = $("#rank-list");
   const status = $("#board-status");
   const kindTabs = $("#kind-tabs");
-  if (kindTabs) kindTabs.hidden = state.board === "channel";
+  if (kindTabs) kindTabs.hidden = state.board === "channel" || !OVERVIEW.has(state.board);
 
   if (!list.length) {
     ol.innerHTML = "";
     const hint =
       state.kind !== "all" && state.board !== "channel"
-        ? "当前类型下暂无上榜细分标签"
+        ? "当前类型下暂无上榜标签"
         : `没有匹配「${escapeHTML(state.kw)}」的标签`;
     status.innerHTML = `<div class="empty">
       ${ICON.searchX}
       <p>${hint}</p>
-      <span class="meta">试试「全部细分 / 套路 / 萌属性 / IP / 题材」，或切换频道榜</span>
+      <span class="meta">试试切换「同人/IP」或「全部 / 作品宇宙 / 同人结构 / 关系类型」</span>
     </div>`;
     return;
   }
 
   const hasDelta = list.some((x) => x.delta_rank !== null && x.delta_rank !== undefined);
   board.classList.toggle("board--nodelta", !hasDelta);
-  board.classList.toggle("board--nospark", !hasSpark || state.board !== "merged");
+  board.classList.toggle(
+    "board--nospark",
+    !hasSpark || (state.board !== "merged" && state.board !== "fandom")
+  );
   renderLegend(hasDelta, isOverview);
 
   status.innerHTML = "";
@@ -208,12 +251,15 @@ function renderBoard() {
   });
 }
 
-// 榜头图例：只说明当前真正显示出来的编码方式
 function renderLegend(hasDelta, isOverview) {
   const parts = ['<span>分数条 = 当前榜单区间相对刻度</span>'];
   if (state.board === "merged") {
     parts.push("<span>默认 = 细分风向（排除频道/粗题材）</span>");
     parts.push("<span>单源发现 / 多源共识 = 覆盖可信度</span>");
+  }
+  if (state.board === "fandom") {
+    parts.push("<span>同人/IP = 作品宇宙 · 同人结构 · 关系类型</span>");
+    parts.push("<span>证据摘要 = 结构化标签 / 平台标签 / 标题推断</span>");
   }
   if (state.board === "channel") {
     parts.push("<span>频道榜 = 专区/粗题材结构，不等价读者热度</span>");
@@ -261,10 +307,14 @@ async function init() {
     series = await loadSeries().catch(() => null);
     const dict = await loadAcgDict().catch(() => null);
     kindMap = buildKindMap(dict);
-    sourceKeys = meta.sources.filter((s) => s !== "merged" && s !== "channel");
+    sourceKeys = meta.sources.filter((s) => !OVERVIEW.has(s));
     hasSpark =
       !!series &&
-      Object.values(series).some((e) => ((e.daily && e.daily.merged) || []).length >= 2);
+      Object.values(series).some(
+        (e) =>
+          ((e.daily && e.daily.merged) || []).length >= 2 ||
+          ((e.daily && e.daily.fandom) || []).length >= 2
+      );
     renderHero();
     renderTabs();
     renderKindTabs();

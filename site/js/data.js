@@ -20,8 +20,7 @@ export const loadAcgDict = () => fetchJSON("acg-dict.json");
 
 /**
  * 由词典构建 tag -> kind 映射（前端筛选）
- * 题材 genre = subgenre + relationship；频道/粗题材不进细分筛选
- * 优先级：moe > relationship/trope > ip > subgenre
+ * 同人榜额外 kind：ip / fandom_structure / relationship
  */
 export function buildKindMap(dict) {
   const map = new Map();
@@ -29,10 +28,27 @@ export function buildKindMap(dict) {
   for (const t of dict.subgenre || []) map.set(t, "genre");
   for (const t of dict.genre || []) map.set(t, "genre");
   for (const t of dict.ip || []) map.set(t, "ip");
+  for (const u of dict.ip_universe || []) {
+    if (u && u.canonical) map.set(u.canonical, "ip");
+    for (const a of (u && u.aliases) || []) map.set(a, "ip");
+  }
   for (const t of dict.trope || []) map.set(t, "trope");
-  for (const t of dict.relationship || []) map.set(t, "genre");
+  for (const t of dict.relationship || []) map.set(t, "relationship");
+  for (const t of dict.relationship_type || []) map.set(t, "relationship");
+  for (const t of dict.fandom_structure || []) map.set(t, "fandom_structure");
   for (const t of dict.moe || []) map.set(t, "moe");
   return map;
+}
+
+/** 查找 IP 宇宙元数据 */
+export function findIpMeta(dict, tag) {
+  if (!dict || !tag) return null;
+  for (const u of dict.ip_universe || []) {
+    if (!u) continue;
+    if (u.canonical === tag) return u;
+    if ((u.aliases || []).includes(tag)) return u;
+  }
+  return null;
 }
 
 export function escapeHTML(s) {

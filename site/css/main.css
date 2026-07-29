@@ -460,6 +460,7 @@ svg.icon {
 
 /* 标签名 */
 .rank-tag {
+  flex-wrap: wrap;
   min-width: 0;
   display: flex;
   align-items: center;
@@ -492,6 +493,29 @@ svg.icon {
   color: var(--brand-ink);
   background: color-mix(in srgb, var(--brand) 18%, transparent);
   border-color: color-mix(in srgb, var(--brand) 40%, var(--line));
+}
+.disc--signal {
+  color: var(--muted);
+  background: transparent;
+  border-style: dashed;
+  font-weight: 500;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tag-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-3);
+}
+.meta-chip {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 8px;
+  background: color-mix(in srgb, var(--panel) 90%, var(--brand) 10%);
 }
 .rank-tag__arrow {
   color: var(--faint);

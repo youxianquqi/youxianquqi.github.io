@@ -1,6 +1,6 @@
 // tag-view.js — 单标签趋势：日/周切换 × 综合/分源切换
 import { initThemeToggle } from "./theme.js";
-import { loadMeta, loadLatest, loadSeries, escapeHTML } from "./data.js";
+import { loadMeta, loadLatest, loadSeries, loadAcgDict, findIpMeta, escapeHTML } from "./data.js";
 import { renderTrend, chartAvailable } from "./chart-view.js";
 
 const $ = (sel) => document.querySelector(sel);
@@ -8,6 +8,7 @@ const $ = (sel) => document.querySelector(sel);
 const state = { tag: null, series: null, gran: "daily" };
 let meta = null;
 let latest = null;
+let dict = null;
 
 const tagNameOf = (src) => (meta && meta.source_names[src]) || src;
 
@@ -31,29 +32,77 @@ function showFatal(msg) {
   </div>`;
 }
 
+function findLatestBoardItem() {
+  for (const key of ["fandom", "merged", "channel"]) {
+    const board = (latest.boards && latest.boards[key]) || [];
+    const hit = board.find((item) => item.tag === state.tag);
+    if (hit) return { board: key, item: hit };
+  }
+  for (const src of meta.sources) {
+    if (src === "merged" || src === "fandom" || src === "channel") continue;
+    const board = latest.boards[src] || [];
+    const hit = board.find((item) => item.tag === state.tag);
+    if (hit) return { board: src, item: hit };
+  }
+  return null;
+}
+
 function renderHead() {
   document.title = `${state.tag} · 标签趋势 · 次元热度`;
   $("#tag-title").textContent = state.tag;
 
-  // 最新日仍在榜的源（用最新快照判定，比“历史出现过”更有意义）
   const hits = [];
   for (const src of meta.sources) {
-    if (src === "merged") continue;
+    if (src === "merged" || src === "fandom" || src === "channel") continue;
     const board = latest.boards[src] || [];
     if (board.some((item) => item.tag === state.tag)) hits.push(src);
   }
   $("#hit-chips").innerHTML = hits.length
     ? `<span class="hit-chip">最新日在榜：${hits.map((s) => escapeHTML(tagNameOf(s))).join(" / ")}</span>`
     : `<span class="hit-chip">最新日未在任一源上榜</span>`;
+
+  const metaEl = $("#tag-meta");
+  const parts = [];
+  const ip = findIpMeta(dict, state.tag);
+  const found = findLatestBoardItem();
+  const role = (found && found.item.tag_role) || (state.series && state.series.tag_role);
+  if (ip) {
+    parts.push(`<span class="meta-chip">宇宙：${escapeHTML(ip.canonical)}</span>`);
+    if (ip.aliases && ip.aliases.length) {
+      parts.push(`<span class="meta-chip">别名：${escapeHTML(ip.aliases.join(" / "))}</span>`);
+    }
+    if (ip.parent) parts.push(`<span class="meta-chip">上级：${escapeHTML(ip.parent)}</span>`);
+  }
+  if (role) parts.push(`<span class="meta-chip">角色：${escapeHTML(role)}</span>`);
+  if (found && found.item.signal_summary_text) {
+    parts.push(`<span class="meta-chip">证据：${escapeHTML(found.item.signal_summary_text)}</span>`);
+  }
+  if (found && found.item.discovery) {
+    const d = found.item.discovery === "multi_source" ? "多源共识" : "单源发现";
+    parts.push(`<span class="meta-chip">${d}</span>`);
+  }
+  if (parts.length) {
+    metaEl.hidden = false;
+    metaEl.innerHTML = parts.join("");
+  } else {
+    metaEl.hidden = true;
+    metaEl.innerHTML = "";
+  }
 }
 
 function renderStats() {
-  const daily = state.series.daily.merged || [];
+  const daily =
+    state.series.daily.merged ||
+    state.series.daily.fandom ||
+    state.series.daily.channel ||
+    [];
   const last = daily.length ? daily[daily.length - 1] : null;
   const prev = daily.length > 1 ? daily[daily.length - 2] : null;
   const recent7 = daily.slice(-7);
   const avg7 = recent7.length ? recent7.reduce((a, p) => a + p[1], 0) / recent7.length : null;
-  const srcCount = Object.keys(state.series.daily).filter((k) => k !== "merged").length;
+  const srcCount = Object.keys(state.series.daily).filter(
+    (k) => k !== "merged" && k !== "fandom" && k !== "channel"
+  ).length;
 
   const delta = last && prev ? last[1] - prev[1] : null;
   const deltaCls = delta === null ? "" : delta > 0 ? "ts--up" : delta < 0 ? "ts--down" : "";
@@ -67,7 +116,9 @@ function renderStats() {
 }
 
 function renderSeriesTabs() {
-  const keys = ["merged", ...Object.keys(state.series.daily).filter((k) => k !== "merged")];
+  const preferred = ["merged", "fandom", "channel"];
+  const rest = Object.keys(state.series.daily).filter((k) => !preferred.includes(k));
+  const keys = [...preferred.filter((k) => state.series.daily[k] && state.series.daily[k].length), ...rest];
   const tabs = $("#series-tabs");
   tabs.innerHTML = keys
     .map(
@@ -134,6 +185,7 @@ async function init() {
 
   try {
     [meta, latest] = await Promise.all([loadMeta(), loadLatest()]);
+    dict = await loadAcgDict().catch(() => null);
     const all = await loadSeries();
     const entry = all[tag];
     if (!entry || !Object.keys(entry.daily).length) {
@@ -141,7 +193,11 @@ async function init() {
       return;
     }
     state.series = entry;
-    state.seriesKey = entry.daily.merged ? "merged" : Object.keys(entry.daily)[0];
+    state.seriesKey = entry.daily.merged
+      ? "merged"
+      : entry.daily.fandom
+        ? "fandom"
+        : Object.keys(entry.daily)[0];
 
     renderHead();
     renderStats();

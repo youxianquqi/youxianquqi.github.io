@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated_at": "2026-07-29",
   "source": "seed",
   "channel": [
@@ -13,7 +13,6 @@
     "韩漫",
     "动漫",
     "条漫",
-    "衍生同人",
     "动漫穿越"
   ],
   "coarse_genre": [
@@ -34,7 +33,6 @@
     "搞笑",
     "治愈",
     "黑暗",
-    "群像",
     "悬疑",
     "推理",
     "灵异",
@@ -65,10 +63,6 @@
     "现代幻想",
     "恋爱日常",
     "诸天无限",
-    "综漫",
-    "无限",
-    "诸天",
-    "万界",
     "次元",
     "穿越异世界",
     "搞笑吐槽",
@@ -87,14 +81,27 @@
     "数据流",
     "战力学"
   ],
+  "fandom_structure": [
+    "综漫",
+    "单IP同人",
+    "跨作品联动",
+    "原作续写",
+    "观影体",
+    "聊天群",
+    "论坛体",
+    "直播体",
+    "系统流同人",
+    "衍生同人",
+    "无限",
+    "诸天",
+    "万界",
+    "综漫无限",
+    "无限流",
+    "诸天流",
+    "原著向",
+    "OOC"
+  ],
   "relationship": [
-    "百合",
-    "耽美",
-    "无CP",
-    "拉郎",
-    "后宫",
-    "逆后宫",
-    "修罗场",
     "年下",
     "年上",
     "青梅",
@@ -102,6 +109,21 @@
     "兄控",
     "妹控",
     "姐控"
+  ],
+  "relationship_type": [
+    "原作CP",
+    "非原作CP",
+    "无CP",
+    "群像",
+    "修罗场",
+    "性转",
+    "角色扮演",
+    "百合",
+    "耽美",
+    "拉郎",
+    "后宫",
+    "逆后宫",
+    "TS"
   ],
   "moe": [
     "傲娇",
@@ -157,9 +179,7 @@
   "trope": [
     "恶役千金",
     "退队流",
-    "TS",
     "变身",
-    "性转",
     "无敌流",
     "系统",
     "穿越",
@@ -177,8 +197,6 @@
     "迪化",
     "文字狱",
     "文字游戏",
-    "原著向",
-    "OOC",
     "恶役",
     "千金",
     "反派大小姐",
@@ -194,10 +212,258 @@
     "平行世界",
     "穿越时空",
     "魂穿",
-    "身穿",
-    "综漫无限",
-    "无限流",
-    "诸天流"
+    "身穿"
+  ],
+  "ip_universe": [
+    {
+      "canonical": "型月",
+      "aliases": [
+        "fate",
+        "FGO",
+        "Fate"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "崩坏",
+      "aliases": [
+        "崩坏三",
+        "崩坏星穹"
+      ],
+      "parent": "崩坏系列"
+    },
+    {
+      "canonical": "星穹铁道",
+      "aliases": [
+        "星铁",
+        "铁道"
+      ],
+      "parent": "崩坏系列"
+    },
+    {
+      "canonical": "原神",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "绝区零",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "明日方舟",
+      "aliases": [
+        "方舟"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "鸣潮",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "战双",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "阴阳师",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "第五人格",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "王者荣耀",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "英雄联盟",
+      "aliases": [
+        "LOL"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "碧蓝航线",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "少女前线",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "火影",
+      "aliases": [
+        "火影忍者",
+        "木叶"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "海贼",
+      "aliases": [
+        "海贼王",
+        "航海王"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "柯南",
+      "aliases": [
+        "名侦探柯南"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "漫威",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "DC",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "奥特曼",
+      "aliases": [
+        "迪迦"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "哈利波特",
+      "aliases": [
+        "霍格沃茨"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "咒术",
+      "aliases": [
+        "咒术回战"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "间谍过家家",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "进击的巨人",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "鬼灭",
+      "aliases": [
+        "鬼灭之刃"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "数码宝贝",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "宝可梦",
+      "aliases": [
+        "口袋妖怪"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "俺春物",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "刀剑神域",
+      "aliases": [
+        "SAO",
+        "刀剑"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "约会大作战",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "从零开始",
+      "aliases": [
+        "Re0"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "高达",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "钢炼",
+      "aliases": [
+        "钢之炼金术师"
+      ],
+      "parent": null
+    },
+    {
+      "canonical": "全职猎人",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "死神",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "龙珠",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "舰娘",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "西游",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "三国",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "大唐",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "僵尸",
+      "aliases": [],
+      "parent": null
+    },
+    {
+      "canonical": "战锤",
+      "aliases": [],
+      "parent": null
+    }
   ],
   "ip": [
     "原神",

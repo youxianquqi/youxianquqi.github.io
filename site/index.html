@@ -65,11 +65,13 @@
           </h2>
           <div class="tabs" id="board-tabs" role="tablist" aria-label="数据源切换"></div>
           <div class="tabs tabs--kind" id="kind-tabs" role="tablist" aria-label="标签类型筛选">
-            <button type="button" role="tab" data-kind="all" class="is-active" aria-selected="true">全部细分</button>
-            <button type="button" role="tab" data-kind="trope" aria-selected="false">套路</button>
-            <button type="button" role="tab" data-kind="moe" aria-selected="false">萌属性</button>
-            <button type="button" role="tab" data-kind="ip" aria-selected="false">IP</button>
-            <button type="button" role="tab" data-kind="genre" aria-selected="false">题材</button>
+            <button type="button" role="tab" data-kind="all" class="is-active" aria-selected="true" data-boards="merged,fandom">全部</button>
+            <button type="button" role="tab" data-kind="trope" aria-selected="false" data-boards="merged">套路</button>
+            <button type="button" role="tab" data-kind="moe" aria-selected="false" data-boards="merged">萌属性</button>
+            <button type="button" role="tab" data-kind="ip" aria-selected="false" data-boards="merged,fandom">作品宇宙</button>
+            <button type="button" role="tab" data-kind="fandom_structure" aria-selected="false" data-boards="fandom">同人结构</button>
+            <button type="button" role="tab" data-kind="relationship" aria-selected="false" data-boards="merged,fandom">关系类型</button>
+            <button type="button" role="tab" data-kind="genre" aria-selected="false" data-boards="merged">题材</button>
           </div>
           <div class="board__search">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
