@@ -809,6 +809,23 @@ svg.icon {
   color: var(--faint);
 }
 .board__legend:empty { display: none; }
+.board__help {
+  flex: none;
+  margin-left: 2px;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  padding: 0.12rem 0.55rem;
+  transition: color var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease), background var(--dur-1) var(--ease);
+}
+.board__help:hover {
+  color: var(--brand-ink);
+  border-color: var(--brand-line);
+  background: var(--brand-bg);
+}
 
 /* ---------- 今日构成 · 环形图（仅综合榜） ---------- */
 .kind-pie {
@@ -957,6 +974,11 @@ svg.icon {
   margin-bottom: var(--s-3);
 }
 .back-link:hover { color: var(--brand); }
+.page-head__lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--fs-md);
+}
 .page-head h1 {
   margin: 0 0 var(--s-2);
   font-family: var(--font-brand);
@@ -1040,6 +1062,42 @@ svg.icon {
 /* ---------- 关于页 ---------- */
 .prose {
   max-width: 44rem;
+}
+.help-glossary {
+  display: grid;
+  gap: var(--s-3);
+  margin: var(--s-4) 0 var(--s-5);
+  padding: 0;
+}
+.help-glossary > div {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: var(--s-3) var(--s-4);
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+}
+.help-glossary dt {
+  margin: 0;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.help-glossary dd {
+  margin: 0;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+.help-more {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+@media (max-width: 640px) {
+  .help-glossary > div {
+    grid-template-columns: 1fr;
+    gap: var(--s-1);
+  }
 }
 .prose h2 {
   display: flex;

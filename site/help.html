@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>标签趋势 · 次元热度</title>
-    <meta name="description" content="单个二次元网文标签的日/周热度趋势。" />
+    <title>Help · 次元热度</title>
+    <meta name="description" content="次元热度热榜界面符号与口径说明。" />
     <script>
       (function () {
         try {
@@ -33,7 +33,7 @@
       </a>
       <nav class="nav" aria-label="主导航">
         <a href="index.html">热榜</a>
-        <a href="help.html">Help</a>
+        <a href="help.html" class="is-active">Help</a>
         <a href="about.html">关于</a>
       </nav>
       <div class="topbar__side">
@@ -46,36 +46,58 @@
 
     <main class="wrap">
       <div class="page-head">
-        <a class="back-link" href="index.html">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
-          返回热榜
-        </a>
-        <h1 id="tag-title">标签趋势</h1>
-        <div class="hit-chips" id="hit-chips"></div>
-        <div class="tag-meta" id="tag-meta" hidden></div>
+        <h1>Help</h1>
+        <p class="page-head__lead">热榜界面符号与阅读口径，随时可来对照。</p>
       </div>
 
-      <div class="tag-summary" id="tag-summary"></div>
+      <div class="prose">
+        <div class="note">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+          <span>默认打开的是<strong>细分风向</strong>综合榜；同人/IP、频道与各平台分源请用上方 Tab 切换。</span>
+        </div>
 
-      <section class="chart-card">
-        <div class="chart-card__controls">
-          <div class="tabs" id="series-tabs" role="tablist" aria-label="数据序列切换"></div>
-          <span class="spacer"></span>
-          <div class="tabs" id="gran-tabs" role="tablist" aria-label="日周切换">
-            <button type="button" data-gran="daily" class="is-active">日</button>
-            <button type="button" data-gran="weekly">周</button>
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+          榜单怎么读
+        </h2>
+        <dl class="help-glossary">
+          <div>
+            <dt>分数条</dt>
+            <dd>当前榜单区间的<strong>相对刻度</strong>，用来对比本榜内高低，不是跨榜绝对分。</dd>
           </div>
-        </div>
-        <div class="chart-box" id="chart-box">
-          <canvas id="trend-chart"></canvas>
-        </div>
-        <div id="chart-status"></div>
-      </section>
+          <div>
+            <dt>默认榜</dt>
+            <dd><strong>细分风向</strong>（排除频道 / 粗题材）。频道类标签在「频道/粗题材」Tab。</dd>
+          </div>
+          <div>
+            <dt>单源发现 / 多源共识</dt>
+            <dd>表示覆盖可信度：只在一个源命中为「单源发现」；多个源同时命中为「多源共识」。</dd>
+          </div>
+          <div>
+            <dt>圆点（覆盖）</dt>
+            <dd>每个点对应一个采集平台；<strong>实心</strong>表示该标签今日在该平台上榜。</dd>
+          </div>
+          <div>
+            <dt>Δ</dt>
+            <dd>相对昨日排名变化。首日快照或无对照日时显示「—」或 NEW。</dd>
+          </div>
+          <div>
+            <dt>近7日</dt>
+            <dd>该标签近一周分数走势小图，便于看升势 / 回落。</dd>
+          </div>
+          <div>
+            <dt>今日构成（饼图）</dt>
+            <dd>仅「细分风向」显示：今日上榜标签按套路 / 萌属性 / 作品宇宙 / 关系 / 题材等类型占比。点击图例可筛选。</dd>
+          </div>
+        </dl>
+
+        <p class="help-more">算法、数据源与免责声明见 <a href="about.html">关于</a>。</p>
+      </div>
     </main>
 
     <footer class="footer">
       <p>次元热度 TagHeat · 多源公开标签汇总，非任何平台官方榜单</p>
-      <p>周视图取 ISO 周内最后一个有数据日的分数，缺日不填充</p>
+      <p>多源公开榜单标签汇总 · 仅供题材风向参考</p>
     </footer>
 
     <div class="site-wind" aria-hidden="true"><i></i><i class="is-teal"></i><i></i><i class="is-teal is-blur"></i><i class="is-teal"></i><i></i><i class="is-blur"></i><i></i></div>
@@ -83,8 +105,9 @@
     <div class="site-motes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="site-hud" aria-hidden="true"><i></i><i></i></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
-    <script type="module" src="js/tag-view.js"></script>
-    <script type="module" src="js/bg-wind.js"></script>
+    <script type="module">
+      import { initThemeToggle } from "./js/theme.js";
+      initThemeToggle();
+    </script>
   </body>
 </html>
