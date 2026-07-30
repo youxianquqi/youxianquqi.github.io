@@ -60,13 +60,13 @@
   --score-fill: linear-gradient(90deg, #3b8eff, #5eb6ff);
   --spark-line: #5eb6ff;
 
-  /* ---------- 背景装饰（极弱） ---------- */
+  /* ---------- 背景装饰（极弱 · 纯 CSS/SVG） ---------- */
   --decor-blob-1: radial-gradient(50rem 24rem at 86% -12%, rgba(94, 182, 255, 0.09), transparent 62%);
   --decor-blob-2: radial-gradient(40rem 22rem at -10% 22%, rgba(45, 212, 191, 0.05), transparent 62%);
   --decor-blob-3: radial-gradient(42rem 26rem at 50% 118%, rgba(59, 142, 255, 0.05), transparent 62%);
   --decor-grid-line: rgba(140, 180, 235, 0.045);
-  --site-art-image: url("../tagheat-anime-bg.png");
-  --site-art-veil: linear-gradient(180deg, rgba(11, 18, 32, 0.18) 0%, rgba(11, 18, 32, 0.55) 48%, #0b1220 94%);
+  --skyline-ink: rgba(94, 182, 255, 0.10);
+  --wind-line: rgba(94, 182, 255, 0.5);
 }
 
 [data-theme="light"] {
@@ -121,8 +121,8 @@
   --decor-blob-2: radial-gradient(40rem 22rem at -10% 22%, rgba(77, 149, 236, 0.09), transparent 62%);
   --decor-blob-3: radial-gradient(42rem 26rem at 50% 118%, rgba(47, 127, 224, 0.05), transparent 62%);
   --decor-grid-line: rgba(28, 76, 140, 0.05);
-  --site-art-image: url("../tagheat-anime-bg-light.png");
-  --site-art-veil: linear-gradient(180deg, rgba(238, 243, 250, 0.22) 0%, rgba(238, 243, 250, 0.52) 56%, #eef3fa 94%);
+  --skyline-ink: rgba(47, 127, 224, 0.09);
+  --wind-line: rgba(47, 127, 224, 0.4);
 }
 
 :root {
