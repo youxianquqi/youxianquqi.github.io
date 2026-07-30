@@ -67,6 +67,19 @@
   --decor-grid-line: rgba(140, 180, 235, 0.045);
   --skyline-ink: rgba(94, 182, 255, 0.10);
   --wind-line: rgba(94, 182, 255, 0.5);
+
+  /* 背景丰富：粒子 / 窗格 / HUD / 弧光 */
+  --mote-ice: rgba(94, 182, 255, 0.65);
+  --mote-up: rgba(45, 212, 191, 0.75);
+  --mote-down: rgba(251, 113, 133, 0.65);
+  --win-glow: rgba(255, 214, 150, 0.5);
+  --win-up: rgba(45, 212, 191, 0.55);
+  --win-down: rgba(251, 113, 133, 0.45);
+  --hud-line: rgba(94, 182, 255, 0.09);
+  --hud-fill: rgba(94, 182, 255, 0.05);
+  --wind-ice: rgba(94, 182, 255, 0.55);
+  --wind-teal: rgba(45, 212, 191, 0.4);
+  --dawn-arc: radial-gradient(ellipse 70% 30% at 50% 8%, rgba(94, 182, 255, 0.12), transparent 65%);
 }
 
 [data-theme="light"] {
@@ -123,6 +136,19 @@
   --decor-grid-line: rgba(28, 76, 140, 0.05);
   --skyline-ink: rgba(47, 127, 224, 0.09);
   --wind-line: rgba(47, 127, 224, 0.4);
+
+  /* 背景丰富：粒子 / 窗格 / HUD / 弧光 */
+  --mote-ice: rgba(47, 127, 224, 0.35);
+  --mote-up: rgba(15, 157, 138, 0.45);
+  --mote-down: rgba(216, 85, 106, 0.35);
+  --win-glow: rgba(214, 158, 90, 0.28);
+  --win-up: rgba(15, 157, 138, 0.3);
+  --win-down: rgba(216, 85, 106, 0.25);
+  --hud-line: rgba(47, 127, 224, 0.06);
+  --hud-fill: rgba(47, 127, 224, 0.03);
+  --wind-ice: rgba(47, 127, 224, 0.35);
+  --wind-teal: rgba(15, 157, 138, 0.28);
+  --dawn-arc: radial-gradient(ellipse 70% 30% at 50% 8%, rgba(255, 214, 150, 0.14), transparent 65%);
 }
 
 :root {

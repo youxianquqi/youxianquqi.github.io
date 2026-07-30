@@ -5,6 +5,22 @@
    层级：sky < skyline < hexgrid < winds < core < flash < skip
    ============================================================ */
 
+/* 首帧引导罩：模块脚本未跑前即用晨空底挡住主站，避免闪帧 */
+html.js-splash-boot {
+  background: linear-gradient(180deg, #f7fbff 0%, #dcefff 55%, #d3f4ec 100%);
+}
+html.js-splash-boot body {
+  overflow: hidden !important;
+}
+html.js-splash-boot::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  background: linear-gradient(180deg, #f7fbff 0%, #dcefff 55%, #d3f4ec 100%);
+}
+
 .splash {
   /* 开屏专用 token：明亮晨色，不随站点主题变化 */
   --sp-sky-1: #f7fbff;
@@ -27,7 +43,8 @@
   background: linear-gradient(180deg, var(--sp-sky-1) 0%, var(--sp-sky-2) 55%, var(--sp-sky-3) 100%);
   font-family: var(--font-sans);
   cursor: pointer;
-  animation: sp-sky-in 0.5s var(--sp-ease) both;
+  /* 壳层不透明入场，避免首帧透出主站；内部图层自行淡入 */
+  opacity: 1;
 }
 
 /* ---------- 层 1 · 晨空光斑 ---------- */

@@ -7,12 +7,22 @@
     <meta name="description" content="看各平台二次元网文标签今天热什么、这周怎么变。多源采集 · 综合风向。" />
     <script>
       (function () {
+        var root = document.documentElement;
         try {
           var t = localStorage.getItem("cyhd-theme");
           if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-          document.documentElement.dataset.theme = t;
+          root.dataset.theme = t;
         } catch (e) {
-          document.documentElement.dataset.theme = "dark";
+          root.dataset.theme = "dark";
+        }
+        /* 首帧即盖住主站：模块脚本延迟执行前不透出榜单 */
+        try {
+          var today = new Date().toLocaleDateString("sv");
+          var force = /(?:\?|&)splash=(?:1|reset|force)\b/.test(location.search);
+          if (force) localStorage.removeItem("cyhd-splash");
+          if (force || localStorage.getItem("cyhd-splash") !== today) root.classList.add("js-splash-boot");
+        } catch (e) {
+          root.classList.add("js-splash-boot");
         }
       })();
     </script>
@@ -59,30 +69,41 @@
 
       <section class="board" id="board">
         <div class="board__head">
-          <h2 class="board__title">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-            细分风向榜
-            <span class="board__date" id="board-date"></span>
-          </h2>
-          <div class="tabs" id="board-tabs" role="tablist" aria-label="数据源切换"></div>
-          <div class="tabs tabs--kind" id="kind-tabs" role="tablist" aria-label="标签类型筛选">
-            <button type="button" role="tab" data-kind="all" class="is-active" aria-selected="true" data-boards="merged,fandom">全部</button>
-            <button type="button" role="tab" data-kind="trope" aria-selected="false" data-boards="merged">套路</button>
-            <button type="button" role="tab" data-kind="moe" aria-selected="false" data-boards="merged">萌属性</button>
-            <button type="button" role="tab" data-kind="ip" aria-selected="false" data-boards="merged,fandom">作品宇宙</button>
-            <button type="button" role="tab" data-kind="fandom_structure" aria-selected="false" data-boards="fandom">同人结构</button>
-            <button type="button" role="tab" data-kind="relationship" aria-selected="false" data-boards="merged,fandom">关系类型</button>
-            <button type="button" role="tab" data-kind="genre" aria-selected="false" data-boards="merged">题材</button>
+          <div class="board__row board__row--id">
+            <h2 class="board__title">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              细分风向榜
+              <span class="board__date" id="board-date"></span>
+              <span class="board__legend" id="board-legend"></span>
+            </h2>
+            <div class="board__search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="text" id="search-input" placeholder="搜索标签，如：恶役千金" autocomplete="off" />
+            </div>
           </div>
-          <div class="board__search">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-            <input type="text" id="search-input" placeholder="搜索标签，如：恶役千金" autocomplete="off" />
+          <div class="board__row board__row--src">
+            <div class="tabs" id="board-tabs" role="tablist" aria-label="数据源切换"></div>
           </div>
-          <div class="board__legend" id="board-legend"></div>
+          <div class="board__row board__row--kind">
+            <div class="tabs tabs--kind" id="kind-tabs" role="tablist" aria-label="标签类型筛选">
+              <button type="button" role="tab" data-kind="all" class="is-active" aria-selected="true" data-boards="merged,fandom">全部</button>
+              <button type="button" role="tab" data-kind="trope" aria-selected="false" data-boards="merged">套路</button>
+              <button type="button" role="tab" data-kind="moe" aria-selected="false" data-boards="merged">萌属性</button>
+              <button type="button" role="tab" data-kind="ip" aria-selected="false" data-boards="merged,fandom">作品宇宙</button>
+              <button type="button" role="tab" data-kind="fandom_structure" aria-selected="false" data-boards="fandom">同人结构</button>
+              <button type="button" role="tab" data-kind="relationship" aria-selected="false" data-boards="merged,fandom">关系类型</button>
+              <button type="button" role="tab" data-kind="genre" aria-selected="false" data-boards="merged">题材</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="kind-pie" id="kind-pie" hidden>
+          <div class="kind-pie__chart" id="kind-pie-chart"></div>
+          <div class="kind-pie__list" id="kind-pie-list" role="group" aria-label="按类型筛选"></div>
         </div>
 
         <div class="rank-head" id="rank-head" aria-hidden="true">
-          <span class="col-no">#</span><span class="col-tag">标签</span><span class="col-score">Score</span><span class="col-delta">Δ</span><span class="col-dots">覆盖</span><span class="col-spark">近7日</span>
+          <span class="col-no">#</span><span class="col-tag">标签</span><span class="col-score" title="分数条 = 当前榜单区间相对刻度">Score</span><span class="col-delta">Δ</span><span class="col-dots">覆盖</span><span class="col-spark">近7日</span>
         </div>
         <ol class="rank-list" id="rank-list"></ol>
         <div id="board-status"></div>
@@ -94,9 +115,13 @@
       <p>多源公开榜单标签汇总 · 仅供题材风向参考</p>
     </footer>
 
-    <div class="site-wind" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="site-wind" aria-hidden="true"><i></i><i class="is-teal"></i><i></i><i class="is-teal is-blur"></i><i class="is-teal"></i><i></i><i class="is-blur"></i><i></i></div>
+    <div class="city-windows" aria-hidden="true"></div>
+    <div class="site-motes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="site-hud" aria-hidden="true"><i></i><i></i></div>
 
     <script type="module" src="js/splash.js"></script>
     <script type="module" src="js/rank.js"></script>
+    <script type="module" src="js/bg-wind.js"></script>
   </body>
 </html>

@@ -42,8 +42,8 @@ function sparkSVG(tag) {
   if (!daily || daily.length < 1) return '<span class="rank-spark col-spark"></span>';
   const pts = daily.slice(-7).map((p) => p[1]);
   if (pts.length === 0) return '<span class="rank-spark col-spark"></span>';
-  const w = 96;
-  const h = 30;
+  const w = 84;
+  const h = 28;
   const pad = 3;
   const min = Math.min(...pts);
   const max = Math.max(...pts);
@@ -93,9 +93,13 @@ function rowHTML(item, i, isOverview, scale) {
       ? " rank-row--top1"
       : "";
   const disc = discoveryHTML(item, showMeta);
+  const meta = disc ? `<span class="rank-tag__meta">${disc}</span>` : "";
   return `<li class="rank-row${top1}" style="--row-delay:${Math.min(i, 20) * 22}ms" data-tag="${tag}" role="link" tabindex="0" aria-label="查看 ${tag} 趋势">
     ${rankNoHTML(item.rank)}
-    <span class="rank-tag"><span class="rank-tag__name">${tag}</span>${disc}${ICON.arrow}</span>
+    <span class="rank-tag">
+      <span class="rank-tag__main"><span class="rank-tag__name">${tag}</span>${ICON.arrow}</span>
+      ${meta}
+    </span>
     <span class="rank-score"><span class="rank-score__num">${item.score.toFixed(1)}</span><span class="rank-score__bar"><i style="width:0%" data-w="${pct}"></i></span></span>
     <span class="rank-delta col-delta">${deltaHTML(item.delta_rank)}</span>
     ${dots}
@@ -123,6 +127,79 @@ function byKind(list, kind) {
     )
       return true;
     return kindMap.get(item.tag) === kind;
+  });
+}
+
+const PIE_KINDS = [
+  { key: "trope", name: "套路", css: "var(--brand)" },
+  { key: "moe", name: "萌属性", css: "var(--up)" },
+  { key: "ip", name: "作品宇宙", css: "var(--no1)" },
+  { key: "relationship", name: "关系类型", css: "var(--down)" },
+  { key: "genre", name: "题材", css: "var(--no2)" },
+  { key: "other", name: "其他", css: "var(--flat)" },
+];
+
+function pieKindOf(item) {
+  if (item.tag_role === "ip_universe") return "ip";
+  if (item.tag_role === "relationship_type" || item.tag_role === "relationship")
+    return "relationship";
+  const k = kindMap.get(item.tag);
+  return PIE_KINDS.some((p) => p.key === k) ? k : "other";
+}
+
+function renderKindPie() {
+  const wrap = $("#kind-pie");
+  if (!wrap) return;
+  const list = (latest && latest.boards && latest.boards.merged) || [];
+  if (state.board !== "merged" || !list.length) {
+    wrap.hidden = true;
+    return;
+  }
+  wrap.hidden = false;
+
+  const counts = new Map(PIE_KINDS.map((p) => [p.key, 0]));
+  list.forEach((it) => counts.set(pieKindOf(it), counts.get(pieKindOf(it)) + 1));
+  const total = list.length;
+  const segs = PIE_KINDS.filter((p) => counts.get(p.key) > 0).map((p) => ({
+    ...p,
+    n: counts.get(p.key),
+    pct: (counts.get(p.key) / total) * 100,
+  }));
+
+  let acc = 0;
+  const circles = segs
+    .map((s) => {
+      const len = Math.max(s.pct - 0.8, 0.4);
+      const off = 25 - acc;
+      acc += s.pct;
+      const dim = state.kind !== "all" && state.kind !== s.key;
+      return `<circle cx="21" cy="21" r="15.9155" fill="none" pathLength="100" stroke-width="6" class="pie-seg${dim ? " is-dim" : ""}" style="stroke:${s.css}" stroke-dasharray="${len.toFixed(2)} 100" stroke-dashoffset="${off.toFixed(2)}"><title>${s.name} ${s.n} 个</title></circle>`;
+    })
+    .join("");
+
+  $("#kind-pie-chart").innerHTML = `<svg viewBox="0 0 42 42" role="img" aria-label="今日上榜标签类型构成">
+    <circle cx="21" cy="21" r="15.9155" fill="none" pathLength="100" stroke-width="6" style="stroke:var(--surface-2)"></circle>
+    ${circles}
+  </svg>
+  <div class="kind-pie__center"><strong>${total}</strong><span>今日上榜</span></div>`;
+
+  const listEl = $("#kind-pie-list");
+  listEl.innerHTML = segs
+    .map((s) => {
+      const active = state.kind === s.key;
+      const stat = s.key === "other";
+      return `<button type="button" class="kind-pie__row${stat ? " is-static" : ""}${active ? " is-active" : ""}" data-kind="${s.key}"${stat ? " disabled" : ""}>
+        <i style="background:${s.css}"></i><span class="kp-name">${s.name}</span><span class="kp-n">${s.n}</span><span class="kp-pct">${s.pct.toFixed(0)}%</span>
+      </button>`;
+    })
+    .join("");
+  listEl.querySelectorAll("button[data-kind]").forEach((btn) => {
+    if (btn.dataset.kind === "other") return;
+    btn.addEventListener("click", () => {
+      state.kind = state.kind === btn.dataset.kind ? "all" : btn.dataset.kind;
+      renderKindTabs();
+      renderBoard();
+    });
   });
 }
 
@@ -181,21 +258,11 @@ function renderTabs() {
   );
 }
 
-function boardTitleHint() {
-  if (state.board === "channel") return "频道/粗题材";
-  if (state.board === "merged") return "细分风向";
-  if (state.board === "fandom") return "同人/IP";
-  return "";
-}
-
 function renderBoard() {
   const isOverview = OVERVIEW.has(state.board);
   const board = $("#board");
   board.classList.toggle("board--src", !isOverview);
-  const titleHint = boardTitleHint();
-  $("#board-date").textContent = titleHint
-    ? `${latest.date} · ${titleHint}`
-    : `${latest.date} 快照`;
+  $("#board-date").textContent = latest.date || "";
 
   let list = byKeyword(latest.boards[state.board] || [], state.kw);
   if (state.board !== "channel" && OVERVIEW.has(state.board)) list = byKind(list, state.kind);
@@ -203,8 +270,9 @@ function renderBoard() {
 
   const ol = $("#rank-list");
   const status = $("#board-status");
-  const kindTabs = $("#kind-tabs");
-  if (kindTabs) kindTabs.hidden = state.board === "channel" || !OVERVIEW.has(state.board);
+  const kindRow = document.querySelector(".board__row--kind");
+  if (kindRow) kindRow.hidden = state.board === "channel" || !OVERVIEW.has(state.board);
+  renderKindPie();
 
   if (!list.length) {
     ol.innerHTML = "";
@@ -226,7 +294,9 @@ function renderBoard() {
     "board--nospark",
     !hasSpark || (state.board !== "merged" && state.board !== "fandom")
   );
-  renderLegend(hasDelta, isOverview);
+  renderLegend(hasDelta);
+  const scoreHead = document.querySelector(".rank-head .col-score");
+  if (scoreHead) scoreHead.title = "分数条 = 当前榜单区间相对刻度";
 
   status.innerHTML = "";
   const scale = makeScale(list);
@@ -252,22 +322,10 @@ function renderBoard() {
   });
 }
 
-function renderLegend(hasDelta, isOverview) {
-  const parts = ['<span>分数条 = 当前榜单区间相对刻度</span>'];
-  if (state.board === "merged") {
-    parts.push("<span>默认 = 细分风向（排除频道/粗题材）</span>");
-    parts.push("<span>单源发现 / 多源共识 = 覆盖可信度</span>");
-  }
-  if (state.board === "fandom") {
-    parts.push("<span>同人/IP = 作品宇宙 · 同人结构 · 关系类型</span>");
-    parts.push("<span>证据摘要 = 结构化标签 / 平台标签 / 标题推断</span>");
-  }
-  if (state.board === "channel") {
-    parts.push("<span>频道榜 = 专区/粗题材结构，不等价读者热度</span>");
-  }
-  if (isOverview) parts.push("<span>圆点 = 覆盖平台，实心为在榜</span>");
-  if (!hasDelta) parts.push('<span class="board__flag">首日快照 · 暂无升降</span>');
-  $("#board-legend").innerHTML = parts.join("");
+function renderLegend(hasDelta) {
+  const el = $("#board-legend");
+  if (!el) return;
+  el.innerHTML = hasDelta ? "" : '<span class="board__flag">首日快照 · 暂无升降</span>';
 }
 
 function renderHero() {

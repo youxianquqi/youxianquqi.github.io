@@ -6,6 +6,9 @@
 const STORE_KEY = "cyhd-splash";
 const TODAY = new Date().toLocaleDateString("sv"); // 本地时区 YYYY-MM-DD
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const FORCE =
+  typeof location !== "undefined" &&
+  /(?:\?|&)splash=(?:1|reset|force)\b/.test(location.search);
 
 // play  = 播放完整四幕（约 2.6s）
 // static = 静态成品帧 500ms 后快进退场（storage 异常 / reduced-motion）
@@ -13,11 +16,12 @@ const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 function decideMode() {
   let stored;
   try {
+    if (FORCE) localStorage.removeItem(STORE_KEY);
     stored = localStorage.getItem(STORE_KEY);
   } catch (e) {
     return "static";
   }
-  if (stored === TODAY) return "skip";
+  if (!FORCE && stored === TODAY) return "skip";
   try {
     localStorage.setItem(STORE_KEY, TODAY);
   } catch (e) {
@@ -104,13 +108,17 @@ function buildSplash() {
 }
 
 const mode = decideMode();
-if (mode !== "skip") {
+const root = document.documentElement;
+
+if (mode === "skip") {
+  root.classList.remove("js-splash-boot");
+} else {
   const splash = buildSplash();
   const logEls = [...splash.querySelectorAll(".splash__log p")];
   const finalEl = logEls.pop();
   const bar = splash.querySelector(".splash__progress > i");
-  const root = document.documentElement;
   root.style.overflow = "hidden";
+  root.classList.add("js-splash-boot");
 
   let raf = 0;
   let finished = false;
@@ -176,6 +184,7 @@ if (mode !== "skip") {
     setTimeout(() => {
       splash.remove();
       root.style.overflow = "";
+      root.classList.remove("js-splash-boot");
     }, leaveDelay + (quick ? 380 : 520));
   }
 
