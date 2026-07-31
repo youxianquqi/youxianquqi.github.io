@@ -2212,7 +2212,7 @@
       {
         "rank": 7,
         "tag": "轻小说",
-        "score": 32.51,
+        "score": 32.32,
         "source_count": 4,
         "sources_hit": [
           "ciweimao",
@@ -2232,7 +2232,7 @@
         },
         "signal_summary_text": "4 个频道提示",
         "delta_rank": 0,
-        "delta_score": 0.28
+        "delta_score": 0.09
       },
       {
         "rank": 8,
@@ -2260,7 +2260,7 @@
       {
         "rank": 9,
         "tag": "悬疑",
-        "score": 28.79,
+        "score": 28.68,
         "source_count": 3,
         "sources_hit": [
           "bilibili_manga",
@@ -2279,7 +2279,7 @@
         },
         "signal_summary_text": "1 个结构化标签 + 2 个频道提示",
         "delta_rank": 0,
-        "delta_score": -0.55
+        "delta_score": -0.66
       },
       {
         "rank": 10,
@@ -2376,7 +2376,7 @@
       {
         "rank": 14,
         "tag": "古风",
-        "score": 22.53,
+        "score": 22.76,
         "source_count": 2,
         "sources_hit": [
           "bilibili_manga",
@@ -2394,12 +2394,12 @@
         },
         "signal_summary_text": "2 个频道提示",
         "delta_rank": 0,
-        "delta_score": 0.15
+        "delta_score": 0.38
       },
       {
         "rank": 15,
         "tag": "同人",
-        "score": 21.74,
+        "score": 21.64,
         "source_count": 3,
         "sources_hit": [
           "ciweimao",
@@ -2418,12 +2418,12 @@
         },
         "signal_summary_text": "3 个频道提示",
         "delta_rank": 0,
-        "delta_score": 0.15
+        "delta_score": 0.05
       },
       {
         "rank": 16,
         "tag": "游戏",
-        "score": 19.32,
+        "score": 19,
         "source_count": 4,
         "sources_hit": [
           "bilibili_manga",
@@ -2443,7 +2443,7 @@
         },
         "signal_summary_text": "4 个频道提示",
         "delta_rank": 1,
-        "delta_score": 0.05
+        "delta_score": -0.27
       },
       {
         "rank": 17,
@@ -2470,7 +2470,7 @@
       {
         "rank": 18,
         "tag": "科幻",
-        "score": 18.58,
+        "score": 18.48,
         "source_count": 4,
         "sources_hit": [
           "ciweimao",
@@ -2490,12 +2490,12 @@
         },
         "signal_summary_text": "4 个频道提示",
         "delta_rank": 0,
-        "delta_score": 0.37
+        "delta_score": 0.27
       },
       {
         "rank": 19,
         "tag": "玄幻",
-        "score": 12.75,
+        "score": 12.64,
         "source_count": 4,
         "sources_hit": [
           "bilibili_manga",
@@ -2515,7 +2515,7 @@
         },
         "signal_summary_text": "4 个频道提示",
         "delta_rank": 0,
-        "delta_score": -0.38
+        "delta_score": -0.49
       },
       {
         "rank": 20,
@@ -5529,8 +5529,8 @@
       {
         "rank": 2,
         "tag": "魔幻",
-        "score": 25.7,
-        "raw_heat": 85,
+        "score": 27.11,
+        "raw_heat": 89,
         "heat_metric": "acg_category_rank",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
@@ -5545,7 +5545,7 @@
         },
         "signal_summary_text": "1 个频道提示",
         "delta_rank": 0,
-        "delta_score": -13.03
+        "delta_score": -11.62
       },
       {
         "rank": 3,
@@ -5570,6 +5570,27 @@
       },
       {
         "rank": 4,
+        "tag": "古风",
+        "score": 7.04,
+        "raw_heat": 32,
+        "heat_metric": "acg_category_rank",
+        "tag_role": "coarse_genre",
+        "discovery": "single_source",
+        "confidence": 0.35,
+        "signal_type": "category_hint",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个频道提示",
+        "delta_rank": 1,
+        "delta_score": -1.78
+      },
+      {
+        "rank": 5,
         "tag": "玄幻",
         "score": 6.34,
         "raw_heat": 30,
@@ -5586,29 +5607,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": 0,
+        "delta_rank": -1,
         "delta_score": -3.46
-      },
-      {
-        "rank": 5,
-        "tag": "古风",
-        "score": 6.34,
-        "raw_heat": 30,
-        "heat_metric": "acg_category_rank",
-        "tag_role": "coarse_genre",
-        "discovery": "single_source",
-        "confidence": 0.35,
-        "signal_type": "category_hint",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个频道提示",
-        "delta_rank": 0,
-        "delta_score": -2.48
       },
       {
         "rank": 6,
@@ -5634,8 +5634,8 @@
       {
         "rank": 7,
         "tag": "游戏",
-        "score": 5.63,
-        "raw_heat": 28,
+        "score": 4.93,
+        "raw_heat": 26,
         "heat_metric": "acg_category_rank",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
@@ -5650,7 +5650,7 @@
         },
         "signal_summary_text": "1 个频道提示",
         "delta_rank": -1,
-        "delta_score": -2.21
+        "delta_score": -2.91
       },
       {
         "rank": 8,
