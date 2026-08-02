@@ -1,15 +1,23 @@
 {
-  "updated_at": "2026-08-02T00:32:14.879Z",
+  "updated_at": "2026-08-02T00:40:40.330Z",
   "latest_date": "2026-08-02",
   "sources": [
     "merged",
     "fandom",
     "channel",
     "bilibili_manga",
+    "changpei",
     "ciweimao",
+    "fanqie",
+    "huaben",
     "jjwxc",
+    "kuaikan",
     "qidian",
-    "sfacg"
+    "qimao",
+    "qq_reading",
+    "sfacg",
+    "tencent_manga",
+    "zongheng"
   ],
   "source_names": {
     "merged": "细分风向",
@@ -71,37 +79,37 @@
     },
     "qq_reading": {
       "name": "QQ阅读",
-      "status": "observe",
+      "status": "default",
       "source_family": "novel",
       "admission_scope": "full"
     },
     "huaben": {
       "name": "话本小说",
-      "status": "observe",
+      "status": "default",
       "source_family": "novel",
       "admission_scope": "full"
     },
     "kuaikan": {
       "name": "快看漫画",
-      "status": "observe",
+      "status": "default",
       "source_family": "comic",
       "admission_scope": "full"
     },
     "tencent_manga": {
       "name": "腾讯动漫",
-      "status": "observe",
+      "status": "default",
       "source_family": "comic",
       "admission_scope": "full"
     },
     "qimao": {
       "name": "七猫",
-      "status": "observe",
+      "status": "default",
       "source_family": "novel",
       "admission_scope": "channel_or_auxiliary"
     },
     "zongheng": {
       "name": "纵横",
-      "status": "observe",
+      "status": "default",
       "source_family": "novel",
       "admission_scope": "channel_or_auxiliary"
     },
@@ -113,13 +121,13 @@
     },
     "changpei": {
       "name": "长佩",
-      "status": "observe",
+      "status": "default",
       "source_family": "novel",
       "admission_scope": "full"
     },
     "fanqie": {
       "name": "番茄",
-      "status": "observe",
+      "status": "default",
       "source_family": "novel",
       "admission_scope": "full"
     },
