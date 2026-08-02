@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-01T22:58:05.207Z",
+  "updated_at": "2026-08-02T00:32:14.879Z",
   "latest_date": "2026-08-02",
   "sources": [
     "merged",
@@ -22,7 +22,113 @@
     "ciweimao": "刺猬猫",
     "jjwxc": "晋江",
     "fanqie": "番茄",
-    "qidian": "起点"
+    "qidian": "起点",
+    "qq_reading": "QQ阅读",
+    "huaben": "话本小说",
+    "kuaikan": "快看漫画",
+    "tencent_manga": "腾讯动漫",
+    "qimao": "七猫",
+    "zongheng": "纵横",
+    "17k": "17K",
+    "changpei": "长佩"
+  },
+  "source_status": {
+    "ciweimao": {
+      "name": "刺猬猫",
+      "status": "default",
+      "source_family": "novel",
+      "admission_scope": "full"
+    },
+    "sfacg": {
+      "name": "SF轻小说",
+      "status": "default",
+      "source_family": "novel",
+      "admission_scope": "full"
+    },
+    "qidian": {
+      "name": "起点",
+      "status": "default",
+      "source_family": "novel",
+      "admission_scope": "full"
+    },
+    "jjwxc": {
+      "name": "晋江",
+      "status": "default",
+      "source_family": "novel",
+      "admission_scope": "full"
+    },
+    "bilibili_manga": {
+      "name": "B漫",
+      "status": "default",
+      "source_family": "comic",
+      "admission_scope": "full"
+    },
+    "feilu": {
+      "name": "飞卢",
+      "status": "observe",
+      "source_family": "novel",
+      "admission_scope": "full"
+    },
+    "qq_reading": {
+      "name": "QQ阅读",
+      "status": "observe",
+      "source_family": "novel",
+      "admission_scope": "full"
+    },
+    "huaben": {
+      "name": "话本小说",
+      "status": "observe",
+      "source_family": "novel",
+      "admission_scope": "full"
+    },
+    "kuaikan": {
+      "name": "快看漫画",
+      "status": "observe",
+      "source_family": "comic",
+      "admission_scope": "full"
+    },
+    "tencent_manga": {
+      "name": "腾讯动漫",
+      "status": "observe",
+      "source_family": "comic",
+      "admission_scope": "full"
+    },
+    "qimao": {
+      "name": "七猫",
+      "status": "observe",
+      "source_family": "novel",
+      "admission_scope": "channel_or_auxiliary"
+    },
+    "zongheng": {
+      "name": "纵横",
+      "status": "observe",
+      "source_family": "novel",
+      "admission_scope": "channel_or_auxiliary"
+    },
+    "17k": {
+      "name": "17K",
+      "status": "suspended",
+      "source_family": "novel",
+      "admission_scope": "channel_or_auxiliary"
+    },
+    "changpei": {
+      "name": "长佩",
+      "status": "observe",
+      "source_family": "novel",
+      "admission_scope": "full"
+    },
+    "fanqie": {
+      "name": "番茄",
+      "status": "observe",
+      "source_family": "novel",
+      "admission_scope": "full"
+    },
+    "lofter": {
+      "name": "LOFTER",
+      "status": "suspended",
+      "source_family": "community",
+      "admission_scope": "full"
+    }
   },
   "limit": 50,
   "board_mode": "fine_default"

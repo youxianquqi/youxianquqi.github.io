@@ -7,9 +7,18 @@
         "tag": "百合",
         "score": 82,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "jjwxc"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "jjwxc"
+          ]
+        },
         "tag_role": "relationship_type",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -29,9 +38,18 @@
         "tag": "无CP",
         "score": 82,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "jjwxc"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "jjwxc"
+          ]
+        },
         "tag_role": "relationship_type",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -51,9 +69,18 @@
         "tag": "型月",
         "score": 82,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -80,9 +107,18 @@
         "tag": "诸天无限",
         "score": 82,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "qidian"
+          ]
+        },
         "tag_role": "subgenre",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -102,9 +138,18 @@
         "tag": "衍生同人",
         "score": 73.89,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "qidian"
+          ]
+        },
         "tag_role": "fandom_structure",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -121,15 +166,63 @@
       },
       {
         "rank": 6,
+        "tag": "修罗场",
+        "score": 73.12,
+        "source_count": 3,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao",
+          "jjwxc"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao",
+            "jjwxc"
+          ]
+        },
+        "tag_role": "relationship_type",
+        "confidence": 0.92,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 2,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签 + 2 个平台标签",
+        "delta_rank": 0,
+        "delta_score": 0
+      },
+      {
+        "rank": 7,
         "tag": "综漫",
-        "score": 68.16,
+        "score": 64.16,
         "source_count": 2,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao",
           "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "qidian"
+          ]
+        },
         "tag_role": "fandom_structure",
-        "confidence": 0.8,
+        "confidence": 0.76,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 2,
@@ -143,40 +236,29 @@
         "delta_score": 0
       },
       {
-        "rank": 7,
-        "tag": "修罗场",
-        "score": 56.16,
-        "source_count": 3,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao",
-          "jjwxc"
-        ],
-        "tag_role": "relationship_type",
-        "confidence": 0.94,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 2,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签 + 2 个平台标签",
-        "delta_rank": 1,
-        "delta_score": 0
-      },
-      {
         "rank": 8,
         "tag": "穿越",
         "score": 52.7,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "trope",
-        "confidence": 0.83,
+        "confidence": 0.85,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -194,9 +276,18 @@
         "tag": "中二",
         "score": 50.01,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "moe",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -208,41 +299,57 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -2,
+        "delta_rank": -1,
         "delta_score": -13.48
       },
       {
         "rank": 10,
-        "tag": "校园",
-        "score": 44.75,
-        "source_count": 3,
+        "tag": "原生幻想",
+        "score": 44.44,
+        "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
-          "bilibili_manga",
-          "ciweimao",
-          "sfacg"
+          "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "qidian"
+          ]
+        },
         "tag_role": "subgenre",
-        "confidence": 0.94,
-        "discovery": "multi_source",
+        "confidence": 0.68,
+        "discovery": "single_source",
         "signal_summary": {
-          "platform_tag": 2,
-          "structured_api_tag": 1,
+          "platform_tag": 1,
+          "structured_api_tag": 0,
           "title_inference": 0,
           "category_hint": 0,
           "unknown": 0
         },
-        "signal_summary_text": "1 个结构化标签 + 2 个平台标签",
+        "signal_summary_text": "1 个平台标签",
         "delta_rank": 0,
-        "delta_score": -0.06
+        "delta_score": 0
       },
       {
         "rank": 11,
-        "tag": "原生幻想",
-        "score": 44.44,
+        "tag": "现代幻想",
+        "score": 43.33,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "qidian"
+          ]
+        },
         "tag_role": "subgenre",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -259,34 +366,59 @@
       },
       {
         "rank": 12,
-        "tag": "现代幻想",
-        "score": 43.33,
-        "source_count": 1,
+        "tag": "校园",
+        "score": 43.13,
+        "source_count": 3,
+        "family_count": 2,
         "sources_hit": [
-          "qidian"
+          "bilibili_manga",
+          "ciweimao",
+          "sfacg"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao",
+            "sfacg"
+          ]
+        },
         "tag_role": "subgenre",
-        "confidence": 0.68,
-        "discovery": "single_source",
+        "confidence": 0.92,
+        "discovery": "multi_source",
         "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
+          "platform_tag": 2,
+          "structured_api_tag": 1,
           "title_inference": 0,
           "category_hint": 0,
           "unknown": 0
         },
-        "signal_summary_text": "1 个平台标签",
+        "signal_summary_text": "1 个结构化标签 + 2 个平台标签",
         "delta_rank": 0,
-        "delta_score": 0
+        "delta_score": -0.09
       },
       {
         "rank": 13,
         "tag": "搞笑吐槽",
         "score": 41.11,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "qidian"
+          ]
+        },
         "tag_role": "subgenre",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -306,9 +438,18 @@
         "tag": "恋爱日常",
         "score": 40,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "qidian"
+          ]
+        },
         "tag_role": "subgenre",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -325,12 +466,59 @@
       },
       {
         "rank": 15,
+        "tag": "无限",
+        "score": 39.32,
+        "source_count": 3,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao",
+          "qidian"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao",
+            "qidian"
+          ]
+        },
+        "tag_role": "fandom_structure",
+        "confidence": 0.92,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 2,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签 + 2 个平台标签",
+        "delta_rank": 0,
+        "delta_score": -0.57
+      },
+      {
+        "rank": 16,
         "tag": "明日方舟",
         "score": 36.26,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -351,13 +539,22 @@
         "delta_score": 0
       },
       {
-        "rank": 16,
+        "rank": 17,
         "tag": "星穹铁道",
         "score": 34.95,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -379,13 +576,22 @@
         "delta_score": 0
       },
       {
-        "rank": 17,
+        "rank": 18,
         "tag": "奥特曼",
         "score": 33.51,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -402,41 +608,26 @@
           "迪迦"
         ],
         "ip_parent": null,
-        "delta_rank": 1,
+        "delta_rank": 0,
         "delta_score": 0
-      },
-      {
-        "rank": 18,
-        "tag": "无限",
-        "score": 33.25,
-        "source_count": 3,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao",
-          "qidian"
-        ],
-        "tag_role": "fandom_structure",
-        "confidence": 0.94,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 2,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签 + 2 个平台标签",
-        "delta_rank": -1,
-        "delta_score": -0.38
       },
       {
         "rank": 19,
         "tag": "崩坏",
         "score": 32.67,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -462,9 +653,18 @@
         "tag": "舰娘",
         "score": 31.95,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -487,9 +687,18 @@
         "tag": "异能",
         "score": 31.74,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "subgenre",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -509,9 +718,18 @@
         "tag": "俺春物",
         "score": 30.52,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -534,12 +752,25 @@
         "tag": "腹黑",
         "score": 28.45,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "moe",
-        "confidence": 0.83,
+        "confidence": 0.85,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -557,9 +788,18 @@
         "tag": "迪化",
         "score": 26.09,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "trope",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -579,9 +819,18 @@
         "tag": "病娇",
         "score": 25.71,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "moe",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -601,12 +850,25 @@
         "tag": "重生",
         "score": 16.77,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "trope",
-        "confidence": 0.83,
+        "confidence": 0.85,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -624,12 +886,25 @@
         "tag": "升级",
         "score": 16.16,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "trope",
-        "confidence": 0.83,
+        "confidence": 0.85,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -647,12 +922,25 @@
         "tag": "火影",
         "score": 16.08,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
-        "confidence": 0.66,
+        "confidence": 0.68,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -676,9 +964,18 @@
         "tag": "种田",
         "score": 12.57,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "trope",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -698,9 +995,18 @@
         "tag": "约会大作战",
         "score": 12.33,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -723,12 +1029,25 @@
         "tag": "死神",
         "score": 12,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
-        "confidence": 0.66,
+        "confidence": 0.68,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -749,9 +1068,18 @@
         "tag": "原神",
         "score": 11.97,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -774,12 +1102,25 @@
         "tag": "克苏鲁",
         "score": 11.41,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "subgenre",
-        "confidence": 0.83,
+        "confidence": 0.85,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -797,12 +1138,25 @@
         "tag": "魔法",
         "score": 11.36,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "subgenre",
-        "confidence": 0.83,
+        "confidence": 0.85,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -820,9 +1174,18 @@
         "tag": "规则怪谈",
         "score": 11.11,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "qidian"
+          ]
+        },
         "tag_role": "subgenre",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -842,9 +1205,18 @@
         "tag": "宝可梦",
         "score": 10.65,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -869,9 +1241,18 @@
         "tag": "海贼",
         "score": 10.41,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -897,9 +1278,18 @@
         "tag": "从零开始",
         "score": 10.17,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -924,9 +1314,18 @@
         "tag": "战锤",
         "score": 9.69,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -949,9 +1348,18 @@
         "tag": "绝区零",
         "score": 8.86,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -974,9 +1382,18 @@
         "tag": "白毛",
         "score": 8.6,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "moe",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -996,9 +1413,18 @@
         "tag": "傲娇",
         "score": 8.28,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "moe",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -1018,9 +1444,18 @@
         "tag": "无口",
         "score": 7.35,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "moe",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -1040,9 +1475,18 @@
         "tag": "哈利波特",
         "score": 7.3,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1067,9 +1511,18 @@
         "tag": "正太",
         "score": 6.74,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "moe",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -1089,9 +1542,18 @@
         "tag": "咒术",
         "score": 6.22,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1116,9 +1578,18 @@
         "tag": "柯南",
         "score": 5.78,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.41,
         "discovery": "single_source",
@@ -1143,9 +1614,18 @@
         "tag": "鸣潮",
         "score": 5.27,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1168,9 +1648,18 @@
         "tag": "机甲",
         "score": 5.03,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "subgenre",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1190,9 +1679,18 @@
         "tag": "间谍过家家",
         "score": 4.92,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.41,
         "discovery": "single_source",
@@ -1217,9 +1715,18 @@
         "tag": "百合",
         "score": 82,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "jjwxc"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "jjwxc"
+          ]
+        },
         "tag_role": "relationship_type",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1239,9 +1746,18 @@
         "tag": "无CP",
         "score": 82,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "jjwxc"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "jjwxc"
+          ]
+        },
         "tag_role": "relationship_type",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1261,9 +1777,18 @@
         "tag": "型月",
         "score": 82,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1290,9 +1815,18 @@
         "tag": "衍生同人",
         "score": 82,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "qidian"
+          ]
+        },
         "tag_role": "fandom_structure",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1309,39 +1843,30 @@
       },
       {
         "rank": 5,
-        "tag": "综漫",
-        "score": 75.86,
-        "source_count": 2,
-        "sources_hit": [
-          "ciweimao",
-          "qidian"
-        ],
-        "tag_role": "fandom_structure",
-        "confidence": 0.8,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 2,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "2 个平台标签",
-        "delta_rank": 0,
-        "delta_score": 0
-      },
-      {
-        "rank": 6,
         "tag": "修罗场",
-        "score": 55.87,
+        "score": 72.9,
         "source_count": 3,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao",
           "jjwxc"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao",
+            "jjwxc"
+          ]
+        },
         "tag_role": "relationship_type",
-        "confidence": 0.94,
+        "confidence": 0.92,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 2,
@@ -1355,13 +1880,93 @@
         "delta_score": 0
       },
       {
+        "rank": 6,
+        "tag": "综漫",
+        "score": 71.86,
+        "source_count": 2,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao",
+          "qidian"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "qidian"
+          ]
+        },
+        "tag_role": "fandom_structure",
+        "confidence": 0.76,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 2,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "2 个平台标签",
+        "delta_rank": 0,
+        "delta_score": 0
+      },
+      {
         "rank": 7,
+        "tag": "无限",
+        "score": 38.93,
+        "source_count": 3,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao",
+          "qidian"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao",
+            "qidian"
+          ]
+        },
+        "tag_role": "fandom_structure",
+        "confidence": 0.92,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 2,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签 + 2 个平台标签",
+        "delta_rank": 0,
+        "delta_score": -0.29
+      },
+      {
+        "rank": 8,
         "tag": "明日方舟",
         "score": 35.39,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1382,13 +1987,22 @@
         "delta_score": 0
       },
       {
-        "rank": 8,
+        "rank": 9,
         "tag": "星穹铁道",
         "score": 34.05,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1410,37 +2024,22 @@
         "delta_score": 0
       },
       {
-        "rank": 9,
-        "tag": "无限",
-        "score": 32.92,
-        "source_count": 3,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao",
-          "qidian"
-        ],
-        "tag_role": "fandom_structure",
-        "confidence": 0.94,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 2,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签 + 2 个平台标签",
-        "delta_rank": 0,
-        "delta_score": -0.19
-      },
-      {
         "rank": 10,
         "tag": "奥特曼",
         "score": 32.59,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1465,9 +2064,18 @@
         "tag": "崩坏",
         "score": 31.74,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1493,9 +2101,18 @@
         "tag": "舰娘",
         "score": 31.01,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1518,9 +2135,18 @@
         "tag": "俺春物",
         "score": 29.55,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1543,12 +2169,25 @@
         "tag": "火影",
         "score": 15.23,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
-        "confidence": 0.66,
+        "confidence": 0.68,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -1572,12 +2211,25 @@
         "tag": "死神",
         "score": 11.1,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
-        "confidence": 0.66,
+        "confidence": 0.68,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -1598,9 +2250,18 @@
         "tag": "约会大作战",
         "score": 11.07,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1623,9 +2284,18 @@
         "tag": "原神",
         "score": 10.7,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1648,9 +2318,18 @@
         "tag": "宝可梦",
         "score": 9.36,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1675,9 +2354,18 @@
         "tag": "海贼",
         "score": 9.12,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1703,9 +2391,18 @@
         "tag": "从零开始",
         "score": 8.88,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1730,9 +2427,18 @@
         "tag": "战锤",
         "score": 8.39,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1755,9 +2461,18 @@
         "tag": "绝区零",
         "score": 7.54,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1780,9 +2495,18 @@
         "tag": "哈利波特",
         "score": 5.96,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1807,9 +2531,18 @@
         "tag": "柯南",
         "score": 5.36,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.41,
         "discovery": "single_source",
@@ -1834,9 +2567,18 @@
         "tag": "咒术",
         "score": 4.86,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1861,9 +2603,18 @@
         "tag": "间谍过家家",
         "score": 4.49,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.41,
         "discovery": "single_source",
@@ -1886,9 +2637,18 @@
         "tag": "鸣潮",
         "score": 3.89,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1911,9 +2671,18 @@
         "tag": "全职猎人",
         "score": 3.49,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.41,
         "discovery": "single_source",
@@ -1936,9 +2705,18 @@
         "tag": "鬼灭",
         "score": 2.33,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.41,
         "discovery": "single_source",
@@ -1963,9 +2741,18 @@
         "tag": "碧蓝航线",
         "score": 1.22,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "ip_universe",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -1988,9 +2775,18 @@
         "tag": "聊天群",
         "score": 0,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "fandom_structure",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -2010,9 +2806,18 @@
         "tag": "群像",
         "score": 0,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "jjwxc"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "jjwxc"
+          ]
+        },
         "tag_role": "relationship_type",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -2032,9 +2837,18 @@
         "tag": "诸天",
         "score": 0,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "qidian"
+          ]
+        },
         "tag_role": "fandom_structure",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -2054,9 +2868,18 @@
         "tag": "TS",
         "score": 0,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "jjwxc"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "jjwxc"
+          ]
+        },
         "tag_role": "relationship_type",
         "confidence": 0.68,
         "discovery": "single_source",
@@ -2078,12 +2901,25 @@
         "tag": "战斗",
         "score": 61.04,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.63,
+        "confidence": 0.65,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2101,12 +2937,25 @@
         "tag": "恋爱",
         "score": 53.12,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.63,
+        "confidence": 0.65,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2124,12 +2973,25 @@
         "tag": "热血",
         "score": 40.18,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.63,
+        "confidence": 0.65,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2144,83 +3006,29 @@
       },
       {
         "rank": 4,
-        "tag": "魔幻",
-        "score": 35,
-        "source_count": 1,
-        "sources_hit": [
-          "sfacg"
-        ],
-        "tag_role": "coarse_genre",
-        "confidence": 0.26,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个频道提示",
-        "delta_rank": 0,
-        "delta_score": 0
-      },
-      {
-        "rank": 5,
-        "tag": "衍生",
-        "score": 35,
-        "source_count": 1,
-        "sources_hit": [
-          "jjwxc"
-        ],
-        "tag_role": "channel",
-        "confidence": 0.26,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个频道提示",
-        "delta_rank": 0,
-        "delta_score": 0
-      },
-      {
-        "rank": 6,
-        "tag": "娱乐",
-        "score": 35,
-        "source_count": 1,
-        "sources_hit": [
-          "jjwxc"
-        ],
-        "tag_role": "coarse_genre",
-        "confidence": 0.26,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个频道提示",
-        "delta_rank": 0,
-        "delta_score": 0
-      },
-      {
-        "rank": 7,
         "tag": "轻小说",
-        "score": 32.41,
+        "score": 36.41,
         "source_count": 4,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao",
           "jjwxc",
           "qidian",
           "sfacg"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "jjwxc",
+            "qidian",
+            "sfacg"
+          ]
+        },
         "tag_role": "channel",
-        "confidence": 0.51,
+        "confidence": 0.44,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2234,17 +3042,124 @@
         "delta_score": 0.09
       },
       {
+        "rank": 5,
+        "tag": "魔幻",
+        "score": 35,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "sfacg"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "sfacg"
+          ]
+        },
+        "tag_role": "coarse_genre",
+        "confidence": 0.26,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个频道提示",
+        "delta_rank": 1,
+        "delta_score": 0
+      },
+      {
+        "rank": 6,
+        "tag": "衍生",
+        "score": 35,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "jjwxc"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "jjwxc"
+          ]
+        },
+        "tag_role": "channel",
+        "confidence": 0.26,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个频道提示",
+        "delta_rank": 1,
+        "delta_score": 0
+      },
+      {
+        "rank": 7,
+        "tag": "娱乐",
+        "score": 35,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "jjwxc"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "jjwxc"
+          ]
+        },
+        "tag_role": "coarse_genre",
+        "confidence": 0.26,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个频道提示",
+        "delta_rank": 1,
+        "delta_score": 0
+      },
+      {
         "rank": 8,
         "tag": "悬疑",
-        "score": 27.74,
+        "score": 32.7,
         "source_count": 3,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "jjwxc",
           "sfacg"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "jjwxc",
+            "sfacg"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.67,
+        "confidence": 0.65,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2255,67 +3170,36 @@
         },
         "signal_summary_text": "1 个结构化标签 + 2 个频道提示",
         "delta_rank": 1,
-        "delta_score": -0.94
+        "delta_score": -1.44
       },
       {
         "rank": 9,
-        "tag": "纯爱",
-        "score": 26.44,
-        "source_count": 2,
-        "sources_hit": [
-          "ciweimao",
-          "jjwxc"
-        ],
-        "tag_role": "coarse_genre",
-        "confidence": 0.38,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 2,
-          "unknown": 0
-        },
-        "signal_summary_text": "2 个频道提示",
-        "delta_rank": 1,
-        "delta_score": 0
-      },
-      {
-        "rank": 10,
-        "tag": "冒险",
-        "score": 26.32,
-        "source_count": 2,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao"
-        ],
-        "tag_role": "coarse_genre",
-        "confidence": 0.63,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签 + 1 个频道提示",
-        "delta_rank": -2,
-        "delta_score": -3.08
-      },
-      {
-        "rank": 11,
         "tag": "奇幻",
-        "score": 23.81,
+        "score": 32.59,
         "source_count": 4,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao",
           "jjwxc",
           "qidian"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao",
+            "jjwxc",
+            "qidian"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.51,
+        "confidence": 0.5,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2325,17 +3209,62 @@
           "unknown": 0
         },
         "signal_summary_text": "4 个频道提示",
-        "delta_rank": 0,
-        "delta_score": -1.21
+        "delta_rank": -4,
+        "delta_score": -2.42
       },
       {
-        "rank": 12,
+        "rank": 10,
+        "tag": "冒险",
+        "score": 26.32,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "coarse_genre",
+        "confidence": 0.65,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签 + 1 个频道提示",
+        "delta_rank": 0,
+        "delta_score": -3.08
+      },
+      {
+        "rank": 11,
         "tag": "动漫穿越",
         "score": 23.59,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "channel",
         "confidence": 0.26,
         "discovery": "single_source",
@@ -2351,16 +3280,26 @@
         "delta_score": 0
       },
       {
-        "rank": 13,
-        "tag": "古风",
-        "score": 22.4,
+        "rank": 12,
+        "tag": "纯爱",
+        "score": 22.44,
         "source_count": 2,
+        "family_count": 1,
         "sources_hit": [
-          "bilibili_manga",
-          "sfacg"
+          "ciweimao",
+          "jjwxc"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "jjwxc"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.38,
+        "confidence": 0.34,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2370,7 +3309,43 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个频道提示",
-        "delta_rank": 1,
+        "delta_rank": 3,
+        "delta_score": 0
+      },
+      {
+        "rank": 13,
+        "tag": "古风",
+        "score": 22.4,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "sfacg"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "sfacg"
+          ]
+        },
+        "tag_role": "coarse_genre",
+        "confidence": 0.4,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 2,
+          "unknown": 0
+        },
+        "signal_summary_text": "2 个频道提示",
+        "delta_rank": 0,
         "delta_score": -0.36
       },
       {
@@ -2378,9 +3353,18 @@
         "tag": "搞笑",
         "score": 21.99,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "coarse_genre",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -2392,7 +3376,7 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -1,
+        "delta_rank": -2,
         "delta_score": -1.42
       },
       {
@@ -2400,13 +3384,24 @@
         "tag": "同人",
         "score": 21.69,
         "source_count": 3,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao",
           "jjwxc",
           "sfacg"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "jjwxc",
+            "sfacg"
+          ]
+        },
         "tag_role": "channel",
-        "confidence": 0.5,
+        "confidence": 0.42,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2416,22 +3411,37 @@
           "unknown": 0
         },
         "signal_summary_text": "3 个频道提示",
-        "delta_rank": 0,
+        "delta_rank": 2,
         "delta_score": 0.05
       },
       {
         "rank": 16,
         "tag": "游戏",
-        "score": 18.78,
+        "score": 21.51,
         "source_count": 4,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "jjwxc",
           "qidian",
           "sfacg"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "jjwxc",
+            "qidian",
+            "sfacg"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.51,
+        "confidence": 0.5,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2442,16 +3452,67 @@
         },
         "signal_summary_text": "4 个频道提示",
         "delta_rank": 0,
-        "delta_score": -0.22
+        "delta_score": -0.49
       },
       {
         "rank": 17,
+        "tag": "科幻",
+        "score": 18.55,
+        "source_count": 5,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao",
+          "jjwxc",
+          "qidian",
+          "sfacg"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao",
+            "jjwxc",
+            "qidian",
+            "sfacg"
+          ]
+        },
+        "tag_role": "coarse_genre",
+        "confidence": 0.5,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 5,
+          "unknown": 0
+        },
+        "signal_summary_text": "5 个频道提示",
+        "delta_rank": -3,
+        "delta_score": -3.93
+      },
+      {
+        "rank": 18,
         "tag": "日常",
         "score": 17.69,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "coarse_genre",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -2467,44 +3528,33 @@
         "delta_score": -1.17
       },
       {
-        "rank": 18,
-        "tag": "科幻",
-        "score": 16.8,
-        "source_count": 5,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao",
-          "jjwxc",
-          "qidian",
-          "sfacg"
-        ],
-        "tag_role": "coarse_genre",
-        "confidence": 0.51,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 5,
-          "unknown": 0
-        },
-        "signal_summary_text": "5 个频道提示",
-        "delta_rank": 0,
-        "delta_score": -1.68
-      },
-      {
         "rank": 19,
         "tag": "玄幻",
-        "score": 12.53,
+        "score": 17.5,
         "source_count": 4,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao",
           "qidian",
           "sfacg"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao",
+            "qidian",
+            "sfacg"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.51,
+        "confidence": 0.5,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2515,19 +3565,32 @@
         },
         "signal_summary_text": "4 个频道提示",
         "delta_rank": 0,
-        "delta_score": -0.11
+        "delta_score": -0.29
       },
       {
         "rank": 20,
         "tag": "青春",
         "score": 11.85,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.38,
+        "confidence": 0.4,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2545,12 +3608,25 @@
         "tag": "推理",
         "score": 11.44,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.63,
+        "confidence": 0.65,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2568,12 +3644,25 @@
         "tag": "治愈",
         "score": 11.24,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "coarse_genre",
-        "confidence": 0.63,
+        "confidence": 0.65,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2591,9 +3680,18 @@
         "tag": "美食",
         "score": 10.77,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "coarse_genre",
         "confidence": 0.75,
         "discovery": "single_source",
@@ -2613,12 +3711,25 @@
         "tag": "国漫",
         "score": 8.01,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "ciweimao"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
         "tag_role": "channel",
-        "confidence": 0.38,
+        "confidence": 0.4,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2636,12 +3747,25 @@
         "tag": "漫画",
         "score": 8,
         "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
           "bilibili_manga",
           "sfacg"
         ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "sfacg"
+          ]
+        },
         "tag_role": "channel",
-        "confidence": 0.38,
+        "confidence": 0.4,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -2659,9 +3783,18 @@
         "tag": "竞技",
         "score": 6.97,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "coarse_genre",
         "confidence": 0.26,
         "discovery": "single_source",
@@ -2681,9 +3814,18 @@
         "tag": "灵异",
         "score": 6.25,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "coarse_genre",
         "confidence": 0.26,
         "discovery": "single_source",
@@ -2703,9 +3845,18 @@
         "tag": "西幻",
         "score": 3.81,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "coarse_genre",
         "confidence": 0.26,
         "discovery": "single_source",
@@ -2725,9 +3876,18 @@
         "tag": "日漫",
         "score": 0.06,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "bilibili_manga"
         ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
         "tag_role": "channel",
         "confidence": 0.26,
         "discovery": "single_source",
@@ -2747,9 +3907,18 @@
         "tag": "短篇",
         "score": 0,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "qidian"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "qidian"
+          ]
+        },
         "tag_role": "coarse_genre",
         "confidence": 0.26,
         "discovery": "single_source",
@@ -2769,9 +3938,18 @@
         "tag": "二次元",
         "score": 0,
         "source_count": 1,
+        "family_count": 1,
         "sources_hit": [
           "jjwxc"
         ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "jjwxc"
+          ]
+        },
         "tag_role": "channel",
         "confidence": 0.26,
         "discovery": "single_source",
@@ -2794,6 +3972,7 @@
         "score": 100,
         "raw_heat": 4700,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "relationship_type",
         "discovery": "single_source",
         "confidence": 1,
@@ -2815,6 +3994,7 @@
         "score": 77.81,
         "raw_heat": 3658,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "trope",
         "discovery": "single_source",
         "confidence": 1,
@@ -2836,6 +4016,7 @@
         "score": 53.08,
         "raw_heat": 2497,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "moe",
         "discovery": "single_source",
         "confidence": 1,
@@ -2857,6 +4038,7 @@
         "score": 41.04,
         "raw_heat": 1932,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "moe",
         "discovery": "single_source",
         "confidence": 1,
@@ -2878,6 +4060,7 @@
         "score": 38.17,
         "raw_heat": 1797,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 1,
@@ -2899,6 +4082,7 @@
         "score": 37.59,
         "raw_heat": 1770,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
         "confidence": 1,
@@ -2920,6 +4104,7 @@
         "score": 35.93,
         "raw_heat": 1692,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 1,
@@ -2941,6 +4126,7 @@
         "score": 32.89,
         "raw_heat": 1549,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -2962,6 +4148,7 @@
         "score": 32.12,
         "raw_heat": 1513,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 1,
@@ -2983,6 +4170,7 @@
         "score": 30.63,
         "raw_heat": 1443,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "trope",
         "discovery": "single_source",
         "confidence": 1,
@@ -3004,6 +4192,7 @@
         "score": 30.27,
         "raw_heat": 1426,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "moe",
         "discovery": "single_source",
         "confidence": 1,
@@ -3025,6 +4214,7 @@
         "score": 23.11,
         "raw_heat": 1090,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3046,6 +4236,7 @@
         "score": 21.24,
         "raw_heat": 1002,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3067,6 +4258,7 @@
         "score": 19.53,
         "raw_heat": 922,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3088,6 +4280,7 @@
         "score": 16,
         "raw_heat": 756,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.55,
@@ -3109,6 +4302,7 @@
         "score": 14.53,
         "raw_heat": 687,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.55,
@@ -3130,6 +4324,7 @@
         "score": 14.5,
         "raw_heat": 686,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "trope",
         "discovery": "single_source",
         "confidence": 1,
@@ -3151,6 +4346,7 @@
         "score": 14.21,
         "raw_heat": 672,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "moe",
         "discovery": "single_source",
         "confidence": 1,
@@ -3172,6 +4368,7 @@
         "score": 13.91,
         "raw_heat": 658,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "moe",
         "discovery": "single_source",
         "confidence": 1,
@@ -3193,6 +4390,7 @@
         "score": 13.04,
         "raw_heat": 617,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "moe",
         "discovery": "single_source",
         "confidence": 1,
@@ -3214,6 +4412,7 @@
         "score": 12.91,
         "raw_heat": 611,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "trope",
         "discovery": "single_source",
         "confidence": 1,
@@ -3235,6 +4434,7 @@
         "score": 12.82,
         "raw_heat": 607,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3256,6 +4456,7 @@
         "score": 12.82,
         "raw_heat": 607,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.55,
@@ -3277,6 +4478,7 @@
         "score": 12.46,
         "raw_heat": 590,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "moe",
         "discovery": "single_source",
         "confidence": 1,
@@ -3298,6 +4500,7 @@
         "score": 11.84,
         "raw_heat": 561,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.55,
@@ -3319,6 +4522,7 @@
         "score": 10.86,
         "raw_heat": 515,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.55,
@@ -3340,6 +4544,7 @@
         "score": 8.99,
         "raw_heat": 427,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3361,6 +4566,7 @@
         "score": 8.39,
         "raw_heat": 399,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3382,6 +4588,7 @@
         "score": 8.35,
         "raw_heat": 397,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "trope",
         "discovery": "single_source",
         "confidence": 1,
@@ -3403,6 +4610,7 @@
         "score": 8.12,
         "raw_heat": 386,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3424,6 +4632,7 @@
         "score": 7.6,
         "raw_heat": 362,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3445,6 +4654,7 @@
         "score": 7.6,
         "raw_heat": 362,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3466,6 +4676,7 @@
         "score": 6.99,
         "raw_heat": 333,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "moe",
         "discovery": "single_source",
         "confidence": 1,
@@ -3487,6 +4698,7 @@
         "score": 6.94,
         "raw_heat": 331,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3508,6 +4720,7 @@
         "score": 6.92,
         "raw_heat": 330,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.55,
@@ -3529,6 +4742,7 @@
         "score": 6.82,
         "raw_heat": 325,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3550,6 +4764,7 @@
         "score": 6.75,
         "raw_heat": 322,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3571,6 +4786,7 @@
         "score": 6.13,
         "raw_heat": 293,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3592,6 +4808,7 @@
         "score": 4.15,
         "raw_heat": 200,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3613,6 +4830,7 @@
         "score": 4.11,
         "raw_heat": 198,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3634,6 +4852,7 @@
         "score": 3.41,
         "raw_heat": 165,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3655,6 +4874,7 @@
         "score": 3.07,
         "raw_heat": 149,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3676,6 +4896,7 @@
         "score": 2.04,
         "raw_heat": 101,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3697,6 +4918,7 @@
         "score": 1.02,
         "raw_heat": 53,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 1,
@@ -3718,6 +4940,7 @@
         "score": 0.06,
         "raw_heat": 8,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3739,6 +4962,7 @@
         "score": 0.02,
         "raw_heat": 6,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3760,6 +4984,7 @@
         "score": 0,
         "raw_heat": 5,
         "heat_metric": "rank_tag_weight",
+        "source_family": "comic",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -3783,6 +5008,7 @@
         "score": 100,
         "raw_heat": 867,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -3804,6 +5030,7 @@
         "score": 57.63,
         "raw_heat": 503,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -3825,6 +5052,7 @@
         "score": 51.92,
         "raw_heat": 454,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -3846,6 +5074,7 @@
         "score": 48.78,
         "raw_heat": 427,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "relationship_type",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -3867,6 +5096,7 @@
         "score": 47.73,
         "raw_heat": 418,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -3888,6 +5118,7 @@
         "score": 46.45,
         "raw_heat": 407,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -3909,6 +5140,7 @@
         "score": 45.05,
         "raw_heat": 395,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -3930,6 +5162,7 @@
         "score": 44.24,
         "raw_heat": 388,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -3951,6 +5184,7 @@
         "score": 43.54,
         "raw_heat": 382,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -3972,6 +5206,7 @@
         "score": 42.14,
         "raw_heat": 370,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -3993,6 +5228,7 @@
         "score": 25.15,
         "raw_heat": 224,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "trope",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4014,6 +5250,7 @@
         "score": 24.91,
         "raw_heat": 222,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4035,6 +5272,7 @@
         "score": 24.68,
         "raw_heat": 220,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "trope",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4056,6 +5294,7 @@
         "score": 24.45,
         "raw_heat": 218,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4077,6 +5316,7 @@
         "score": 24.1,
         "raw_heat": 215,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4098,6 +5338,7 @@
         "score": 22.82,
         "raw_heat": 204,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4119,6 +5360,7 @@
         "score": 22.58,
         "raw_heat": 202,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4140,6 +5382,7 @@
         "score": 22.35,
         "raw_heat": 200,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4161,6 +5404,7 @@
         "score": 21.89,
         "raw_heat": 196,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4182,6 +5426,7 @@
         "score": 21.3,
         "raw_heat": 191,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "trope",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4203,6 +5448,7 @@
         "score": 21.07,
         "raw_heat": 189,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4224,6 +5470,7 @@
         "score": 20.84,
         "raw_heat": 187,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "trope",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4245,6 +5492,7 @@
         "score": 19.79,
         "raw_heat": 178,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4266,6 +5514,7 @@
         "score": 19.56,
         "raw_heat": 176,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4287,6 +5536,7 @@
         "score": 19.09,
         "raw_heat": 172,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4308,6 +5558,7 @@
         "score": 18.51,
         "raw_heat": 167,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4329,6 +5580,7 @@
         "score": 18.28,
         "raw_heat": 165,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4350,6 +5602,7 @@
         "score": 18.16,
         "raw_heat": 164,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4371,6 +5624,7 @@
         "score": 17.58,
         "raw_heat": 159,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4392,6 +5646,7 @@
         "score": 17.35,
         "raw_heat": 157,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4413,6 +5668,7 @@
         "score": 16.07,
         "raw_heat": 146,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "moe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4434,6 +5690,7 @@
         "score": 15.02,
         "raw_heat": 137,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4455,6 +5712,7 @@
         "score": 15.02,
         "raw_heat": 137,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4476,6 +5734,7 @@
         "score": 13.85,
         "raw_heat": 127,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4497,6 +5756,7 @@
         "score": 12.46,
         "raw_heat": 115,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4518,6 +5778,7 @@
         "score": 5.36,
         "raw_heat": 54,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4539,6 +5800,7 @@
         "score": 3.61,
         "raw_heat": 39,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4560,6 +5822,7 @@
         "score": 2.91,
         "raw_heat": 33,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4581,6 +5844,7 @@
         "score": 0.93,
         "raw_heat": 16,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4602,6 +5866,7 @@
         "score": 0.93,
         "raw_heat": 16,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4623,6 +5888,7 @@
         "score": 0.7,
         "raw_heat": 14,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4644,6 +5910,7 @@
         "score": 0.7,
         "raw_heat": 14,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4665,6 +5932,7 @@
         "score": 0.7,
         "raw_heat": 14,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4686,6 +5954,7 @@
         "score": 0.58,
         "raw_heat": 13,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4707,6 +5976,7 @@
         "score": 0.58,
         "raw_heat": 13,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4728,6 +5998,7 @@
         "score": 0.47,
         "raw_heat": 12,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4749,6 +6020,7 @@
         "score": 0.35,
         "raw_heat": 11,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4770,6 +6042,7 @@
         "score": 0.23,
         "raw_heat": 10,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4791,6 +6064,7 @@
         "score": 0.12,
         "raw_heat": 9,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4812,6 +6086,7 @@
         "score": 0,
         "raw_heat": 8,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4835,6 +6110,7 @@
         "score": 100,
         "raw_heat": 286,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "relationship_type",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4856,6 +6132,7 @@
         "score": 98.25,
         "raw_heat": 281,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "relationship_type",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4877,6 +6154,7 @@
         "score": 14.39,
         "raw_heat": 42,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "relationship_type",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4898,6 +6176,7 @@
         "score": 13.68,
         "raw_heat": 40,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": null,
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4919,6 +6198,7 @@
         "score": 7.02,
         "raw_heat": 21,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "relationship_type",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4940,6 +6220,7 @@
         "score": 7.02,
         "raw_heat": 21,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "relationship_type",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -4961,6 +6242,7 @@
         "score": 4.56,
         "raw_heat": 14,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -4982,6 +6264,7 @@
         "score": 4.56,
         "raw_heat": 14,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5003,6 +6286,7 @@
         "score": 4.21,
         "raw_heat": 13,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5024,6 +6308,7 @@
         "score": 4.21,
         "raw_heat": 13,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5045,6 +6330,7 @@
         "score": 3.86,
         "raw_heat": 12,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5066,6 +6352,7 @@
         "score": 3.86,
         "raw_heat": 12,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5087,6 +6374,7 @@
         "score": 3.86,
         "raw_heat": 12,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5108,6 +6396,7 @@
         "score": 3.86,
         "raw_heat": 12,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5129,6 +6418,7 @@
         "score": 0,
         "raw_heat": 1,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5150,6 +6440,7 @@
         "score": 0,
         "raw_heat": 1,
         "heat_metric": "acg_zone_freq",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5173,6 +6464,7 @@
         "score": 100,
         "raw_heat": 276,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5194,6 +6486,7 @@
         "score": 89.18,
         "raw_heat": 247,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5215,6 +6508,7 @@
         "score": 89.18,
         "raw_heat": 247,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5236,6 +6530,7 @@
         "score": 69.4,
         "raw_heat": 194,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5257,6 +6552,7 @@
         "score": 68.66,
         "raw_heat": 192,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5278,6 +6574,7 @@
         "score": 67.16,
         "raw_heat": 188,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5299,6 +6596,7 @@
         "score": 66.42,
         "raw_heat": 186,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5320,6 +6618,7 @@
         "score": 47.01,
         "raw_heat": 134,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5341,6 +6640,7 @@
         "score": 40.67,
         "raw_heat": 117,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5362,6 +6662,7 @@
         "score": 39.55,
         "raw_heat": 114,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5383,6 +6684,7 @@
         "score": 16.04,
         "raw_heat": 51,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5404,6 +6706,7 @@
         "score": 0,
         "raw_heat": 8,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5425,6 +6728,7 @@
         "score": 0,
         "raw_heat": 8,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5446,6 +6750,7 @@
         "score": 0,
         "raw_heat": 8,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5467,6 +6772,7 @@
         "score": 0,
         "raw_heat": 8,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5488,6 +6794,7 @@
         "score": 0,
         "raw_heat": 8,
         "heat_metric": "qidian_acg_zone",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5511,6 +6818,7 @@
         "score": 100,
         "raw_heat": 276,
         "heat_metric": "acg_category_rank",
+        "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
         "confidence": 0.9,
@@ -5532,6 +6840,7 @@
         "score": 28.41,
         "raw_heat": 87,
         "heat_metric": "acg_category_rank",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5553,6 +6862,7 @@
         "score": 11.36,
         "raw_heat": 42,
         "heat_metric": "acg_category_rank",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5574,6 +6884,7 @@
         "score": 7.58,
         "raw_heat": 32,
         "heat_metric": "acg_category_rank",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5595,6 +6906,7 @@
         "score": 6.82,
         "raw_heat": 30,
         "heat_metric": "acg_category_rank",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5616,6 +6928,7 @@
         "score": 5.68,
         "raw_heat": 27,
         "heat_metric": "acg_category_rank",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5637,6 +6950,7 @@
         "score": 5.3,
         "raw_heat": 26,
         "heat_metric": "acg_category_rank",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5658,6 +6972,7 @@
         "score": 4.92,
         "raw_heat": 25,
         "heat_metric": "acg_category_rank",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5679,6 +6994,7 @@
         "score": 4.92,
         "raw_heat": 25,
         "heat_metric": "acg_category_rank",
+        "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
         "confidence": 0.35,
@@ -5700,6 +7016,7 @@
         "score": 0,
         "raw_heat": 12,
         "heat_metric": "acg_category_rank",
+        "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
         "confidence": 0.35,

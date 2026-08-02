@@ -263,6 +263,8 @@ function renderBoard() {
   const board = $("#board");
   board.classList.toggle("board--src", !isOverview);
   $("#board-date").textContent = latest.date || "";
+  const title = meta.source_names[state.board] || state.board;
+  $("#board-title-text").textContent = isOverview ? `${title}榜` : `${title}分源榜`;
 
   let list = byKeyword(latest.boards[state.board] || [], state.kw);
   if (state.board !== "channel" && OVERVIEW.has(state.board)) list = byKind(list, state.kind);
