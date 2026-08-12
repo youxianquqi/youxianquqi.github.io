@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-12",
+  "date": "2026-08-13",
   "boards": {
     "merged": [
       {
@@ -69,7 +69,7 @@
       {
         "rank": 3,
         "tag": "修罗场",
-        "score": 67.08,
+        "score": 73.15,
         "source_count": 3,
         "family_count": 2,
         "sources_hit": [
@@ -91,7 +91,7 @@
           ]
         },
         "tag_role": "relationship_type",
-        "confidence": 0.57,
+        "confidence": 0.92,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 2,
@@ -102,43 +102,12 @@
         },
         "signal_summary_text": "1 个结构化标签 + 2 个平台标签",
         "delta_rank": 0,
-        "delta_score": -6.07
+        "delta_score": 6.07
       },
       {
         "rank": 4,
-        "tag": "中二",
-        "score": 66.58,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "bilibili_manga"
-        ],
-        "source_families": [
-          "comic"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "bilibili_manga"
-          ]
-        },
-        "tag_role": "moe",
-        "confidence": 0.75,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 1,
-        "delta_score": -1.43
-      },
-      {
-        "rank": 5,
         "tag": "穿越",
-        "score": 66.51,
+        "score": 68.15,
         "source_count": 6,
         "family_count": 2,
         "sources_hit": [
@@ -166,7 +135,7 @@
           ]
         },
         "tag_role": "trope",
-        "confidence": 0.58,
+        "confidence": 0.85,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 3,
@@ -176,13 +145,44 @@
           "unknown": 0
         },
         "signal_summary_text": "3 个结构化标签 + 3 个平台标签",
+        "delta_rank": 1,
+        "delta_score": 1.64
+      },
+      {
+        "rank": 5,
+        "tag": "中二",
+        "score": 66.58,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "bilibili_manga"
+        ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ]
+        },
+        "tag_role": "moe",
+        "confidence": 0.75,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签",
         "delta_rank": -1,
-        "delta_score": -1.62
+        "delta_score": 0
       },
       {
         "rank": 6,
         "tag": "百合",
-        "score": 60.47,
+        "score": 60.46,
         "source_count": 2,
         "family_count": 1,
         "sources_hit": [
@@ -209,13 +209,91 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个平台标签",
-        "delta_rank": 1,
-        "delta_score": 0
+        "delta_rank": 0,
+        "delta_score": -0.01
       },
       {
         "rank": 7,
+        "tag": "校园",
+        "score": 54.82,
+        "source_count": 5,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "changpei",
+          "ciweimao",
+          "kuaikan",
+          "sfacg"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga",
+            "kuaikan"
+          ],
+          "novel": [
+            "changpei",
+            "ciweimao",
+            "sfacg"
+          ]
+        },
+        "tag_role": "subgenre",
+        "confidence": 0.89,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 3,
+          "structured_api_tag": 2,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "2 个结构化标签 + 3 个平台标签",
+        "delta_rank": 3,
+        "delta_score": 0.65
+      },
+      {
+        "rank": 8,
+        "tag": "后宫",
+        "score": 53,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "huaben",
+          "tencent_manga"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "tencent_manga"
+          ],
+          "novel": [
+            "huaben"
+          ]
+        },
+        "tag_role": "relationship_type",
+        "confidence": 0.66,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
+        "delta_rank": 1,
+        "delta_score": -1.78
+      },
+      {
+        "rank": 9,
         "tag": "团宠",
-        "score": 55.53,
+        "score": 52.83,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -240,13 +318,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 1,
-        "delta_score": -4.91
+        "delta_rank": -2,
+        "delta_score": -2.7
       },
       {
-        "rank": 8,
+        "rank": 10,
         "tag": "衍生同人",
-        "score": 54.78,
+        "score": 52.67,
         "source_count": 4,
         "family_count": 1,
         "sources_hit": [
@@ -278,163 +356,12 @@
         },
         "signal_summary_text": "4 个平台标签",
         "delta_rank": -2,
-        "delta_score": -6.37
-      },
-      {
-        "rank": 9,
-        "tag": "后宫",
-        "score": 54.78,
-        "source_count": 2,
-        "family_count": 2,
-        "sources_hit": [
-          "huaben",
-          "tencent_manga"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "tencent_manga"
-          ],
-          "novel": [
-            "huaben"
-          ]
-        },
-        "tag_role": "relationship_type",
-        "confidence": 0.66,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "delta_rank": 0,
-        "delta_score": 0
-      },
-      {
-        "rank": 10,
-        "tag": "校园",
-        "score": 54.17,
-        "source_count": 5,
-        "family_count": 2,
-        "sources_hit": [
-          "bilibili_manga",
-          "changpei",
-          "ciweimao",
-          "kuaikan",
-          "sfacg"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "bilibili_manga",
-            "kuaikan"
-          ],
-          "novel": [
-            "changpei",
-            "ciweimao",
-            "sfacg"
-          ]
-        },
-        "tag_role": "subgenre",
-        "confidence": 0.61,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 3,
-          "structured_api_tag": 2,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "2 个结构化标签 + 3 个平台标签",
-        "delta_rank": 5,
-        "delta_score": 5.52
+        "delta_score": -2.11
       },
       {
         "rank": 11,
-        "tag": "观影体",
-        "score": 52.85,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "huaben"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "huaben"
-          ]
-        },
-        "tag_role": "fandom_structure",
-        "confidence": 0.68,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": -1,
-        "delta_score": -1.66
-      },
-      {
-        "rank": 12,
-        "tag": "海贼",
-        "score": 50.32,
-        "source_count": 2,
-        "family_count": 2,
-        "sources_hit": [
-          "ciweimao",
-          "tencent_manga"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "tencent_manga"
-          ],
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.36,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 2,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "2 个平台标签",
-        "ip_canonical": "海贼",
-        "ip_aliases": [
-          "海贼王",
-          "航海王"
-        ],
-        "ip_parent": null,
-        "delta_rank": -1,
-        "delta_score": -3.39
-      },
-      {
-        "rank": 13,
         "tag": "系统",
-        "score": 49.95,
+        "score": 50.8,
         "source_count": 4,
         "family_count": 2,
         "sources_hit": [
@@ -468,8 +395,79 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个结构化标签 + 2 个平台标签",
-        "delta_rank": 1,
-        "delta_score": 1.24
+        "delta_rank": 2,
+        "delta_score": 0.85
+      },
+      {
+        "rank": 12,
+        "tag": "观影体",
+        "score": 50.46,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "huaben"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "huaben"
+          ]
+        },
+        "tag_role": "fandom_structure",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "delta_rank": -1,
+        "delta_score": -2.39
+      },
+      {
+        "rank": 13,
+        "tag": "型月",
+        "score": 49.01,
+        "source_count": 2,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao",
+          "fanqie"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "fanqie"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.54,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
+        "ip_canonical": "型月",
+        "ip_aliases": [
+          "fate",
+          "FGO",
+          "Fate"
+        ],
+        "ip_parent": null,
+        "delta_rank": 17,
+        "delta_score": 29.26
       },
       {
         "rank": 14,
@@ -501,13 +499,13 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个平台标签",
-        "delta_rank": 2,
+        "delta_rank": 0,
         "delta_score": 0
       },
       {
         "rank": 15,
         "tag": "末世",
-        "score": 45.93,
+        "score": 46.79,
         "source_count": 2,
         "family_count": 2,
         "sources_hit": [
@@ -527,7 +525,7 @@
           ]
         },
         "tag_role": "subgenre",
-        "confidence": 0.36,
+        "confidence": 0.78,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 2,
@@ -537,13 +535,13 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个平台标签",
-        "delta_rank": -3,
-        "delta_score": -4.2
+        "delta_rank": 0,
+        "delta_score": 0.86
       },
       {
         "rank": 16,
         "tag": "年下",
-        "score": 44.11,
+        "score": 44.1,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -568,8 +566,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 1,
-        "delta_score": -0.02
+        "delta_rank": 0,
+        "delta_score": -0.01
       },
       {
         "rank": 17,
@@ -599,11 +597,48 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 1,
+        "delta_rank": 0,
         "delta_score": 0
       },
       {
         "rank": 18,
+        "tag": "综漫",
+        "score": 42.08,
+        "source_count": 4,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao",
+          "huaben",
+          "qidian",
+          "qq_reading"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "huaben",
+            "qidian",
+            "qq_reading"
+          ]
+        },
+        "tag_role": "fandom_structure",
+        "confidence": 0.84,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 4,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "4 个平台标签",
+        "delta_rank": 7,
+        "delta_score": 7.54
+      },
+      {
+        "rank": 19,
         "tag": "搞笑吐槽",
         "score": 41.11,
         "source_count": 1,
@@ -630,11 +665,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 2,
+        "delta_rank": -1,
         "delta_score": 0
       },
       {
-        "rank": 19,
+        "rank": 20,
         "tag": "恋爱日常",
         "score": 40,
         "source_count": 1,
@@ -661,11 +696,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 2,
+        "delta_rank": -1,
         "delta_score": 0
       },
       {
-        "rank": 20,
+        "rank": 21,
         "tag": "异能",
         "score": 39.7,
         "source_count": 3,
@@ -699,53 +734,13 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个结构化标签 + 1 个平台标签",
-        "delta_rank": 2,
-        "delta_score": 0.19
-      },
-      {
-        "rank": 21,
-        "tag": "腹黑",
-        "score": 38.5,
-        "source_count": 4,
-        "family_count": 2,
-        "sources_hit": [
-          "bilibili_manga",
-          "changpei",
-          "ciweimao",
-          "fanqie"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "bilibili_manga"
-          ],
-          "novel": [
-            "changpei",
-            "ciweimao",
-            "fanqie"
-          ]
-        },
-        "tag_role": "moe",
-        "confidence": 0.54,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 3,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "3 个结构化标签 + 1 个平台标签",
-        "delta_rank": 3,
-        "delta_score": 0.26
+        "delta_rank": -1,
+        "delta_score": 0
       },
       {
         "rank": 22,
         "tag": "末日",
-        "score": 38.28,
+        "score": 38.94,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -770,11 +765,51 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 1,
-        "delta_score": -0.68
+        "delta_rank": 0,
+        "delta_score": 0.66
       },
       {
         "rank": 23,
+        "tag": "腹黑",
+        "score": 38.86,
+        "source_count": 4,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "changpei",
+          "ciweimao",
+          "fanqie"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "changpei",
+            "ciweimao",
+            "fanqie"
+          ]
+        },
+        "tag_role": "moe",
+        "confidence": 0.85,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 3,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "3 个结构化标签 + 1 个平台标签",
+        "delta_rank": -2,
+        "delta_score": 0.36
+      },
+      {
+        "rank": 24,
         "tag": "迪化",
         "score": 37.68,
         "source_count": 1,
@@ -801,13 +836,49 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 4,
-        "delta_score": 4.65
+        "delta_rank": -1,
+        "delta_score": 0
       },
       {
-        "rank": 24,
+        "rank": 25,
+        "tag": "明日方舟",
+        "score": 36.26,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "ip_canonical": "明日方舟",
+        "ip_aliases": [
+          "方舟"
+        ],
+        "ip_parent": null,
+        "delta_rank": 14,
+        "delta_score": 23.57
+      },
+      {
+        "rank": 26,
         "tag": "重生",
-        "score": 35.66,
+        "score": 36.02,
         "source_count": 5,
         "family_count": 2,
         "sources_hit": [
@@ -833,7 +904,7 @@
           ]
         },
         "tag_role": "trope",
-        "confidence": 0.57,
+        "confidence": 0.86,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 3,
@@ -843,48 +914,11 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个结构化标签 + 3 个平台标签",
-        "delta_rank": 1,
-        "delta_score": -1.34
+        "delta_rank": -2,
+        "delta_score": 0.36
       },
       {
-        "rank": 25,
-        "tag": "综漫",
-        "score": 34.54,
-        "source_count": 4,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao",
-          "huaben",
-          "qidian",
-          "qq_reading"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao",
-            "huaben",
-            "qidian",
-            "qq_reading"
-          ]
-        },
-        "tag_role": "fandom_structure",
-        "confidence": 0.53,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 4,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "4 个平台标签",
-        "delta_rank": -6,
-        "delta_score": -7.55
-      },
-      {
-        "rank": 26,
+        "rank": 27,
         "tag": "傲娇",
         "score": 34.31,
         "source_count": 2,
@@ -916,13 +950,126 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签 + 1 个平台标签",
-        "delta_rank": 2,
-        "delta_score": 1.32
+        "delta_rank": -1,
+        "delta_score": 0
       },
       {
-        "rank": 27,
+        "rank": 28,
+        "tag": "海贼",
+        "score": 33.72,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "ciweimao",
+          "tencent_manga"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "tencent_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.78,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 2,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "2 个平台标签",
+        "ip_canonical": "海贼",
+        "ip_aliases": [
+          "海贼王",
+          "航海王"
+        ],
+        "ip_parent": null,
+        "delta_rank": -16,
+        "delta_score": -16.6
+      },
+      {
+        "rank": 29,
+        "tag": "崩坏",
+        "score": 32.67,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "ip_canonical": "崩坏",
+        "ip_aliases": [
+          "崩坏三",
+          "崩坏星穹"
+        ],
+        "ip_parent": "崩坏系列",
+        "delta_rank": 16,
+        "delta_score": 21.23
+      },
+      {
+        "rank": 30,
+        "tag": "舰娘",
+        "score": 31.95,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "ip_canonical": "舰娘",
+        "ip_aliases": [],
+        "ip_parent": null,
+        "delta_rank": 17,
+        "delta_score": 20.77
+      },
+      {
+        "rank": 31,
         "tag": "无限",
-        "score": 27.51,
+        "score": 31.66,
         "source_count": 7,
         "family_count": 2,
         "sources_hit": [
@@ -952,7 +1099,7 @@
           ]
         },
         "tag_role": "fandom_structure",
-        "confidence": 0.57,
+        "confidence": 0.83,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 4,
@@ -962,13 +1109,47 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签 + 4 个平台标签 + 2 个标题推断",
-        "delta_rank": 4,
-        "delta_score": -3.5
+        "delta_rank": -4,
+        "delta_score": 4.15
       },
       {
-        "rank": 28,
+        "rank": 32,
+        "tag": "俺春物",
+        "score": 30.52,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "ip_canonical": "俺春物",
+        "ip_aliases": [],
+        "ip_parent": null,
+        "delta_rank": 18,
+        "delta_score": 19.84
+      },
+      {
+        "rank": 33,
         "tag": "原生幻想",
-        "score": 25.21,
+        "score": 25.12,
         "source_count": 3,
         "family_count": 1,
         "sources_hit": [
@@ -997,13 +1178,52 @@
           "unknown": 0
         },
         "signal_summary_text": "3 个平台标签",
-        "delta_rank": 5,
-        "delta_score": -0.66
+        "delta_rank": -5,
+        "delta_score": -0.09
       },
       {
-        "rank": 29,
+        "rank": 34,
+        "tag": "星穹铁道",
+        "score": 22.21,
+        "source_count": 2,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao",
+          "qimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "qimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.56,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
+        "ip_canonical": "星穹铁道",
+        "ip_aliases": [
+          "星铁",
+          "铁道"
+        ],
+        "ip_parent": "崩坏系列",
+        "delta_rank": 8,
+        "delta_score": 10.48
+      },
+      {
+        "rank": 35,
         "tag": "聊天群",
-        "score": 20.75,
+        "score": 21.22,
         "source_count": 2,
         "family_count": 1,
         "sources_hit": [
@@ -1020,7 +1240,7 @@
           ]
         },
         "tag_role": "fandom_structure",
-        "confidence": 0.15,
+        "confidence": 0.54,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -1030,13 +1250,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "delta_rank": 6,
-        "delta_score": -0.39
+        "delta_rank": -6,
+        "delta_score": 0.47
       },
       {
-        "rank": 30,
-        "tag": "型月",
-        "score": 19.75,
+        "rank": 36,
+        "tag": "奥特曼",
+        "score": 20.77,
         "source_count": 2,
         "family_count": 1,
         "sources_hit": [
@@ -1053,7 +1273,7 @@
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.15,
+        "confidence": 0.54,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -1063,20 +1283,62 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "ip_canonical": "型月",
+        "ip_canonical": "奥特曼",
         "ip_aliases": [
-          "fate",
-          "FGO",
-          "Fate"
+          "迪迦"
         ],
         "ip_parent": null,
-        "delta_rank": -17,
-        "delta_score": -29.25
+        "delta_rank": null,
+        "delta_score": null
       },
       {
-        "rank": 31,
+        "rank": 37,
+        "tag": "火影",
+        "score": 18.59,
+        "source_count": 3,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao",
+          "fanqie"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao",
+            "fanqie"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.73,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 1,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签 + 1 个平台标签 + 1 个标题推断",
+        "ip_canonical": "火影",
+        "ip_aliases": [
+          "火影忍者",
+          "木叶"
+        ],
+        "ip_parent": null,
+        "delta_rank": -5,
+        "delta_score": 1.99
+      },
+      {
+        "rank": 38,
         "tag": "诸天",
-        "score": 17.12,
+        "score": 17.07,
         "source_count": 3,
         "family_count": 2,
         "sources_hit": [
@@ -1108,57 +1370,48 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个平台标签 + 1 个标题推断",
-        "delta_rank": 8,
-        "delta_score": -0.21
+        "delta_rank": -7,
+        "delta_score": -0.05
       },
       {
-        "rank": 32,
-        "tag": "火影",
-        "score": 16.6,
+        "rank": 39,
+        "tag": "种田",
+        "score": 16.39,
         "source_count": 3,
-        "family_count": 2,
+        "family_count": 1,
         "sources_hit": [
-          "bilibili_manga",
+          "changpei",
           "ciweimao",
           "fanqie"
         ],
         "source_families": [
-          "comic",
           "novel"
         ],
         "sources_by_family": {
-          "comic": [
-            "bilibili_manga"
-          ],
           "novel": [
+            "changpei",
             "ciweimao",
             "fanqie"
           ]
         },
-        "tag_role": "ip_universe",
-        "confidence": 0.39,
+        "tag_role": "trope",
+        "confidence": 0.72,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
-          "structured_api_tag": 1,
-          "title_inference": 1,
+          "structured_api_tag": 2,
+          "title_inference": 0,
           "category_hint": 0,
           "unknown": 0
         },
-        "signal_summary_text": "1 个结构化标签 + 1 个平台标签 + 1 个标题推断",
-        "ip_canonical": "火影",
-        "ip_aliases": [
-          "火影忍者",
-          "木叶"
-        ],
-        "ip_parent": null,
-        "delta_rank": 5,
-        "delta_score": -3
+        "signal_summary_text": "2 个结构化标签 + 1 个平台标签",
+        "delta_rank": -3,
+        "delta_score": 2.64
       },
       {
-        "rank": 33,
+        "rank": 40,
         "tag": "职业",
-        "score": 16.39,
+        "score": 16.38,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -1183,11 +1436,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 8,
+        "delta_rank": -7,
         "delta_score": -0.01
       },
       {
-        "rank": 34,
+        "rank": 41,
         "tag": "病娇",
         "score": 16.35,
         "source_count": 1,
@@ -1214,13 +1467,162 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 9,
-        "delta_score": 1.23
+        "delta_rank": -7,
+        "delta_score": 0
       },
       {
-        "rank": 35,
+        "rank": 42,
+        "tag": "从零开始",
+        "score": 16.17,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "ciweimao",
+          "tencent_manga"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "tencent_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.66,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
+        "ip_canonical": "从零开始",
+        "ip_aliases": [
+          "Re0"
+        ],
+        "ip_parent": null,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 43,
+        "tag": "克苏鲁",
+        "score": 14.67,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "subgenre",
+        "confidence": 0.85,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签 + 1 个平台标签",
+        "delta_rank": -2,
+        "delta_score": 2.22
+      },
+      {
+        "rank": 44,
+        "tag": "魔法",
+        "score": 14.55,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "subgenre",
+        "confidence": 0.85,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签 + 1 个平台标签",
+        "delta_rank": -4,
+        "delta_score": 1.91
+      },
+      {
+        "rank": 45,
+        "tag": "升级",
+        "score": 14.45,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "trope",
+        "confidence": 0.85,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签 + 1 个平台标签",
+        "delta_rank": -1,
+        "delta_score": 2.96
+      },
+      {
+        "rank": 46,
         "tag": "柯南",
-        "score": 14.21,
+        "score": 13.54,
         "source_count": 2,
         "family_count": 2,
         "sources_hit": [
@@ -1255,46 +1657,90 @@
           "名侦探柯南"
         ],
         "ip_parent": null,
-        "delta_rank": 9,
-        "delta_score": -0.77
+        "delta_rank": -11,
+        "delta_score": -0.67
       },
       {
-        "rank": 36,
-        "tag": "种田",
-        "score": 13.75,
-        "source_count": 3,
+        "rank": 47,
+        "tag": "哈利波特",
+        "score": 13.44,
+        "source_count": 2,
         "family_count": 1,
         "sources_hit": [
-          "changpei",
           "ciweimao",
-          "fanqie"
+          "huaben"
         ],
         "source_families": [
           "novel"
         ],
         "sources_by_family": {
           "novel": [
-            "changpei",
             "ciweimao",
-            "fanqie"
+            "huaben"
           ]
         },
-        "tag_role": "trope",
-        "confidence": 0.38,
+        "tag_role": "ip_universe",
+        "confidence": 0.76,
         "discovery": "multi_source",
         "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 2,
+          "platform_tag": 2,
+          "structured_api_tag": 0,
           "title_inference": 0,
           "category_hint": 0,
           "unknown": 0
         },
-        "signal_summary_text": "2 个结构化标签 + 1 个平台标签",
-        "delta_rank": 4,
-        "delta_score": -2.83
+        "signal_summary_text": "2 个平台标签",
+        "ip_canonical": "哈利波特",
+        "ip_aliases": [
+          "霍格沃茨"
+        ],
+        "ip_parent": null,
+        "delta_rank": -9,
+        "delta_score": 0.75
       },
       {
-        "rank": 37,
+        "rank": 48,
+        "tag": "宝可梦",
+        "score": 13.33,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
+        "ip_canonical": "宝可梦",
+        "ip_aliases": [
+          "口袋妖怪"
+        ],
+        "ip_parent": null,
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 49,
         "tag": "竹马",
         "score": 12.81,
         "source_count": 1,
@@ -1321,429 +1767,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 12,
-        "delta_score": -0.02
-      },
-      {
-        "rank": 38,
-        "tag": "哈利波特",
-        "score": 12.69,
-        "source_count": 2,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao",
-          "huaben"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao",
-            "huaben"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.34,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 2,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "2 个平台标签",
-        "ip_canonical": "哈利波特",
-        "ip_aliases": [
-          "霍格沃茨"
-        ],
-        "ip_parent": null,
-        "delta_rank": 0,
-        "delta_score": -5.14
-      },
-      {
-        "rank": 39,
-        "tag": "明日方舟",
-        "score": 12.69,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "明日方舟",
-        "ip_aliases": [
-          "方舟"
-        ],
-        "ip_parent": null,
-        "delta_rank": -13,
-        "delta_score": -23.57
-      },
-      {
-        "rank": 40,
-        "tag": "魔法",
-        "score": 12.64,
-        "source_count": 2,
-        "family_count": 2,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "bilibili_manga"
-          ],
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "subgenre",
-        "confidence": 0.43,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签 + 1 个平台标签",
-        "delta_rank": 6,
-        "delta_score": -0.77
-      },
-      {
-        "rank": 41,
-        "tag": "克苏鲁",
-        "score": 12.45,
-        "source_count": 2,
-        "family_count": 2,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "bilibili_manga"
-          ],
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "subgenre",
-        "confidence": 0.43,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签 + 1 个平台标签",
-        "delta_rank": null,
-        "delta_score": null
-      },
-      {
-        "rank": 42,
-        "tag": "星穹铁道",
-        "score": 11.73,
-        "source_count": 2,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao",
-          "qimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao",
-            "qimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "ip_canonical": "星穹铁道",
-        "ip_aliases": [
-          "星铁",
-          "铁道"
-        ],
-        "ip_parent": "崩坏系列",
-        "delta_rank": -8,
-        "delta_score": -12.63
-      },
-      {
-        "rank": 43,
-        "tag": "快穿",
-        "score": 11.63,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "huaben"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "huaben"
-          ]
-        },
-        "tag_role": "trope",
-        "confidence": 0.68,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": -1,
-        "delta_score": -4.36
-      },
-      {
-        "rank": 44,
-        "tag": "升级",
-        "score": 11.49,
-        "source_count": 2,
-        "family_count": 2,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "bilibili_manga"
-          ],
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "trope",
-        "confidence": 0.43,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签 + 1 个平台标签",
-        "delta_rank": 1,
-        "delta_score": -2.48
-      },
-      {
-        "rank": 45,
-        "tag": "崩坏",
-        "score": 11.44,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "崩坏",
-        "ip_aliases": [
-          "崩坏三",
-          "崩坏星穹"
-        ],
-        "ip_parent": "崩坏系列",
-        "delta_rank": -16,
-        "delta_score": -21.23
-      },
-      {
-        "rank": 46,
-        "tag": "万界",
-        "score": 11.28,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "tencent_manga"
-        ],
-        "source_families": [
-          "comic"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "tencent_manga"
-          ]
-        },
-        "tag_role": "fandom_structure",
-        "confidence": 0.37,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个标题推断",
-        "delta_rank": null,
-        "delta_score": null
-      },
-      {
-        "rank": 47,
-        "tag": "舰娘",
-        "score": 11.18,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "舰娘",
-        "ip_aliases": [],
-        "ip_parent": null,
-        "delta_rank": -17,
-        "delta_score": -20.77
-      },
-      {
-        "rank": 48,
-        "tag": "规则怪谈",
-        "score": 11.11,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "qidian"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "qidian"
-          ]
-        },
-        "tag_role": "subgenre",
-        "confidence": 0.68,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": null,
-        "delta_score": null
-      },
-      {
-        "rank": 49,
-        "tag": "白毛",
-        "score": 10.95,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "bilibili_manga"
-        ],
-        "source_families": [
-          "comic"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "bilibili_manga"
-          ]
-        },
-        "tag_role": "moe",
-        "confidence": 0.75,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签",
-        "delta_rank": null,
-        "delta_score": null
+        "delta_rank": -12,
+        "delta_score": 0
       },
       {
         "rank": 50,
-        "tag": "俺春物",
-        "score": 10.68,
+        "tag": "约会大作战",
+        "score": 12.33,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -1758,7 +1788,7 @@
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.15,
+        "confidence": 0.68,
         "discovery": "single_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -1768,11 +1798,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "俺春物",
+        "ip_canonical": "约会大作战",
         "ip_aliases": [],
         "ip_parent": null,
-        "delta_rank": -18,
-        "delta_score": -19.84
+        "delta_rank": null,
+        "delta_score": null
       }
     ],
     "fandom": [
@@ -1810,7 +1840,7 @@
       {
         "rank": 2,
         "tag": "修罗场",
-        "score": 67.01,
+        "score": 72.94,
         "source_count": 3,
         "family_count": 2,
         "sources_hit": [
@@ -1832,7 +1862,7 @@
           ]
         },
         "tag_role": "relationship_type",
-        "confidence": 0.57,
+        "confidence": 0.92,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 2,
@@ -1843,7 +1873,7 @@
         },
         "signal_summary_text": "1 个结构化标签 + 2 个平台标签",
         "delta_rank": 0,
-        "delta_score": -5.93
+        "delta_score": 5.93
       },
       {
         "rank": 3,
@@ -1880,12 +1910,12 @@
         },
         "signal_summary_text": "4 个平台标签",
         "delta_rank": 0,
-        "delta_score": -8.47
+        "delta_score": 0
       },
       {
         "rank": 4,
         "tag": "百合",
-        "score": 60.47,
+        "score": 60.46,
         "source_count": 2,
         "family_count": 1,
         "sources_hit": [
@@ -1913,12 +1943,54 @@
         },
         "signal_summary_text": "2 个平台标签",
         "delta_rank": 0,
-        "delta_score": 0
+        "delta_score": -0.01
       },
       {
         "rank": 5,
+        "tag": "海贼",
+        "score": 53.06,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "ciweimao",
+          "tencent_manga"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "tencent_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.78,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 2,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "2 个平台标签",
+        "ip_canonical": "海贼",
+        "ip_aliases": [
+          "海贼王",
+          "航海王"
+        ],
+        "ip_parent": null,
+        "delta_rank": 2,
+        "delta_score": 2.96
+      },
+      {
+        "rank": 6,
         "tag": "后宫",
-        "score": 54.78,
+        "score": 53,
         "source_count": 2,
         "family_count": 2,
         "sources_hit": [
@@ -1948,13 +2020,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "delta_rank": 0,
-        "delta_score": 0
+        "delta_rank": -1,
+        "delta_score": -1.78
       },
       {
-        "rank": 6,
+        "rank": 7,
         "tag": "观影体",
-        "score": 52.85,
+        "score": 50.46,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -1979,53 +2051,85 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 0,
-        "delta_score": -1.64
+        "delta_rank": -1,
+        "delta_score": -2.39
       },
       {
-        "rank": 7,
-        "tag": "海贼",
-        "score": 50.1,
+        "rank": 8,
+        "tag": "型月",
+        "score": 49.06,
         "source_count": 2,
-        "family_count": 2,
+        "family_count": 1,
         "sources_hit": [
           "ciweimao",
-          "tencent_manga"
+          "fanqie"
         ],
         "source_families": [
-          "comic",
           "novel"
         ],
         "sources_by_family": {
-          "comic": [
-            "tencent_manga"
-          ],
           "novel": [
-            "ciweimao"
+            "ciweimao",
+            "fanqie"
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.36,
+        "confidence": 0.54,
         "discovery": "multi_source",
         "signal_summary": {
-          "platform_tag": 2,
+          "platform_tag": 1,
           "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
+        "ip_canonical": "型月",
+        "ip_aliases": [
+          "fate",
+          "FGO",
+          "Fate"
+        ],
+        "ip_parent": null,
+        "delta_rank": 7,
+        "delta_score": 29.28
+      },
+      {
+        "rank": 9,
+        "tag": "漫威",
+        "score": 48.73,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "fanqie"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "fanqie"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.45,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 1,
           "title_inference": 0,
           "category_hint": 0,
           "unknown": 0
         },
-        "signal_summary_text": "2 个平台标签",
-        "ip_canonical": "海贼",
-        "ip_aliases": [
-          "海贼王",
-          "航海王"
-        ],
+        "signal_summary_text": "1 个结构化标签",
+        "ip_canonical": "漫威",
+        "ip_aliases": [],
         "ip_parent": null,
         "delta_rank": 0,
-        "delta_score": -2.96
+        "delta_score": 1.94
       },
       {
-        "rank": 8,
+        "rank": 10,
         "tag": "无CP",
         "score": 48.13,
         "source_count": 2,
@@ -2054,78 +2158,50 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个平台标签",
-        "delta_rank": 1,
+        "delta_rank": -2,
         "delta_score": 0
       },
       {
-        "rank": 9,
-        "tag": "漫威",
-        "score": 46.79,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "fanqie"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "fanqie"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.45,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签",
-        "ip_canonical": "漫威",
-        "ip_aliases": [],
-        "ip_parent": null,
-        "delta_rank": null,
-        "delta_score": null
-      },
-      {
-        "rank": 10,
-        "tag": "年下",
-        "score": 44.11,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "changpei"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "changpei"
-          ]
-        },
-        "tag_role": "relationship",
-        "confidence": 0.56,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 1,
-        "delta_score": -0.02
-      },
-      {
         "rank": 11,
+        "tag": "综漫",
+        "score": 45.93,
+        "source_count": 4,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao",
+          "huaben",
+          "qidian",
+          "qq_reading"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "huaben",
+            "qidian",
+            "qq_reading"
+          ]
+        },
+        "tag_role": "fandom_structure",
+        "confidence": 0.84,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 4,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "4 个平台标签",
+        "delta_rank": 1,
+        "delta_score": 7.43
+      },
+      {
+        "rank": 12,
         "tag": "无限",
-        "score": 39.31,
+        "score": 44.4,
         "source_count": 7,
         "family_count": 2,
         "sources_hit": [
@@ -2155,7 +2231,7 @@
           ]
         },
         "tag_role": "fandom_structure",
-        "confidence": 0.57,
+        "confidence": 0.83,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 4,
@@ -2165,50 +2241,185 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签 + 4 个平台标签 + 2 个标题推断",
-        "delta_rank": 1,
-        "delta_score": -3.41
+        "delta_rank": -1,
+        "delta_score": 5.09
       },
       {
-        "rank": 12,
-        "tag": "综漫",
-        "score": 38.5,
-        "source_count": 4,
+        "rank": 13,
+        "tag": "年下",
+        "score": 44.1,
+        "source_count": 1,
         "family_count": 1,
         "sources_hit": [
-          "ciweimao",
-          "huaben",
-          "qidian",
-          "qq_reading"
+          "changpei"
         ],
         "source_families": [
           "novel"
         ],
         "sources_by_family": {
           "novel": [
-            "ciweimao",
-            "huaben",
-            "qidian",
-            "qq_reading"
+            "changpei"
           ]
         },
-        "tag_role": "fandom_structure",
-        "confidence": 0.53,
-        "discovery": "multi_source",
+        "tag_role": "relationship",
+        "confidence": 0.56,
+        "discovery": "single_source",
         "signal_summary": {
-          "platform_tag": 4,
+          "platform_tag": 0,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签",
+        "delta_rank": -3,
+        "delta_score": -0.01
+      },
+      {
+        "rank": 14,
+        "tag": "明日方舟",
+        "score": 35.39,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
           "structured_api_tag": 0,
           "title_inference": 0,
           "category_hint": 0,
           "unknown": 0
         },
-        "signal_summary_text": "4 个平台标签",
-        "delta_rank": -2,
-        "delta_score": -7.43
+        "signal_summary_text": "1 个平台标签",
+        "ip_canonical": "明日方舟",
+        "ip_aliases": [
+          "方舟"
+        ],
+        "ip_parent": null,
+        "delta_rank": 6,
+        "delta_score": 23
       },
       {
-        "rank": 13,
+        "rank": 15,
+        "tag": "崩坏",
+        "score": 31.74,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "ip_canonical": "崩坏",
+        "ip_aliases": [
+          "崩坏三",
+          "崩坏星穹"
+        ],
+        "ip_parent": "崩坏系列",
+        "delta_rank": 8,
+        "delta_score": 20.63
+      },
+      {
+        "rank": 16,
+        "tag": "舰娘",
+        "score": 31.01,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "ip_canonical": "舰娘",
+        "ip_aliases": [],
+        "ip_parent": null,
+        "delta_rank": 8,
+        "delta_score": 20.16
+      },
+      {
+        "rank": 17,
+        "tag": "俺春物",
+        "score": 29.55,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "ip_canonical": "俺春物",
+        "ip_aliases": [],
+        "ip_parent": null,
+        "delta_rank": 8,
+        "delta_score": 19.21
+      },
+      {
+        "rank": 18,
         "tag": "火影",
-        "score": 27.47,
+        "score": 29.19,
         "source_count": 3,
         "family_count": 2,
         "sources_hit": [
@@ -2230,7 +2441,7 @@
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.39,
+        "confidence": 0.73,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -2246,63 +2457,64 @@
           "木叶"
         ],
         "ip_parent": null,
-        "delta_rank": 2,
-        "delta_score": -4.25
+        "delta_rank": -5,
+        "delta_score": 1.72
       },
       {
-        "rank": 14,
-        "tag": "聊天群",
-        "score": 20.5,
-        "source_count": 2,
+        "rank": 19,
+        "tag": "三国",
+        "score": 23.91,
+        "source_count": 1,
         "family_count": 1,
         "sources_hit": [
-          "ciweimao",
-          "zongheng"
+          "tencent_manga"
         ],
         "source_families": [
-          "novel"
+          "comic"
         ],
         "sources_by_family": {
-          "novel": [
-            "ciweimao",
-            "zongheng"
-          ]
-        },
-        "tag_role": "fandom_structure",
-        "confidence": 0.15,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "delta_rank": 28,
-        "delta_score": 16.5
-      },
-      {
-        "rank": 15,
-        "tag": "型月",
-        "score": 19.78,
-        "source_count": 2,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao",
-          "fanqie"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao",
-            "fanqie"
+          "comic": [
+            "tencent_manga"
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.15,
+        "confidence": 0.37,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个标题推断",
+        "ip_canonical": "三国",
+        "ip_aliases": [],
+        "ip_parent": null,
+        "delta_rank": 17,
+        "delta_score": 18.27
+      },
+      {
+        "rank": 20,
+        "tag": "星穹铁道",
+        "score": 21.76,
+        "source_count": 2,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao",
+          "qimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "qimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.56,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -2312,20 +2524,50 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "ip_canonical": "型月",
+        "ip_canonical": "星穹铁道",
         "ip_aliases": [
-          "fate",
-          "FGO",
-          "Fate"
+          "星铁",
+          "铁道"
         ],
-        "ip_parent": null,
-        "delta_rank": -7,
-        "delta_score": -29.24
+        "ip_parent": "崩坏系列",
+        "delta_rank": 1,
+        "delta_score": 10.18
       },
       {
-        "rank": 16,
+        "rank": 21,
+        "tag": "万界",
+        "score": 21.39,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "tencent_manga"
+        ],
+        "source_families": [
+          "comic"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "tencent_manga"
+          ]
+        },
+        "tag_role": "fandom_structure",
+        "confidence": 0.37,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个标题推断",
+        "delta_rank": 1,
+        "delta_score": 10.11
+      },
+      {
+        "rank": 22,
         "tag": "诸天",
-        "score": 18.13,
+        "score": 21.19,
         "source_count": 3,
         "family_count": 2,
         "sources_hit": [
@@ -2357,13 +2599,125 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个平台标签 + 1 个标题推断",
-        "delta_rank": 4,
-        "delta_score": -0.21
+        "delta_rank": -6,
+        "delta_score": 3.06
       },
       {
-        "rank": 17,
+        "rank": 23,
+        "tag": "聊天群",
+        "score": 20.5,
+        "source_count": 2,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao",
+          "zongheng"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "zongheng"
+          ]
+        },
+        "tag_role": "fandom_structure",
+        "confidence": 0.54,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
+        "delta_rank": -9,
+        "delta_score": 0
+      },
+      {
+        "rank": 24,
+        "tag": "奥特曼",
+        "score": 20.41,
+        "source_count": 2,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao",
+          "fanqie"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao",
+            "fanqie"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.54,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
+        "ip_canonical": "奥特曼",
+        "ip_aliases": [
+          "迪迦"
+        ],
+        "ip_parent": null,
+        "delta_rank": 3,
+        "delta_score": 10.62
+      },
+      {
+        "rank": 25,
+        "tag": "从零开始",
+        "score": 18.52,
+        "source_count": 2,
+        "family_count": 2,
+        "sources_hit": [
+          "ciweimao",
+          "tencent_manga"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "tencent_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.66,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
+        "ip_canonical": "从零开始",
+        "ip_aliases": [
+          "Re0"
+        ],
+        "ip_parent": null,
+        "delta_rank": 5,
+        "delta_score": 8.97
+      },
+      {
+        "rank": 26,
         "tag": "柯南",
-        "score": 14.21,
+        "score": 13.54,
         "source_count": 2,
         "family_count": 2,
         "sources_hit": [
@@ -2398,11 +2752,11 @@
           "名侦探柯南"
         ],
         "ip_parent": null,
-        "delta_rank": 5,
-        "delta_score": -0.71
+        "delta_rank": -9,
+        "delta_score": -0.67
       },
       {
-        "rank": 18,
+        "rank": 27,
         "tag": "竹马",
         "score": 12.81,
         "source_count": 1,
@@ -2429,13 +2783,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 6,
-        "delta_score": -0.02
+        "delta_rank": -9,
+        "delta_score": 0
       },
       {
-        "rank": 19,
+        "rank": 28,
         "tag": "哈利波特",
-        "score": 12.46,
+        "score": 12.77,
         "source_count": 2,
         "family_count": 1,
         "sources_hit": [
@@ -2452,7 +2806,7 @@
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.34,
+        "confidence": 0.76,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 2,
@@ -2467,66 +2821,33 @@
           "霍格沃茨"
         ],
         "ip_parent": null,
-        "delta_rank": 2,
-        "delta_score": -4.68
+        "delta_rank": -9,
+        "delta_score": 0.31
       },
       {
-        "rank": 20,
-        "tag": "明日方舟",
-        "score": 12.39,
-        "source_count": 1,
-        "family_count": 1,
+        "rank": 29,
+        "tag": "宝可梦",
+        "score": 12.68,
+        "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
+          "bilibili_manga",
           "ciweimao"
         ],
         "source_families": [
+          "comic",
           "novel"
         ],
         "sources_by_family": {
+          "comic": [
+            "bilibili_manga"
+          ],
           "novel": [
             "ciweimao"
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "明日方舟",
-        "ip_aliases": [
-          "方舟"
-        ],
-        "ip_parent": null,
-        "delta_rank": -7,
-        "delta_score": -23
-      },
-      {
-        "rank": 21,
-        "tag": "星穹铁道",
-        "score": 11.58,
-        "source_count": 2,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao",
-          "qimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao",
-            "qimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
+        "confidence": 0.68,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -2536,121 +2857,57 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "ip_canonical": "星穹铁道",
+        "ip_canonical": "宝可梦",
         "ip_aliases": [
-          "星铁",
-          "铁道"
+          "口袋妖怪"
         ],
-        "ip_parent": "崩坏系列",
-        "delta_rank": -3,
-        "delta_score": -12.33
+        "ip_parent": null,
+        "delta_rank": 0,
+        "delta_score": 3.04
       },
       {
-        "rank": 22,
-        "tag": "万界",
-        "score": 11.28,
-        "source_count": 1,
-        "family_count": 1,
+        "rank": 30,
+        "tag": "死神",
+        "score": 11.53,
+        "source_count": 2,
+        "family_count": 2,
         "sources_hit": [
-          "tencent_manga"
+          "bilibili_manga",
+          "ciweimao"
         ],
         "source_families": [
-          "comic"
+          "comic",
+          "novel"
         ],
         "sources_by_family": {
           "comic": [
-            "tencent_manga"
+            "bilibili_manga"
+          ],
+          "novel": [
+            "ciweimao"
           ]
         },
-        "tag_role": "fandom_structure",
-        "confidence": 0.37,
-        "discovery": "single_source",
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "multi_source",
         "signal_summary": {
-          "platform_tag": 0,
+          "platform_tag": 1,
           "structured_api_tag": 0,
           "title_inference": 1,
           "category_hint": 0,
           "unknown": 0
         },
-        "signal_summary_text": "1 个标题推断",
-        "delta_rank": 10,
-        "delta_score": 2.51
-      },
-      {
-        "rank": 23,
-        "tag": "崩坏",
-        "score": 11.11,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "崩坏",
-        "ip_aliases": [
-          "崩坏三",
-          "崩坏星穹"
-        ],
-        "ip_parent": "崩坏系列",
-        "delta_rank": -9,
-        "delta_score": -20.63
-      },
-      {
-        "rank": 24,
-        "tag": "舰娘",
-        "score": 10.85,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "舰娘",
+        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
+        "ip_canonical": "死神",
         "ip_aliases": [],
         "ip_parent": null,
-        "delta_rank": -8,
-        "delta_score": -20.16
+        "delta_rank": 1,
+        "delta_score": 2.02
       },
       {
-        "rank": 25,
-        "tag": "俺春物",
-        "score": 10.34,
+        "rank": 31,
+        "tag": "约会大作战",
+        "score": 11.07,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -2665,7 +2922,7 @@
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.15,
+        "confidence": 0.68,
         "discovery": "single_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -2675,16 +2932,50 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "俺春物",
+        "ip_canonical": "约会大作战",
         "ip_aliases": [],
         "ip_parent": null,
-        "delta_rank": -8,
-        "delta_score": -19.21
+        "delta_rank": 8,
+        "delta_score": 7.2
       },
       {
-        "rank": 26,
+        "rank": 32,
+        "tag": "原神",
+        "score": 10.7,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "ip_canonical": "原神",
+        "ip_aliases": [],
+        "ip_parent": null,
+        "delta_rank": 8,
+        "delta_score": 6.95
+      },
+      {
+        "rank": 33,
         "tag": "鬼灭",
-        "score": 9.95,
+        "score": 9.86,
         "source_count": 2,
         "family_count": 2,
         "sources_hit": [
@@ -2719,13 +3010,13 @@
           "鬼灭之刃"
         ],
         "ip_parent": null,
-        "delta_rank": 3,
-        "delta_score": -0.21
+        "delta_rank": -7,
+        "delta_score": -0.09
       },
       {
-        "rank": 27,
-        "tag": "奥特曼",
-        "score": 9.79,
+        "rank": 34,
+        "tag": "战锤",
+        "score": 8.2,
         "source_count": 2,
         "family_count": 1,
         "sources_hit": [
@@ -2742,7 +3033,7 @@
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.15,
+        "confidence": 0.54,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -2752,168 +3043,14 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "ip_canonical": "奥特曼",
-        "ip_aliases": [
-          "迪迦"
-        ],
-        "ip_parent": null,
-        "delta_rank": -8,
-        "delta_score": -10.56
-      },
-      {
-        "rank": 28,
-        "tag": "论坛体",
-        "score": 9.74,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "huaben"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "huaben"
-          ]
-        },
-        "tag_role": "fandom_structure",
-        "confidence": 0.68,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": -5,
-        "delta_score": -3.62
-      },
-      {
-        "rank": 29,
-        "tag": "宝可梦",
-        "score": 9.64,
-        "source_count": 2,
-        "family_count": 2,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "bilibili_manga"
-          ],
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.26,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "ip_canonical": "宝可梦",
-        "ip_aliases": [
-          "口袋妖怪"
-        ],
-        "ip_parent": null,
-        "delta_rank": 1,
-        "delta_score": 0.28
-      },
-      {
-        "rank": 30,
-        "tag": "从零开始",
-        "score": 9.55,
-        "source_count": 2,
-        "family_count": 2,
-        "sources_hit": [
-          "ciweimao",
-          "tencent_manga"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "tencent_manga"
-          ],
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.24,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "ip_canonical": "从零开始",
-        "ip_aliases": [
-          "Re0"
-        ],
-        "ip_parent": null,
-        "delta_rank": -5,
-        "delta_score": -2.89
-      },
-      {
-        "rank": 31,
-        "tag": "死神",
-        "score": 9.51,
-        "source_count": 2,
-        "family_count": 2,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "bilibili_manga"
-          ],
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.26,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "ip_canonical": "死神",
+        "ip_canonical": "战锤",
         "ip_aliases": [],
         "ip_parent": null,
-        "delta_rank": -5,
-        "delta_score": -1.59
+        "delta_rank": 4,
+        "delta_score": 2.73
       },
       {
-        "rank": 32,
+        "rank": 35,
         "tag": "群像",
         "score": 8,
         "source_count": 2,
@@ -2942,11 +3079,76 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签 + 1 个平台标签",
-        "delta_rank": 2,
-        "delta_score": -0.01
+        "delta_rank": -3,
+        "delta_score": 0
       },
       {
-        "rank": 33,
+        "rank": 36,
+        "tag": "论坛体",
+        "score": 7.61,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "huaben"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "huaben"
+          ]
+        },
+        "tag_role": "fandom_structure",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "delta_rank": -8,
+        "delta_score": -2.13
+      },
+      {
+        "rank": 37,
+        "tag": "绝区零",
+        "score": 7.54,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "ip_universe",
+        "confidence": 0.68,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "ip_canonical": "绝区零",
+        "ip_aliases": [],
+        "ip_parent": null,
+        "delta_rank": 4,
+        "delta_score": 4.9
+      },
+      {
+        "rank": 38,
         "tag": "TS",
         "score": 7.27,
         "source_count": 1,
@@ -2973,11 +3175,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 3,
+        "delta_rank": -5,
         "delta_score": 0
       },
       {
-        "rank": 34,
+        "rank": 39,
         "tag": "刀剑神域",
         "score": 7.07,
         "source_count": 1,
@@ -3010,11 +3212,11 @@
           "刀剑"
         ],
         "ip_parent": null,
-        "delta_rank": 7,
-        "delta_score": 2.95
+        "delta_rank": -5,
+        "delta_score": 0
       },
       {
-        "rank": 35,
+        "rank": 40,
         "tag": "间谍过家家",
         "score": 6.42,
         "source_count": 1,
@@ -3044,45 +3246,47 @@
         "ip_canonical": "间谍过家家",
         "ip_aliases": [],
         "ip_parent": null,
-        "delta_rank": 2,
-        "delta_score": 0.71
+        "delta_rank": -5,
+        "delta_score": 0
       },
       {
-        "rank": 36,
-        "tag": "三国",
-        "score": 5.64,
-        "source_count": 1,
+        "rank": 41,
+        "tag": "西游",
+        "score": 5.9,
+        "source_count": 2,
         "family_count": 1,
         "sources_hit": [
-          "tencent_manga"
+          "fanqie",
+          "qimao"
         ],
         "source_families": [
-          "comic"
+          "novel"
         ],
         "sources_by_family": {
-          "comic": [
-            "tencent_manga"
+          "novel": [
+            "fanqie",
+            "qimao"
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.37,
-        "discovery": "single_source",
+        "confidence": 0.35,
+        "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
           "structured_api_tag": 0,
-          "title_inference": 1,
+          "title_inference": 2,
           "category_hint": 0,
           "unknown": 0
         },
-        "signal_summary_text": "1 个标题推断",
-        "ip_canonical": "三国",
+        "signal_summary_text": "2 个标题推断",
+        "ip_canonical": "西游",
         "ip_aliases": [],
         "ip_parent": null,
-        "delta_rank": -5,
-        "delta_score": -3.61
+        "delta_rank": 4,
+        "delta_score": 5.9
       },
       {
-        "rank": 37,
+        "rank": 42,
         "tag": "全职猎人",
         "score": 5.56,
         "source_count": 1,
@@ -3112,151 +3316,13 @@
         "ip_canonical": "全职猎人",
         "ip_aliases": [],
         "ip_parent": null,
-        "delta_rank": 3,
-        "delta_score": 0.73
-      },
-      {
-        "rank": 38,
-        "tag": "战锤",
-        "score": 5.47,
-        "source_count": 2,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao",
-          "fanqie"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao",
-            "fanqie"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签 + 1 个标题推断",
-        "ip_canonical": "战锤",
-        "ip_aliases": [],
-        "ip_parent": null,
         "delta_rank": -5,
-        "delta_score": -2.73
+        "delta_score": 0
       },
       {
-        "rank": 39,
-        "tag": "约会大作战",
-        "score": 3.87,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "约会大作战",
-        "ip_aliases": [],
-        "ip_parent": null,
-        "delta_rank": -12,
-        "delta_score": -7.2
-      },
-      {
-        "rank": 40,
-        "tag": "原神",
-        "score": 3.75,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "原神",
-        "ip_aliases": [],
-        "ip_parent": null,
-        "delta_rank": -12,
-        "delta_score": -6.95
-      },
-      {
-        "rank": 41,
-        "tag": "绝区零",
-        "score": 2.64,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.15,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "ip_canonical": "绝区零",
-        "ip_aliases": [],
-        "ip_parent": null,
-        "delta_rank": -6,
-        "delta_score": -4.9
-      },
-      {
-        "rank": 42,
+        "rank": 43,
         "tag": "咒术",
-        "score": 1.83,
+        "score": 5.23,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -3271,7 +3337,7 @@
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.15,
+        "confidence": 0.68,
         "discovery": "single_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -3286,13 +3352,13 @@
           "咒术回战"
         ],
         "ip_parent": null,
-        "delta_rank": -4,
-        "delta_score": -3.4
+        "delta_rank": -1,
+        "delta_score": 3.4
       },
       {
-        "rank": 43,
+        "rank": 44,
         "tag": "鸣潮",
-        "score": 1.36,
+        "score": 3.89,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -3307,7 +3373,7 @@
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.15,
+        "confidence": 0.68,
         "discovery": "single_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -3320,13 +3386,13 @@
         "ip_canonical": "鸣潮",
         "ip_aliases": [],
         "ip_parent": null,
-        "delta_rank": 0,
-        "delta_score": -2.53
+        "delta_rank": -1,
+        "delta_score": 2.53
       },
       {
-        "rank": 44,
+        "rank": 45,
         "tag": "碧蓝航线",
-        "score": 0.43,
+        "score": 1.22,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -3341,7 +3407,7 @@
           ]
         },
         "tag_role": "ip_universe",
-        "confidence": 0.15,
+        "confidence": 0.68,
         "discovery": "single_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -3354,42 +3420,8 @@
         "ip_canonical": "碧蓝航线",
         "ip_aliases": [],
         "ip_parent": null,
-        "delta_rank": 0,
-        "delta_score": -0.79
-      },
-      {
-        "rank": 45,
-        "tag": "西游",
-        "score": 0,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "qimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "qimao"
-          ]
-        },
-        "tag_role": "ip_universe",
-        "confidence": 0.29,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个标题推断",
-        "ip_canonical": "西游",
-        "ip_aliases": [],
-        "ip_parent": null,
-        "delta_rank": -6,
-        "delta_score": -5
+        "delta_rank": -1,
+        "delta_score": 0.79
       }
     ],
     "channel": [
@@ -3460,7 +3492,7 @@
       {
         "rank": 3,
         "tag": "同人",
-        "score": 47.47,
+        "score": 49.93,
         "source_count": 8,
         "family_count": 1,
         "sources_hit": [
@@ -3489,7 +3521,7 @@
           ]
         },
         "tag_role": "channel",
-        "confidence": 0.38,
+        "confidence": 0.6,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 4,
@@ -3500,7 +3532,7 @@
         },
         "signal_summary_text": "1 个结构化标签 + 4 个平台标签 + 3 个频道提示",
         "delta_rank": 0,
-        "delta_score": -2.97
+        "delta_score": 2.46
       },
       {
         "rank": 4,
@@ -3575,8 +3607,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签 + 1 个频道提示",
-        "delta_rank": 8,
-        "delta_score": 11.44
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 6,
@@ -3620,8 +3652,46 @@
       },
       {
         "rank": 7,
+        "tag": "战斗",
+        "score": 37.8,
+        "source_count": 3,
+        "family_count": 2,
+        "sources_hit": [
+          "bilibili_manga",
+          "ciweimao",
+          "tencent_manga"
+        ],
+        "source_families": [
+          "comic",
+          "novel"
+        ],
+        "sources_by_family": {
+          "comic": [
+            "bilibili_manga",
+            "tencent_manga"
+          ],
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "coarse_genre",
+        "confidence": 0.76,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签 + 1 个平台标签 + 1 个频道提示",
+        "delta_rank": 2,
+        "delta_score": 1.97
+      },
+      {
+        "rank": 8,
         "tag": "奇幻",
-        "score": 37.64,
+        "score": 37.68,
         "source_count": 8,
         "family_count": 2,
         "sources_hit": [
@@ -3653,7 +3723,7 @@
           ]
         },
         "tag_role": "coarse_genre",
-        "confidence": 0.46,
+        "confidence": 0.68,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 3,
@@ -3663,13 +3733,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签 + 3 个平台标签 + 4 个频道提示",
-        "delta_rank": 0,
-        "delta_score": 0.08
+        "delta_rank": -1,
+        "delta_score": 0.04
       },
       {
-        "rank": 8,
+        "rank": 9,
         "tag": "恋爱",
-        "score": 35.83,
+        "score": 36.49,
         "source_count": 6,
         "family_count": 2,
         "sources_hit": [
@@ -3697,7 +3767,7 @@
           ]
         },
         "tag_role": "coarse_genre",
-        "confidence": 0.56,
+        "confidence": 0.79,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 4,
@@ -3707,46 +3777,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签 + 4 个平台标签 + 1 个频道提示",
-        "delta_rank": 2,
-        "delta_score": 1.52
-      },
-      {
-        "rank": 9,
-        "tag": "战斗",
-        "score": 35.83,
-        "source_count": 3,
-        "family_count": 2,
-        "sources_hit": [
-          "bilibili_manga",
-          "ciweimao",
-          "tencent_manga"
-        ],
-        "source_families": [
-          "comic",
-          "novel"
-        ],
-        "sources_by_family": {
-          "comic": [
-            "bilibili_manga",
-            "tencent_manga"
-          ],
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "coarse_genre",
-        "confidence": 0.5,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签 + 1 个平台标签 + 1 个频道提示",
-        "delta_rank": -4,
-        "delta_score": -4.24
+        "delta_rank": -1,
+        "delta_score": 0.66
       },
       {
         "rank": 10,
@@ -3776,7 +3808,7 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -2,
+        "delta_rank": 0,
         "delta_score": 0
       },
       {
@@ -3807,13 +3839,60 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -2,
+        "delta_rank": 0,
         "delta_score": 0
       },
       {
         "rank": 12,
+        "tag": "轻小说",
+        "score": 32.28,
+        "source_count": 9,
+        "family_count": 1,
+        "sources_hit": [
+          "changpei",
+          "ciweimao",
+          "fanqie",
+          "jjwxc",
+          "qidian",
+          "qimao",
+          "qq_reading",
+          "sfacg",
+          "zongheng"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "changpei",
+            "ciweimao",
+            "fanqie",
+            "jjwxc",
+            "qidian",
+            "qimao",
+            "qq_reading",
+            "sfacg",
+            "zongheng"
+          ]
+        },
+        "tag_role": "channel",
+        "confidence": 0.57,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 3,
+          "structured_api_tag": 2,
+          "title_inference": 0,
+          "category_hint": 4,
+          "unknown": 0
+        },
+        "signal_summary_text": "2 个结构化标签 + 3 个平台标签 + 4 个频道提示",
+        "delta_rank": 1,
+        "delta_score": 1.41
+      },
+      {
+        "rank": 13,
         "tag": "悬疑",
-        "score": 32.08,
+        "score": 31.98,
         "source_count": 6,
         "family_count": 2,
         "sources_hit": [
@@ -3851,60 +3930,13 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个结构化标签 + 2 个平台标签 + 2 个频道提示",
-        "delta_rank": 0,
-        "delta_score": 0.13
-      },
-      {
-        "rank": 13,
-        "tag": "轻小说",
-        "score": 30.87,
-        "source_count": 9,
-        "family_count": 1,
-        "sources_hit": [
-          "changpei",
-          "ciweimao",
-          "fanqie",
-          "jjwxc",
-          "qidian",
-          "qimao",
-          "qq_reading",
-          "sfacg",
-          "zongheng"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "changpei",
-            "ciweimao",
-            "fanqie",
-            "jjwxc",
-            "qidian",
-            "qimao",
-            "qq_reading",
-            "sfacg",
-            "zongheng"
-          ]
-        },
-        "tag_role": "channel",
-        "confidence": 0.36,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 3,
-          "structured_api_tag": 2,
-          "title_inference": 0,
-          "category_hint": 4,
-          "unknown": 0
-        },
-        "signal_summary_text": "2 个结构化标签 + 3 个平台标签 + 4 个频道提示",
-        "delta_rank": -2,
-        "delta_score": -1.37
+        "delta_rank": -1,
+        "delta_score": -0.1
       },
       {
         "rank": 14,
         "tag": "冒险",
-        "score": 29.35,
+        "score": 29.85,
         "source_count": 3,
         "family_count": 2,
         "sources_hit": [
@@ -3926,7 +3958,7 @@
           ]
         },
         "tag_role": "coarse_genre",
-        "confidence": 0.49,
+        "confidence": 0.75,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -3937,12 +3969,12 @@
         },
         "signal_summary_text": "2 个结构化标签 + 1 个频道提示",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0.5
       },
       {
         "rank": 15,
         "tag": "热血",
-        "score": 27.71,
+        "score": 28.33,
         "source_count": 4,
         "family_count": 2,
         "sources_hit": [
@@ -3966,7 +3998,7 @@
           ]
         },
         "tag_role": "coarse_genre",
-        "confidence": 0.54,
+        "confidence": 0.79,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -3977,7 +4009,7 @@
         },
         "signal_summary_text": "2 个结构化标签 + 1 个平台标签 + 1 个频道提示",
         "delta_rank": 0,
-        "delta_score": -0.62
+        "delta_score": 0.62
       },
       {
         "rank": 16,
@@ -4017,7 +4049,7 @@
       {
         "rank": 17,
         "tag": "青春",
-        "score": 24.11,
+        "score": 24.48,
         "source_count": 5,
         "family_count": 2,
         "sources_hit": [
@@ -4043,7 +4075,7 @@
           ]
         },
         "tag_role": "coarse_genre",
-        "confidence": 0.41,
+        "confidence": 0.65,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -4054,12 +4086,43 @@
         },
         "signal_summary_text": "1 个结构化标签 + 1 个平台标签 + 3 个频道提示",
         "delta_rank": 0,
-        "delta_score": -0.44
+        "delta_score": 0.37
       },
       {
         "rank": 18,
+        "tag": "动漫穿越",
+        "score": 23.59,
+        "source_count": 1,
+        "family_count": 1,
+        "sources_hit": [
+          "ciweimao"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "ciweimao"
+          ]
+        },
+        "tag_role": "channel",
+        "confidence": 0.26,
+        "discovery": "single_source",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个频道提示",
+        "delta_rank": 12,
+        "delta_score": 15.33
+      },
+      {
+        "rank": 19,
         "tag": "游戏",
-        "score": 23.33,
+        "score": 23.36,
         "source_count": 5,
         "family_count": 2,
         "sources_hit": [
@@ -4095,50 +4158,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签 + 4 个频道提示",
-        "delta_rank": 0,
-        "delta_score": -0.68
-      },
-      {
-        "rank": 19,
-        "tag": "二次元",
-        "score": 22.48,
-        "source_count": 4,
-        "family_count": 1,
-        "sources_hit": [
-          "fanqie",
-          "huaben",
-          "jjwxc",
-          "zongheng"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "fanqie",
-            "huaben",
-            "jjwxc",
-            "zongheng"
-          ]
-        },
-        "tag_role": "channel",
-        "confidence": 0.63,
-        "discovery": "multi_source",
-        "signal_summary": {
-          "platform_tag": 2,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签 + 2 个平台标签 + 1 个频道提示",
-        "delta_rank": 2,
-        "delta_score": 0.81
+        "delta_rank": -1,
+        "delta_score": 0.03
       },
       {
         "rank": 20,
         "tag": "古风",
-        "score": 21.71,
+        "score": 22.77,
         "source_count": 4,
         "family_count": 2,
         "sources_hit": [
@@ -4173,12 +4199,49 @@
         },
         "signal_summary_text": "2 个平台标签 + 2 个频道提示",
         "delta_rank": 0,
-        "delta_score": -0.45
+        "delta_score": 1.06
       },
       {
         "rank": 21,
+        "tag": "二次元",
+        "score": 21.58,
+        "source_count": 4,
+        "family_count": 1,
+        "sources_hit": [
+          "fanqie",
+          "huaben",
+          "jjwxc",
+          "zongheng"
+        ],
+        "source_families": [
+          "novel"
+        ],
+        "sources_by_family": {
+          "novel": [
+            "fanqie",
+            "huaben",
+            "jjwxc",
+            "zongheng"
+          ]
+        },
+        "tag_role": "channel",
+        "confidence": 0.63,
+        "discovery": "multi_source",
+        "signal_summary": {
+          "platform_tag": 2,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签 + 2 个平台标签 + 1 个频道提示",
+        "delta_rank": -2,
+        "delta_score": -0.9
+      },
+      {
+        "rank": 22,
         "tag": "纯爱",
-        "score": 20.08,
+        "score": 21.07,
         "source_count": 3,
         "family_count": 1,
         "sources_hit": [
@@ -4197,7 +4260,7 @@
           ]
         },
         "tag_role": "coarse_genre",
-        "confidence": 0.25,
+        "confidence": 0.5,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -4207,11 +4270,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签 + 2 个频道提示",
-        "delta_rank": 1,
-        "delta_score": -0.99
+        "delta_rank": -1,
+        "delta_score": 0.99
       },
       {
-        "rank": 22,
+        "rank": 23,
         "tag": "日常",
         "score": 18.83,
         "source_count": 1,
@@ -4238,13 +4301,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 1,
-        "delta_score": -0.64
+        "delta_rank": -1,
+        "delta_score": 0
       },
       {
-        "rank": 23,
+        "rank": 24,
         "tag": "玄幻",
-        "score": 18.41,
+        "score": 18.74,
         "source_count": 6,
         "family_count": 2,
         "sources_hit": [
@@ -4272,7 +4335,7 @@
           ]
         },
         "tag_role": "coarse_genre",
-        "confidence": 0.39,
+        "confidence": 0.62,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 2,
@@ -4282,13 +4345,13 @@
           "unknown": 0
         },
         "signal_summary_text": "2 个平台标签 + 4 个频道提示",
-        "delta_rank": 1,
-        "delta_score": -0.12
+        "delta_rank": -1,
+        "delta_score": 0.33
       },
       {
-        "rank": 24,
+        "rank": 25,
         "tag": "科幻",
-        "score": 18.01,
+        "score": 18.35,
         "source_count": 7,
         "family_count": 2,
         "sources_hit": [
@@ -4318,7 +4381,7 @@
           ]
         },
         "tag_role": "coarse_genre",
-        "confidence": 0.37,
+        "confidence": 0.59,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -4328,11 +4391,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签 + 1 个平台标签 + 5 个频道提示",
-        "delta_rank": 1,
-        "delta_score": -0.5
+        "delta_rank": -1,
+        "delta_score": 0.34
       },
       {
-        "rank": 25,
+        "rank": 26,
         "tag": "西幻",
         "score": 16.82,
         "source_count": 2,
@@ -4364,13 +4427,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签 + 1 个频道提示",
-        "delta_rank": 1,
-        "delta_score": -0.1
+        "delta_rank": -1,
+        "delta_score": 0
       },
       {
-        "rank": 26,
+        "rank": 27,
         "tag": "推理",
-        "score": 14.86,
+        "score": 15.35,
         "source_count": 2,
         "family_count": 2,
         "sources_hit": [
@@ -4390,7 +4453,7 @@
           ]
         },
         "tag_role": "coarse_genre",
-        "confidence": 0.36,
+        "confidence": 0.65,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -4400,11 +4463,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签 + 1 个频道提示",
-        "delta_rank": 1,
-        "delta_score": -0.34
+        "delta_rank": -1,
+        "delta_score": 0.49
       },
       {
-        "rank": 27,
+        "rank": 28,
         "tag": "短篇",
         "score": 13,
         "source_count": 2,
@@ -4433,11 +4496,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签 + 1 个频道提示",
-        "delta_rank": 1,
+        "delta_rank": -1,
         "delta_score": 0
       },
       {
-        "rank": 28,
+        "rank": 29,
         "tag": "国漫",
         "score": 12.08,
         "source_count": 3,
@@ -4461,7 +4524,7 @@
           ]
         },
         "tag_role": "channel",
-        "confidence": 0.34,
+        "confidence": 0.6,
         "discovery": "multi_source",
         "signal_summary": {
           "platform_tag": 1,
@@ -4471,11 +4534,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签 + 2 个频道提示",
-        "delta_rank": 1,
+        "delta_rank": -1,
         "delta_score": 0
       },
       {
-        "rank": 29,
+        "rank": 30,
         "tag": "美食",
         "score": 10.83,
         "source_count": 1,
@@ -4502,39 +4565,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 1,
-        "delta_score": 0.03
-      },
-      {
-        "rank": 30,
-        "tag": "动漫穿越",
-        "score": 8.26,
-        "source_count": 1,
-        "family_count": 1,
-        "sources_hit": [
-          "ciweimao"
-        ],
-        "source_families": [
-          "novel"
-        ],
-        "sources_by_family": {
-          "novel": [
-            "ciweimao"
-          ]
-        },
-        "tag_role": "channel",
-        "confidence": 0.15,
-        "discovery": "single_source",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个频道提示",
-        "delta_rank": -11,
-        "delta_score": -15.33
+        "delta_rank": -1,
+        "delta_score": 0
       },
       {
         "rank": 31,
@@ -4565,12 +4597,12 @@
         },
         "signal_summary_text": "1 个频道提示",
         "delta_rank": 0,
-        "delta_score": -1.36
+        "delta_score": 0
       },
       {
         "rank": 32,
         "tag": "治愈",
-        "score": 1.33,
+        "score": 3.8,
         "source_count": 1,
         "family_count": 1,
         "sources_hit": [
@@ -4585,7 +4617,7 @@
           ]
         },
         "tag_role": "coarse_genre",
-        "confidence": 0.15,
+        "confidence": 0.26,
         "discovery": "single_source",
         "signal_summary": {
           "platform_tag": 0,
@@ -4596,7 +4628,7 @@
         },
         "signal_summary_text": "1 个频道提示",
         "delta_rank": 0,
-        "delta_score": -2.47
+        "delta_score": 2.47
       },
       {
         "rank": 33,
@@ -4673,7 +4705,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -1.16
+        "delta_score": 0
       },
       {
         "rank": 3,
@@ -4695,7 +4727,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -1.88
+        "delta_score": 0
       },
       {
         "rank": 4,
@@ -4717,7 +4749,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": 0.52
+        "delta_score": 0
       },
       {
         "rank": 5,
@@ -4738,8 +4770,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 1,
-        "delta_score": 3.34
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 6,
@@ -4760,8 +4792,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -1,
-        "delta_score": -0.49
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 7,
@@ -4782,8 +4814,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": 1,
-        "delta_score": 0.53
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 8,
@@ -4804,8 +4836,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 1,
-        "delta_score": 0.32
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 9,
@@ -4826,8 +4858,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -2,
-        "delta_score": -3.27
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 10,
@@ -4849,7 +4881,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.45
+        "delta_score": 0
       },
       {
         "rank": 11,
@@ -4871,7 +4903,7 @@
         },
         "signal_summary_text": "1 个频道提示",
         "delta_rank": 0,
-        "delta_score": 0.03
+        "delta_score": 0
       },
       {
         "rank": 12,
@@ -4893,7 +4925,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": 0.01
+        "delta_score": 0
       },
       {
         "rank": 13,
@@ -4914,8 +4946,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 1,
-        "delta_score": 1.12
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 14,
@@ -4936,8 +4968,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -1,
-        "delta_score": -0.21
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 15,
@@ -4959,7 +4991,7 @@
         },
         "signal_summary_text": "1 个标题推断",
         "delta_rank": 0,
-        "delta_score": -0.37
+        "delta_score": 0
       },
       {
         "rank": 16,
@@ -4981,7 +5013,7 @@
         },
         "signal_summary_text": "1 个标题推断",
         "delta_rank": 0,
-        "delta_score": -0.11
+        "delta_score": 0
       },
       {
         "rank": 17,
@@ -5002,8 +5034,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 2,
-        "delta_score": 0.52
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 18,
@@ -5024,8 +5056,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -1,
-        "delta_score": -0.13
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 19,
@@ -5046,8 +5078,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": -1,
-        "delta_score": -0.37
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 20,
@@ -5069,7 +5101,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.09
+        "delta_score": 0
       },
       {
         "rank": 21,
@@ -5091,7 +5123,7 @@
         },
         "signal_summary_text": "1 个标题推断",
         "delta_rank": 0,
-        "delta_score": -0.09
+        "delta_score": 0
       },
       {
         "rank": 22,
@@ -5113,7 +5145,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": 0.36
+        "delta_score": 0
       },
       {
         "rank": 23,
@@ -5135,7 +5167,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": 0.49
+        "delta_score": 0
       },
       {
         "rank": 24,
@@ -5156,8 +5188,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 2,
-        "delta_score": 0.61
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 25,
@@ -5178,8 +5210,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 2,
-        "delta_score": 1.11
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 26,
@@ -5200,8 +5232,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": -2,
-        "delta_score": -0.08
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 27,
@@ -5222,8 +5254,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -2,
-        "delta_score": 0.03
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 28,
@@ -5244,8 +5276,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 8,
-        "delta_score": 3.47
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 29,
@@ -5266,8 +5298,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 3,
-        "delta_score": -0.1
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 30,
@@ -5288,8 +5320,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -2,
-        "delta_score": -1.4
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 31,
@@ -5310,8 +5342,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -2,
-        "delta_score": -1.4
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 32,
@@ -5332,8 +5364,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -1,
-        "delta_score": -0.36
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 33,
@@ -5354,8 +5386,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -3,
-        "delta_score": -0.67
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 34,
@@ -5377,7 +5409,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": 0.01
+        "delta_score": 0
       },
       {
         "rank": 35,
@@ -5399,7 +5431,7 @@
         },
         "signal_summary_text": "1 个频道提示",
         "delta_rank": 0,
-        "delta_score": 0.04
+        "delta_score": 0
       },
       {
         "rank": 36,
@@ -5420,8 +5452,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -3,
-        "delta_score": -0.21
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 37,
@@ -5442,8 +5474,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 2,
-        "delta_score": 0.86
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 38,
@@ -5464,8 +5496,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -1,
-        "delta_score": -0.23
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 39,
@@ -5486,8 +5518,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": -1,
-        "delta_score": -0.3
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 40,
@@ -5509,7 +5541,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": 0.12
+        "delta_score": 0
       },
       {
         "rank": 41,
@@ -5530,8 +5562,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": null,
-        "delta_score": null
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 42,
@@ -5552,8 +5584,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -1,
-        "delta_score": 0.02
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 43,
@@ -5574,8 +5606,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -1,
-        "delta_score": -0.2
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 44,
@@ -5596,8 +5628,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -1,
-        "delta_score": -0.09
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 45,
@@ -5618,8 +5650,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -1,
-        "delta_score": -0.21
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 46,
@@ -5640,7 +5672,7 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -1,
+        "delta_rank": 0,
         "delta_score": 0
       },
       {
@@ -5662,7 +5694,7 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -1,
+        "delta_rank": 0,
         "delta_score": 0
       },
       {
@@ -5684,7 +5716,7 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
-        "delta_rank": -1,
+        "delta_rank": 0,
         "delta_score": 0
       }
     ],
@@ -5693,7 +5725,7 @@
         "rank": 1,
         "tag": "年上",
         "score": 100,
-        "raw_heat": 9711,
+        "raw_heat": 9714.16,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "relationship",
@@ -5714,8 +5746,8 @@
       {
         "rank": 2,
         "tag": "年下",
-        "score": 58.81,
-        "raw_heat": 5876.24,
+        "score": 58.8,
+        "raw_heat": 5876.85,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "relationship",
@@ -5731,13 +5763,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.03
+        "delta_score": -0.01
       },
       {
         "rank": 3,
         "tag": "校园",
-        "score": 48.89,
-        "raw_heat": 4951.94,
+        "score": 48.87,
+        "raw_heat": 4951.96,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "subgenre",
@@ -5753,13 +5785,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.03
+        "delta_score": -0.02
       },
       {
         "rank": 4,
         "tag": "架空",
-        "score": 44.44,
-        "raw_heat": 4537.96,
+        "score": 44.43,
+        "raw_heat": 4537.99,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "coarse_genre",
@@ -5775,13 +5807,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.03
+        "delta_score": -0.01
       },
       {
         "rank": 5,
         "tag": "灵异",
-        "score": 37.06,
-        "raw_heat": 3850.91,
+        "score": 37.05,
+        "raw_heat": 3850.96,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "coarse_genre",
@@ -5797,13 +5829,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.03
+        "delta_score": -0.01
       },
       {
         "rank": 6,
         "tag": "百合",
-        "score": 33.97,
-        "raw_heat": 3563.3,
+        "score": 33.96,
+        "raw_heat": 3563.34,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "relationship_type",
@@ -5819,13 +5851,13 @@
         },
         "signal_summary_text": "1 个平台标签",
         "delta_rank": 0,
-        "delta_score": -0.03
+        "delta_score": -0.01
       },
       {
         "rank": 7,
         "tag": "搞笑",
-        "score": 33.7,
-        "raw_heat": 3538.11,
+        "score": 33.69,
+        "raw_heat": 3538.13,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "coarse_genre",
@@ -5841,12 +5873,12 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.03
+        "delta_score": -0.01
       },
       {
         "rank": 8,
         "tag": "穿越",
-        "score": 29.95,
+        "score": 29.94,
         "raw_heat": 3188.77,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
@@ -5863,13 +5895,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.02
+        "delta_score": -0.01
       },
       {
         "rank": 9,
         "tag": "悬疑",
-        "score": 27.09,
-        "raw_heat": 2921.95,
+        "score": 27.08,
+        "raw_heat": 2921.99,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "coarse_genre",
@@ -5890,8 +5922,8 @@
       {
         "rank": 10,
         "tag": "职业",
-        "score": 21.85,
-        "raw_heat": 2434.61,
+        "score": 21.84,
+        "raw_heat": 2434.62,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "subgenre",
@@ -5907,13 +5939,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.02
+        "delta_score": -0.01
       },
       {
         "rank": 11,
         "tag": "竹马",
-        "score": 17.09,
-        "raw_heat": 1990.91,
+        "score": 17.08,
+        "raw_heat": 1990.95,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "relationship",
@@ -5929,7 +5961,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.02
+        "delta_score": -0.01
       },
       {
         "rank": 12,
@@ -5951,7 +5983,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0
       },
       {
         "rank": 13,
@@ -5973,13 +6005,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0
       },
       {
         "rank": 14,
         "tag": "西幻",
         "score": 10.73,
-        "raw_heat": 1399.47,
+        "raw_heat": 1399.59,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "coarse_genre",
@@ -5995,13 +6027,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0
       },
       {
         "rank": 15,
         "tag": "奇幻",
         "score": 10.67,
-        "raw_heat": 1393.8,
+        "raw_heat": 1393.86,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "coarse_genre",
@@ -6017,13 +6049,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0
       },
       {
         "rank": 16,
         "tag": "群像",
         "score": 10.67,
-        "raw_heat": 1393.8,
+        "raw_heat": 1393.86,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "relationship_type",
@@ -6039,7 +6071,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0
       },
       {
         "rank": 17,
@@ -6061,12 +6093,12 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0
       },
       {
         "rank": 18,
         "tag": "纯爱",
-        "score": 4.3,
+        "score": 4.29,
         "raw_heat": 800,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
@@ -6083,7 +6115,7 @@
         },
         "signal_summary_text": "1 个平台标签",
         "delta_rank": 0,
-        "delta_score": 0
+        "delta_score": -0.01
       },
       {
         "rank": 19,
@@ -6105,7 +6137,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0
       },
       {
         "rank": 20,
@@ -6127,7 +6159,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0
       },
       {
         "rank": 21,
@@ -6171,7 +6203,7 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0
       },
       {
         "rank": 23,
@@ -6193,13 +6225,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": -0.01
+        "delta_score": 0
       },
       {
         "rank": 24,
         "tag": "科幻",
         "score": 2.86,
-        "raw_heat": 666.36,
+        "raw_heat": 666.42,
         "heat_metric": "changpei_category_rank",
         "source_family": "novel",
         "tag_role": "coarse_genre",
@@ -6246,11 +6278,11 @@
         "tag": "型月",
         "score": 100,
         "raw_heat": 867,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6268,11 +6300,11 @@
         "tag": "综漫",
         "score": 57.63,
         "raw_heat": 503,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6290,11 +6322,11 @@
         "tag": "无限",
         "score": 51.92,
         "raw_heat": 454,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6312,11 +6344,11 @@
         "tag": "修罗场",
         "score": 48.78,
         "raw_heat": 427,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "relationship_type",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6334,11 +6366,11 @@
         "tag": "明日方舟",
         "score": 47.73,
         "raw_heat": 418,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6356,11 +6388,11 @@
         "tag": "星穹铁道",
         "score": 46.45,
         "raw_heat": 407,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6378,11 +6410,11 @@
         "tag": "奥特曼",
         "score": 45.05,
         "raw_heat": 395,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6400,11 +6432,11 @@
         "tag": "崩坏",
         "score": 44.24,
         "raw_heat": 388,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6422,11 +6454,11 @@
         "tag": "舰娘",
         "score": 43.54,
         "raw_heat": 382,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6444,11 +6476,11 @@
         "tag": "俺春物",
         "score": 42.14,
         "raw_heat": 370,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6466,11 +6498,11 @@
         "tag": "穿越",
         "score": 25.15,
         "raw_heat": 224,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "trope",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6488,11 +6520,11 @@
         "tag": "火影",
         "score": 24.91,
         "raw_heat": 222,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6510,11 +6542,11 @@
         "tag": "种田",
         "score": 24.68,
         "raw_heat": 220,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "trope",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6532,11 +6564,11 @@
         "tag": "约会大作战",
         "score": 24.45,
         "raw_heat": 218,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6554,11 +6586,11 @@
         "tag": "原神",
         "score": 24.1,
         "raw_heat": 215,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6576,11 +6608,11 @@
         "tag": "宝可梦",
         "score": 22.82,
         "raw_heat": 204,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6598,11 +6630,11 @@
         "tag": "海贼",
         "score": 22.58,
         "raw_heat": 202,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6620,11 +6652,11 @@
         "tag": "从零开始",
         "score": 22.35,
         "raw_heat": 200,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6642,11 +6674,11 @@
         "tag": "战锤",
         "score": 21.89,
         "raw_heat": 196,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6664,11 +6696,11 @@
         "tag": "升级",
         "score": 21.3,
         "raw_heat": 191,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "trope",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6686,11 +6718,11 @@
         "tag": "绝区零",
         "score": 21.07,
         "raw_heat": 189,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6708,11 +6740,11 @@
         "tag": "重生",
         "score": 20.84,
         "raw_heat": 187,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "trope",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6730,11 +6762,11 @@
         "tag": "死神",
         "score": 19.79,
         "raw_heat": 178,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6752,11 +6784,11 @@
         "tag": "哈利波特",
         "score": 19.56,
         "raw_heat": 176,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6774,11 +6806,11 @@
         "tag": "克苏鲁",
         "score": 19.09,
         "raw_heat": 172,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6796,11 +6828,11 @@
         "tag": "咒术",
         "score": 18.86,
         "raw_heat": 170,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6818,11 +6850,11 @@
         "tag": "校园",
         "score": 18.28,
         "raw_heat": 165,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6840,11 +6872,11 @@
         "tag": "魔法",
         "score": 18.16,
         "raw_heat": 164,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6862,11 +6894,11 @@
         "tag": "鸣潮",
         "score": 17.58,
         "raw_heat": 159,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6884,11 +6916,11 @@
         "tag": "机甲",
         "score": 17.35,
         "raw_heat": 157,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6906,11 +6938,11 @@
         "tag": "腹黑",
         "score": 16.07,
         "raw_heat": 146,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "moe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6928,11 +6960,11 @@
         "tag": "末世",
         "score": 15.02,
         "raw_heat": 137,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6950,11 +6982,11 @@
         "tag": "碧蓝航线",
         "score": 15.02,
         "raw_heat": 137,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "ip_universe",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6972,11 +7004,11 @@
         "tag": "聊天群",
         "score": 13.85,
         "raw_heat": 127,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "fandom_structure",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -6994,11 +7026,11 @@
         "tag": "丧尸",
         "score": 12.46,
         "raw_heat": 115,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "subgenre",
         "discovery": "single_source",
-        "confidence": 0.315,
+        "confidence": 0.9,
         "signal_type": "platform_tag",
         "signal_summary": {
           "platform_tag": 1,
@@ -7016,11 +7048,11 @@
         "tag": "同人",
         "score": 5.36,
         "raw_heat": 54,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7038,11 +7070,11 @@
         "tag": "动漫穿越",
         "score": 3.61,
         "raw_heat": 39,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7060,11 +7092,11 @@
         "tag": "轻小说",
         "score": 2.91,
         "raw_heat": 33,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7082,11 +7114,11 @@
         "tag": "战斗",
         "score": 0.93,
         "raw_heat": 16,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7104,11 +7136,11 @@
         "tag": "恋爱",
         "score": 0.93,
         "raw_heat": 16,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7126,11 +7158,11 @@
         "tag": "科幻",
         "score": 0.7,
         "raw_heat": 14,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7148,11 +7180,11 @@
         "tag": "纯爱",
         "score": 0.7,
         "raw_heat": 14,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7170,11 +7202,11 @@
         "tag": "青春",
         "score": 0.7,
         "raw_heat": 14,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7192,11 +7224,11 @@
         "tag": "治愈",
         "score": 0.58,
         "raw_heat": 13,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7214,11 +7246,11 @@
         "tag": "热血",
         "score": 0.58,
         "raw_heat": 13,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7236,11 +7268,11 @@
         "tag": "冒险",
         "score": 0.47,
         "raw_heat": 12,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7258,11 +7290,11 @@
         "tag": "玄幻",
         "score": 0.35,
         "raw_heat": 11,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7280,11 +7312,11 @@
         "tag": "推理",
         "score": 0.23,
         "raw_heat": 10,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7302,11 +7334,11 @@
         "tag": "奇幻",
         "score": 0.12,
         "raw_heat": 9,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "coarse_genre",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7324,11 +7356,11 @@
         "tag": "国漫",
         "score": 0,
         "raw_heat": 8,
-        "heat_metric": "carry_forward_prev_day",
+        "heat_metric": "acg_zone_freq",
         "source_family": "novel",
         "tag_role": "channel",
         "discovery": "single_source",
-        "confidence": 0.12249999999999998,
+        "confidence": 0.35,
         "signal_type": "category_hint",
         "signal_summary": {
           "platform_tag": 0,
@@ -7347,7 +7379,7 @@
         "rank": 1,
         "tag": "衍生",
         "score": 100,
-        "raw_heat": 3464.47,
+        "raw_heat": 3464.23,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
         "tag_role": "channel",
@@ -7368,8 +7400,8 @@
       {
         "rank": 2,
         "tag": "同人",
-        "score": 93.6,
-        "raw_heat": 3245.5,
+        "score": 88.02,
+        "raw_heat": 3054.55,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
         "tag_role": "channel",
@@ -7385,13 +7417,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": 0.01
+        "delta_score": -5.58
       },
       {
         "rank": 3,
         "tag": "穿越",
-        "score": 76.48,
-        "raw_heat": 2659.96,
+        "score": 82.14,
+        "raw_heat": 2853.14,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
         "tag_role": "trope",
@@ -7407,13 +7439,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": 5.7
+        "delta_score": 5.66
       },
       {
         "rank": 4,
         "tag": "系统",
-        "score": 46.13,
-        "raw_heat": 1621.55,
+        "score": 51.55,
+        "raw_heat": 1806.64,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
         "tag_role": "trope",
@@ -7429,13 +7461,13 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": 5.75
+        "delta_score": 5.42
       },
       {
         "rank": 5,
         "tag": "二次元",
-        "score": 28.43,
-        "raw_heat": 1016.33,
+        "score": 22.71,
+        "raw_heat": 819.95,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
         "tag_role": "channel",
@@ -7451,34 +7483,12 @@
         },
         "signal_summary_text": "1 个结构化标签",
         "delta_rank": 0,
-        "delta_score": 5.86
+        "delta_score": -5.72
       },
       {
         "rank": 6,
-        "tag": "重生",
-        "score": 10.07,
-        "raw_heat": 388.13,
-        "heat_metric": "fanqie_derivative_rank",
-        "source_family": "novel",
-        "tag_role": "trope",
-        "discovery": "single_source",
-        "confidence": 0.6,
-        "signal_type": "structured_api_tag",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签",
-        "delta_rank": 1,
-        "delta_score": -0.09
-      },
-      {
-        "rank": 7,
         "tag": "衍生同人",
-        "score": 7.49,
+        "score": 7.51,
         "raw_heat": 300,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
@@ -7495,13 +7505,35 @@
         },
         "signal_summary_text": "1 个平台标签",
         "delta_rank": 1,
-        "delta_score": 0
+        "delta_score": 0.02
+      },
+      {
+        "rank": 7,
+        "tag": "漫威",
+        "score": 6.1,
+        "raw_heat": 251.78,
+        "heat_metric": "fanqie_derivative_rank",
+        "source_family": "novel",
+        "tag_role": "ip_universe",
+        "discovery": "single_source",
+        "confidence": 0.6,
+        "signal_type": "structured_api_tag",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签",
+        "delta_rank": 2,
+        "delta_score": 0.26
       },
       {
         "rank": 8,
         "tag": "火影",
-        "score": 6.08,
-        "raw_heat": 251.76,
+        "score": 6.02,
+        "raw_heat": 248.99,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
         "tag_role": "ip_universe",
@@ -7516,36 +7548,14 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -2,
-        "delta_score": -5.86
+        "delta_rank": 0,
+        "delta_score": -0.06
       },
       {
         "rank": 9,
-        "tag": "漫威",
-        "score": 5.84,
-        "raw_heat": 243.57,
-        "heat_metric": "fanqie_derivative_rank",
-        "source_family": "novel",
-        "tag_role": "ip_universe",
-        "discovery": "single_source",
-        "confidence": 0.6,
-        "signal_type": "structured_api_tag",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 1,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个结构化标签",
-        "delta_rank": null,
-        "delta_score": null
-      },
-      {
-        "rank": 10,
         "tag": "轻小说",
         "score": 4.73,
-        "raw_heat": 205.51,
+        "raw_heat": 204.95,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
         "tag_role": "channel",
@@ -7560,14 +7570,14 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -1,
+        "delta_rank": 1,
         "delta_score": 0
       },
       {
-        "rank": 11,
+        "rank": 10,
         "tag": "腹黑",
-        "score": 4.67,
-        "raw_heat": 203.28,
+        "score": 4.68,
+        "raw_heat": 203.3,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
         "tag_role": "moe",
@@ -7582,14 +7592,14 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -1,
-        "delta_score": -0.06
+        "delta_rank": 1,
+        "delta_score": 0.01
       },
       {
-        "rank": 12,
+        "rank": 11,
         "tag": "种田",
         "score": 4.58,
-        "raw_heat": 200.26,
+        "raw_heat": 200.04,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
         "tag_role": "trope",
@@ -7604,13 +7614,35 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个结构化标签",
-        "delta_rank": -1,
+        "delta_rank": 1,
         "delta_score": 0
+      },
+      {
+        "rank": 12,
+        "tag": "重生",
+        "score": 4.5,
+        "raw_heat": 197.09,
+        "heat_metric": "fanqie_derivative_rank",
+        "source_family": "novel",
+        "tag_role": "trope",
+        "discovery": "single_source",
+        "confidence": 0.6,
+        "signal_type": "structured_api_tag",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 1,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个结构化标签",
+        "delta_rank": -6,
+        "delta_score": -5.57
       },
       {
         "rank": 13,
         "tag": "奥特曼",
-        "score": 0.04,
+        "score": 0.05,
         "raw_heat": 45,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
@@ -7626,13 +7658,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": -1,
-        "delta_score": 0
+        "delta_rank": 0,
+        "delta_score": 0.01
       },
       {
         "rank": 14,
         "tag": "型月",
-        "score": 0.01,
+        "score": 0.03,
         "raw_heat": 44.1,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
@@ -7648,14 +7680,36 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": -1,
-        "delta_score": 0
+        "delta_rank": 0,
+        "delta_score": 0.02
       },
       {
         "rank": 15,
+        "tag": "西游",
+        "score": 0.01,
+        "raw_heat": 43.65,
+        "heat_metric": "fanqie_derivative_rank",
+        "source_family": "novel",
+        "tag_role": "ip_universe",
+        "discovery": "single_source",
+        "confidence": 0.33,
+        "signal_type": "title_inference",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个标题推断",
+        "delta_rank": null,
+        "delta_score": null
+      },
+      {
+        "rank": 16,
         "tag": "战锤",
         "score": 0,
-        "raw_heat": 43.65,
+        "raw_heat": 43.2,
         "heat_metric": "fanqie_derivative_rank",
         "source_family": "novel",
         "tag_role": "ip_universe",
@@ -7679,7 +7733,7 @@
         "rank": 1,
         "tag": "后宫",
         "score": 100,
-        "raw_heat": 133267,
+        "raw_heat": 170648,
         "heat_metric": "huaben_weekly_tag_heat",
         "source_family": "novel",
         "tag_role": "relationship_type",
@@ -7700,8 +7754,8 @@
       {
         "rank": 2,
         "tag": "团宠",
-        "score": 61.7,
-        "raw_heat": 82295,
+        "score": 58.7,
+        "raw_heat": 100247,
         "heat_metric": "huaben_weekly_tag_heat",
         "source_family": "novel",
         "tag_role": "trope",
@@ -7717,167 +7771,13 @@
         },
         "signal_summary_text": "1 个平台标签",
         "delta_rank": 0,
-        "delta_score": -5.45
+        "delta_score": -3
       },
       {
         "rank": 3,
         "tag": "观影体",
-        "score": 58.73,
-        "raw_heat": 78336,
-        "heat_metric": "huaben_weekly_tag_heat",
-        "source_family": "novel",
-        "tag_role": "fandom_structure",
-        "discovery": "single_source",
-        "confidence": 0.9,
-        "signal_type": "platform_tag",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": 0,
-        "delta_score": -1.83
-      },
-      {
-        "rank": 4,
-        "tag": "奇幻",
-        "score": 23.68,
-        "raw_heat": 31694,
-        "heat_metric": "huaben_weekly_tag_heat",
-        "source_family": "novel",
-        "tag_role": "coarse_genre",
-        "discovery": "single_source",
-        "confidence": 0.9,
-        "signal_type": "platform_tag",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": 0,
-        "delta_score": -8.82
-      },
-      {
-        "rank": 5,
-        "tag": "哈利波特",
-        "score": 16.47,
-        "raw_heat": 22098,
-        "heat_metric": "huaben_weekly_tag_heat",
-        "source_family": "novel",
-        "tag_role": "ip_universe",
-        "discovery": "single_source",
-        "confidence": 0.9,
-        "signal_type": "platform_tag",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": 0,
-        "delta_score": -6.15
-      },
-      {
-        "rank": 6,
-        "tag": "快穿",
-        "score": 12.92,
-        "raw_heat": 17376,
-        "heat_metric": "huaben_weekly_tag_heat",
-        "source_family": "novel",
-        "tag_role": "trope",
-        "discovery": "single_source",
-        "confidence": 0.9,
-        "signal_type": "platform_tag",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": 0,
-        "delta_score": -4.84
-      },
-      {
-        "rank": 7,
-        "tag": "青春",
-        "score": 12.92,
-        "raw_heat": 17376,
-        "heat_metric": "huaben_weekly_tag_heat",
-        "source_family": "novel",
-        "tag_role": "coarse_genre",
-        "discovery": "single_source",
-        "confidence": 0.9,
-        "signal_type": "platform_tag",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": 0,
-        "delta_score": -4.84
-      },
-      {
-        "rank": 8,
-        "tag": "论坛体",
-        "score": 10.83,
-        "raw_heat": 14586,
-        "heat_metric": "huaben_weekly_tag_heat",
-        "source_family": "novel",
-        "tag_role": "fandom_structure",
-        "discovery": "single_source",
-        "confidence": 0.9,
-        "signal_type": "platform_tag",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": 0,
-        "delta_score": -4.06
-      },
-      {
-        "rank": 9,
-        "tag": "同人",
-        "score": 9.39,
-        "raw_heat": 12667,
-        "heat_metric": "huaben_weekly_tag_heat",
-        "source_family": "novel",
-        "tag_role": "channel",
-        "discovery": "single_source",
-        "confidence": 0.9,
-        "signal_type": "platform_tag",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": 0,
-        "delta_score": -3.45
-      },
-      {
-        "rank": 10,
-        "tag": "无限",
-        "score": 7,
-        "raw_heat": 9498,
+        "score": 56.07,
+        "raw_heat": 95758,
         "heat_metric": "huaben_weekly_tag_heat",
         "source_family": "novel",
         "tag_role": "fandom_structure",
@@ -7896,10 +7796,32 @@
         "delta_score": -2.66
       },
       {
-        "rank": 11,
-        "tag": "柯南",
-        "score": 6.83,
-        "raw_heat": 9263,
+        "rank": 4,
+        "tag": "奇幻",
+        "score": 18.49,
+        "raw_heat": 31694,
+        "heat_metric": "huaben_weekly_tag_heat",
+        "source_family": "novel",
+        "tag_role": "coarse_genre",
+        "discovery": "single_source",
+        "confidence": 0.9,
+        "signal_type": "platform_tag",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "delta_rank": 0,
+        "delta_score": -5.19
+      },
+      {
+        "rank": 5,
+        "tag": "哈利波特",
+        "score": 12.86,
+        "raw_heat": 22100,
         "heat_metric": "huaben_weekly_tag_heat",
         "source_family": "novel",
         "tag_role": "ip_universe",
@@ -7915,13 +7837,79 @@
         },
         "signal_summary_text": "1 个平台标签",
         "delta_rank": 0,
-        "delta_score": -2.58
+        "delta_score": -3.61
       },
       {
-        "rank": 12,
-        "tag": "二次元",
-        "score": 0.07,
-        "raw_heat": 275,
+        "rank": 6,
+        "tag": "快穿",
+        "score": 10.09,
+        "raw_heat": 17376,
+        "heat_metric": "huaben_weekly_tag_heat",
+        "source_family": "novel",
+        "tag_role": "trope",
+        "discovery": "single_source",
+        "confidence": 0.9,
+        "signal_type": "platform_tag",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "delta_rank": 0,
+        "delta_score": -2.83
+      },
+      {
+        "rank": 7,
+        "tag": "青春",
+        "score": 10.09,
+        "raw_heat": 17376,
+        "heat_metric": "huaben_weekly_tag_heat",
+        "source_family": "novel",
+        "tag_role": "coarse_genre",
+        "discovery": "single_source",
+        "confidence": 0.9,
+        "signal_type": "platform_tag",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "delta_rank": 0,
+        "delta_score": -2.83
+      },
+      {
+        "rank": 8,
+        "tag": "论坛体",
+        "score": 8.45,
+        "raw_heat": 14586,
+        "heat_metric": "huaben_weekly_tag_heat",
+        "source_family": "novel",
+        "tag_role": "fandom_structure",
+        "discovery": "single_source",
+        "confidence": 0.9,
+        "signal_type": "platform_tag",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "delta_rank": 0,
+        "delta_score": -2.38
+      },
+      {
+        "rank": 9,
+        "tag": "同人",
+        "score": 7.37,
+        "raw_heat": 12747,
         "heat_metric": "huaben_weekly_tag_heat",
         "source_family": "novel",
         "tag_role": "channel",
@@ -7937,13 +7925,13 @@
         },
         "signal_summary_text": "1 个平台标签",
         "delta_rank": 0,
-        "delta_score": -0.09
+        "delta_score": -2.02
       },
       {
-        "rank": 13,
-        "tag": "综漫",
-        "score": 0,
-        "raw_heat": 176,
+        "rank": 10,
+        "tag": "无限",
+        "score": 5.47,
+        "raw_heat": 9497,
         "heat_metric": "huaben_weekly_tag_heat",
         "source_family": "novel",
         "tag_role": "fandom_structure",
@@ -7958,8 +7946,74 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 1,
-        "delta_score": -0.06
+        "delta_rank": 0,
+        "delta_score": -1.53
+      },
+      {
+        "rank": 11,
+        "tag": "柯南",
+        "score": 5.33,
+        "raw_heat": 9264,
+        "heat_metric": "huaben_weekly_tag_heat",
+        "source_family": "novel",
+        "tag_role": "ip_universe",
+        "discovery": "single_source",
+        "confidence": 0.9,
+        "signal_type": "platform_tag",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "delta_rank": 0,
+        "delta_score": -1.5
+      },
+      {
+        "rank": 12,
+        "tag": "二次元",
+        "score": 0.06,
+        "raw_heat": 276,
+        "heat_metric": "huaben_weekly_tag_heat",
+        "source_family": "novel",
+        "tag_role": "channel",
+        "discovery": "single_source",
+        "confidence": 0.9,
+        "signal_type": "platform_tag",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "delta_rank": 0,
+        "delta_score": -0.01
+      },
+      {
+        "rank": 13,
+        "tag": "综漫",
+        "score": 0,
+        "raw_heat": 175,
+        "heat_metric": "huaben_weekly_tag_heat",
+        "source_family": "novel",
+        "tag_role": "fandom_structure",
+        "discovery": "single_source",
+        "confidence": 0.9,
+        "signal_type": "platform_tag",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "delta_rank": 0,
+        "delta_score": 0
       }
     ],
     "jjwxc": [
@@ -9138,7 +9192,7 @@
       {
         "rank": 2,
         "tag": "同人",
-        "score": 46.43,
+        "score": 46.18,
         "raw_heat": 340,
         "heat_metric": "qimao_category_click_rank",
         "source_family": "novel",
@@ -9155,12 +9209,12 @@
         },
         "signal_summary_text": "1 个平台标签",
         "delta_rank": 0,
-        "delta_score": -1.89
+        "delta_score": -0.25
       },
       {
         "rank": 3,
         "tag": "轻小说",
-        "score": 19.49,
+        "score": 19.11,
         "raw_heat": 170,
         "heat_metric": "qimao_category_click_rank",
         "source_family": "novel",
@@ -9177,12 +9231,12 @@
         },
         "signal_summary_text": "1 个平台标签",
         "delta_rank": 0,
-        "delta_score": -2.83
+        "delta_score": -0.38
       },
       {
         "rank": 4,
         "tag": "恋爱",
-        "score": 17.91,
+        "score": 17.52,
         "raw_heat": 160,
         "heat_metric": "qimao_category_click_rank",
         "source_family": "novel",
@@ -9199,12 +9253,12 @@
         },
         "signal_summary_text": "1 个平台标签",
         "delta_rank": 0,
-        "delta_score": -2.89
+        "delta_score": -0.39
       },
       {
         "rank": 5,
         "tag": "原生幻想",
-        "score": 11.41,
+        "score": 10.99,
         "raw_heat": 119,
         "heat_metric": "qimao_category_click_rank",
         "source_family": "novel",
@@ -9220,14 +9274,36 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 1,
-        "delta_score": -3.12
+        "delta_rank": 0,
+        "delta_score": -0.42
       },
       {
         "rank": 6,
+        "tag": "西游",
+        "score": 9.71,
+        "raw_heat": 111,
+        "heat_metric": "qimao_category_click_rank",
+        "source_family": "novel",
+        "tag_role": "ip_universe",
+        "discovery": "single_source",
+        "confidence": 0.385,
+        "signal_type": "title_inference",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个标题推断",
+        "delta_rank": 2,
+        "delta_score": 9.71
+      },
+      {
+        "rank": 7,
         "tag": "星穹铁道",
-        "score": 8.4,
-        "raw_heat": 100,
+        "score": 3.82,
+        "raw_heat": 74,
         "heat_metric": "qimao_category_click_rank",
         "source_family": "novel",
         "tag_role": "ip_universe",
@@ -9243,12 +9319,12 @@
         },
         "signal_summary_text": "1 个标题推断",
         "delta_rank": -1,
-        "delta_score": -6.58
+        "delta_score": -4.58
       },
       {
-        "rank": 7,
+        "rank": 8,
         "tag": "鬼灭",
-        "score": 0.48,
+        "score": 0,
         "raw_heat": 50,
         "heat_metric": "qimao_category_click_rank",
         "source_family": "novel",
@@ -9264,30 +9340,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": 1,
-        "delta_score": -3.5
-      },
-      {
-        "rank": 8,
-        "tag": "西游",
-        "score": 0,
-        "raw_heat": 47,
-        "heat_metric": "qimao_category_click_rank",
-        "source_family": "novel",
-        "tag_role": "ip_universe",
-        "discovery": "single_source",
-        "confidence": 0.385,
-        "signal_type": "title_inference",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个标题推断",
         "delta_rank": -1,
-        "delta_score": -13
+        "delta_score": -0.48
       }
     ],
     "qq_reading": [
@@ -9583,7 +9637,7 @@
         "rank": 1,
         "tag": "校园",
         "score": 100,
-        "raw_heat": 296,
+        "raw_heat": 276,
         "heat_metric": "acg_category_rank",
         "source_family": "novel",
         "tag_role": "subgenre",
@@ -9604,8 +9658,8 @@
       {
         "rank": 2,
         "tag": "魔幻",
-        "score": 26.41,
-        "raw_heat": 87,
+        "score": 27.65,
+        "raw_heat": 85,
         "heat_metric": "acg_category_rank",
         "source_family": "novel",
         "tag_role": "coarse_genre",
@@ -9621,12 +9675,12 @@
         },
         "signal_summary_text": "1 个频道提示",
         "delta_rank": 0,
-        "delta_score": -4.33
+        "delta_score": 1.24
       },
       {
         "rank": 3,
         "tag": "轻小说",
-        "score": 10.56,
+        "score": 11.36,
         "raw_heat": 42,
         "heat_metric": "acg_category_rank",
         "source_family": "novel",
@@ -9643,12 +9697,34 @@
         },
         "signal_summary_text": "1 个频道提示",
         "delta_rank": 0,
-        "delta_score": -1.74
+        "delta_score": 0.8
       },
       {
         "rank": 4,
         "tag": "玄幻",
-        "score": 7.04,
+        "score": 8.33,
+        "raw_heat": 34,
+        "heat_metric": "acg_category_rank",
+        "source_family": "novel",
+        "tag_role": "coarse_genre",
+        "discovery": "single_source",
+        "confidence": 0.35,
+        "signal_type": "category_hint",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个频道提示",
+        "delta_rank": 0,
+        "delta_score": 1.29
+      },
+      {
+        "rank": 5,
+        "tag": "古风",
+        "score": 7.58,
         "raw_heat": 32,
         "heat_metric": "acg_category_rank",
         "source_family": "novel",
@@ -9665,79 +9741,13 @@
         },
         "signal_summary_text": "1 个频道提示",
         "delta_rank": 1,
-        "delta_score": -0.34
-      },
-      {
-        "rank": 5,
-        "tag": "游戏",
-        "score": 5.63,
-        "raw_heat": 28,
-        "heat_metric": "acg_category_rank",
-        "source_family": "novel",
-        "tag_role": "coarse_genre",
-        "discovery": "single_source",
-        "confidence": 0.35,
-        "signal_type": "category_hint",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个频道提示",
-        "delta_rank": 2,
-        "delta_score": -0.93
+        "delta_score": 1.95
       },
       {
         "rank": 6,
-        "tag": "古风",
-        "score": 5.63,
-        "raw_heat": 28,
-        "heat_metric": "acg_category_rank",
-        "source_family": "novel",
-        "tag_role": "coarse_genre",
-        "discovery": "single_source",
-        "confidence": 0.35,
-        "signal_type": "category_hint",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个频道提示",
-        "delta_rank": 0,
-        "delta_score": -1.75
-      },
-      {
-        "rank": 7,
         "tag": "科幻",
-        "score": 5.28,
-        "raw_heat": 27,
-        "heat_metric": "acg_category_rank",
-        "source_family": "novel",
-        "tag_role": "coarse_genre",
-        "discovery": "single_source",
-        "confidence": 0.35,
-        "signal_type": "category_hint",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 1,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个频道提示",
-        "delta_rank": -3,
-        "delta_score": -2.51
-      },
-      {
-        "rank": 8,
-        "tag": "悬疑",
-        "score": 5.28,
-        "raw_heat": 27,
+        "score": 6.44,
+        "raw_heat": 29,
         "heat_metric": "acg_category_rank",
         "source_family": "novel",
         "tag_role": "coarse_genre",
@@ -9753,12 +9763,34 @@
         },
         "signal_summary_text": "1 个频道提示",
         "delta_rank": 1,
-        "delta_score": -0.05
+        "delta_score": 1.16
       },
       {
-        "rank": 9,
+        "rank": 7,
+        "tag": "游戏",
+        "score": 6.06,
+        "raw_heat": 28,
+        "heat_metric": "acg_category_rank",
+        "source_family": "novel",
+        "tag_role": "coarse_genre",
+        "discovery": "single_source",
+        "confidence": 0.35,
+        "signal_type": "category_hint",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个频道提示",
+        "delta_rank": -2,
+        "delta_score": 0.43
+      },
+      {
+        "rank": 8,
         "tag": "同人",
-        "score": 4.58,
+        "score": 4.92,
         "raw_heat": 25,
         "heat_metric": "acg_category_rank",
         "source_family": "novel",
@@ -9774,8 +9806,30 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个频道提示",
+        "delta_rank": 1,
+        "delta_score": 0.34
+      },
+      {
+        "rank": 9,
+        "tag": "悬疑",
+        "score": 4.92,
+        "raw_heat": 25,
+        "heat_metric": "acg_category_rank",
+        "source_family": "novel",
+        "tag_role": "coarse_genre",
+        "discovery": "single_source",
+        "confidence": 0.35,
+        "signal_type": "category_hint",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 1,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个频道提示",
         "delta_rank": -1,
-        "delta_score": -1.57
+        "delta_score": -0.36
       },
       {
         "rank": 10,
@@ -9864,33 +9918,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 3,
-        "delta_score": 13.24
-      },
-      {
-        "rank": 4,
-        "tag": "海贼",
-        "score": 26.36,
-        "raw_heat": 238,
-        "heat_metric": "comic_rank_category",
-        "source_family": "comic",
-        "tag_role": "ip_universe",
-        "discovery": "single_source",
-        "confidence": 0.81,
-        "signal_type": "platform_tag",
-        "signal_summary": {
-          "platform_tag": 1,
-          "structured_api_tag": 0,
-          "title_inference": 0,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个平台标签",
-        "delta_rank": -1,
+        "delta_rank": 0,
         "delta_score": 0
       },
       {
-        "rank": 5,
+        "rank": 4,
         "tag": "穿越",
         "score": 25.92,
         "raw_heat": 234,
@@ -9908,11 +9940,11 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": -1,
-        "delta_score": -0.11
+        "delta_rank": 1,
+        "delta_score": 0
       },
       {
-        "rank": 6,
+        "rank": 5,
         "tag": "古风",
         "score": 25.81,
         "raw_heat": 233,
@@ -9930,8 +9962,30 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": -1,
-        "delta_score": 0.11
+        "delta_rank": 1,
+        "delta_score": 0
+      },
+      {
+        "rank": 6,
+        "tag": "海贼",
+        "score": 13.13,
+        "raw_heat": 119,
+        "heat_metric": "comic_rank_category",
+        "source_family": "comic",
+        "tag_role": "ip_universe",
+        "discovery": "single_source",
+        "confidence": 0.81,
+        "signal_type": "platform_tag",
+        "signal_summary": {
+          "platform_tag": 1,
+          "structured_api_tag": 0,
+          "title_inference": 0,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个平台标签",
+        "delta_rank": -2,
+        "delta_score": -13.23
       },
       {
         "rank": 7,
@@ -10018,7 +10072,7 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": 1,
+        "delta_rank": 0,
         "delta_score": 0
       },
       {
@@ -10040,17 +10094,17 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": -1,
-        "delta_score": -0.22
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 12,
-        "tag": "万界",
-        "score": 6.01,
-        "raw_heat": 55,
+        "tag": "三国",
+        "score": 6.34,
+        "raw_heat": 58,
         "heat_metric": "comic_rank_category",
         "source_family": "comic",
-        "tag_role": "fandom_structure",
+        "tag_role": "ip_universe",
         "discovery": "single_source",
         "confidence": 0.49500000000000005,
         "signal_type": "title_inference",
@@ -10062,14 +10116,14 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": 0,
-        "delta_score": 1.34
+        "delta_rank": 2,
+        "delta_score": 3.34
       },
       {
         "rank": 13,
-        "tag": "诸天",
-        "score": 3.45,
-        "raw_heat": 32,
+        "tag": "万界",
+        "score": 5.67,
+        "raw_heat": 52,
         "heat_metric": "comic_rank_category",
         "source_family": "comic",
         "tag_role": "fandom_structure",
@@ -10084,14 +10138,36 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": 0,
-        "delta_score": -0.22
+        "delta_rank": -1,
+        "delta_score": -0.34
       },
       {
         "rank": 14,
-        "tag": "三国",
-        "score": 3,
-        "raw_heat": 28,
+        "tag": "诸天",
+        "score": 3.34,
+        "raw_heat": 31,
+        "heat_metric": "comic_rank_category",
+        "source_family": "comic",
+        "tag_role": "fandom_structure",
+        "discovery": "single_source",
+        "confidence": 0.49500000000000005,
+        "signal_type": "title_inference",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个标题推断",
+        "delta_rank": -1,
+        "delta_score": -0.11
+      },
+      {
+        "rank": 15,
+        "tag": "从零开始",
+        "score": 3.23,
+        "raw_heat": 30,
         "heat_metric": "comic_rank_category",
         "source_family": "comic",
         "tag_role": "ip_universe",
@@ -10107,13 +10183,35 @@
         },
         "signal_summary_text": "1 个标题推断",
         "delta_rank": 1,
-        "delta_score": 1.67
+        "delta_score": 3.23
       },
       {
-        "rank": 15,
+        "rank": 16,
+        "tag": "无限",
+        "score": 3.23,
+        "raw_heat": 30,
+        "heat_metric": "comic_rank_category",
+        "source_family": "comic",
+        "tag_role": "fandom_structure",
+        "discovery": "single_source",
+        "confidence": 0.49500000000000005,
+        "signal_type": "title_inference",
+        "signal_summary": {
+          "platform_tag": 0,
+          "structured_api_tag": 0,
+          "title_inference": 1,
+          "category_hint": 0,
+          "unknown": 0
+        },
+        "signal_summary_text": "1 个标题推断",
+        "delta_rank": 1,
+        "delta_score": 3.23
+      },
+      {
+        "rank": 17,
         "tag": "后宫",
-        "score": 1.89,
-        "raw_heat": 18,
+        "score": 0,
+        "raw_heat": 1,
         "heat_metric": "comic_rank_category",
         "source_family": "comic",
         "tag_role": "relationship_type",
@@ -10128,52 +10226,8 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": -1,
-        "delta_score": 0
-      },
-      {
-        "rank": 16,
-        "tag": "从零开始",
-        "score": 0,
-        "raw_heat": 1,
-        "heat_metric": "comic_rank_category",
-        "source_family": "comic",
-        "tag_role": "ip_universe",
-        "discovery": "single_source",
-        "confidence": 0.49500000000000005,
-        "signal_type": "title_inference",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个标题推断",
-        "delta_rank": 0,
-        "delta_score": 0
-      },
-      {
-        "rank": 17,
-        "tag": "无限",
-        "score": 0,
-        "raw_heat": 1,
-        "heat_metric": "comic_rank_category",
-        "source_family": "comic",
-        "tag_role": "fandom_structure",
-        "discovery": "single_source",
-        "confidence": 0.49500000000000005,
-        "signal_type": "title_inference",
-        "signal_summary": {
-          "platform_tag": 0,
-          "structured_api_tag": 0,
-          "title_inference": 1,
-          "category_hint": 0,
-          "unknown": 0
-        },
-        "signal_summary_text": "1 个标题推断",
-        "delta_rank": 0,
-        "delta_score": 0
+        "delta_rank": -2,
+        "delta_score": -1.89
       }
     ],
     "zongheng": [
@@ -10181,7 +10235,7 @@
         "rank": 1,
         "tag": "聊天群",
         "score": 100,
-        "raw_heat": 15804,
+        "raw_heat": 20634,
         "heat_metric": "zongheng_category_rank",
         "source_family": "novel",
         "tag_role": "fandom_structure",
@@ -10196,13 +10250,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个标题推断",
-        "delta_rank": 2,
-        "delta_score": 0.49
+        "delta_rank": 0,
+        "delta_score": 0
       },
       {
         "rank": 2,
         "tag": "衍生同人",
-        "score": 53.59,
+        "score": 38.63,
         "raw_heat": 10020,
         "heat_metric": "zongheng_category_rank",
         "source_family": "novel",
@@ -10218,13 +10272,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": -1,
-        "delta_score": -46.41
+        "delta_rank": 0,
+        "delta_score": -14.96
       },
       {
         "rank": 3,
         "tag": "同人",
-        "score": 53.57,
+        "score": 38.61,
         "raw_heat": 10017,
         "heat_metric": "zongheng_category_rank",
         "source_family": "novel",
@@ -10240,13 +10294,13 @@
           "unknown": 0
         },
         "signal_summary_text": "1 个平台标签",
-        "delta_rank": -1,
-        "delta_score": -46.39
+        "delta_rank": 0,
+        "delta_score": -14.96
       },
       {
         "rank": 4,
         "tag": "二次元",
-        "score": 26.78,
+        "score": 19.3,
         "raw_heat": 6678,
         "heat_metric": "zongheng_category_rank",
         "source_family": "novel",
@@ -10263,7 +10317,7 @@
         },
         "signal_summary_text": "1 个平台标签",
         "delta_rank": 0,
-        "delta_score": -23.19
+        "delta_score": -7.48
       },
       {
         "rank": 5,
